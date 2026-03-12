@@ -18,7 +18,7 @@ M.colors = {
   blue      = "#7090a0",
   violet    = "#9a7a8a",
   border    = "#3a2c26",
-  selection = "#1a1613",
+  selection = "#201c1b",
   none      = "NONE",
 }
 

@@ -20,10 +20,10 @@ function M.get(c, _)
 
     -- 文・制御
     Statement      = { fg = c.violet },
-    Conditional    = { fg = c.violet },
+    Conditional    = { fg = c.violet, italic = true },
     Repeat         = { fg = c.violet },
     Label          = { fg = c.violet },
-    Keyword        = { fg = c.violet },
+    Keyword        = { fg = c.violet, italic = true },
     Exception      = { fg = c.red },
     Operator       = { fg = c.fg },
 
