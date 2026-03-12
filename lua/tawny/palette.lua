@@ -1,8 +1,8 @@
 local M = {}
 
 M.colors = {
-  bg        = "#100c09",
-  bg_dim    = "#0c0805",
+  bg        = "#14100d",
+  bg_dim    = "#100c09",
   bg_light  = "#1a1613",
 
   -- bg        = "#171717",
