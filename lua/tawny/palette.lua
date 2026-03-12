@@ -1,12 +1,12 @@
 local M = {}
 
 M.colors = {
-  -- bg        = "#1c1714",
-  -- bg_dim    = "#14100e",
-  bg_light  = "#2e2420",
+  bg        = "#100c09",
+  bg_dim    = "#0c0805",
+  bg_light  = "#1a1613",
 
-  bg        = "#171717",
-  bg_dim    = "#09090b",
+  -- bg        = "#171717",
+  -- bg_dim    = "#09090b",
 
   fg        = "#e0c99a",
   fg_dim    = "#7a6650",
@@ -18,7 +18,7 @@ M.colors = {
   blue      = "#7090a0",
   violet    = "#9a7a8a",
   border    = "#3a2c26",
-  selection = "#3d2e24",
+  selection = "#1a1613",
   none      = "NONE",
 }
 
