@@ -25,8 +25,8 @@ function M.get(c, opts)
     Substitute    = { fg = c.bg, bg = c.red },
 
     -- 行番号・サイン
-    LineNr        = { fg = c.fg_dim },
-    SignColumn    = { bg = c.none },
+    LineNr        = { fg = c.fg_dim, bg = c.bg_light },
+    SignColumn    = { bg = c.bg_dim },
     FoldColumn    = { fg = c.fg_dim, bg = c.none },
     Folded        = { fg = c.fg_dim, bg = c.bg_light },
 
