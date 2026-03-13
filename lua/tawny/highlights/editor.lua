@@ -13,7 +13,7 @@ function M.get(c, opts)
     -- カーソル・選択
     CursorLine    = { bg = c.bg_light },
     CursorColumn  = { bg = c.bg_light },
-    CursorLineNr  = { fg = c.yellow, bold = true },
+    CursorLineNr  = { fg = c.yellow, bold = true, bg = c.bg_light },
     Visual        = { bg = c.selection },
     VisualNOS     = { bg = c.selection },
     MatchParen    = { fg = c.orange, bold = true },
@@ -26,7 +26,7 @@ function M.get(c, opts)
 
     -- 行番号・サイン
     LineNr        = { fg = c.fg_dim, bg = c.bg_light },
-    SignColumn    = { bg = c.bg_dim },
+    SignColumn    = { bg = c.bg_light },
     FoldColumn    = { fg = c.fg_dim, bg = c.light },
     Folded        = { fg = c.fg_dim, bg = c.bg_light },
 

@@ -1,9 +1,9 @@
 local M = {}
 
 M.dark = {
-  bg        = "#14100d",
-  bg_dim    = "#100c09",
-  bg_light  = "#1a1613",
+  bg        = "#171310",
+  bg_dim    = "#14100d",
+  bg_light  = "#221e1b",
   fg        = "#f0d3ae",
   fg_dim    = "#7a6650",
   red       = "#b85c4a",
@@ -14,7 +14,7 @@ M.dark = {
   blue      = "#7090a0",
   violet    = "#a48494",
   border    = "#3a2c26",
-  selection = "#201c1b",
+  selection = "#282423",
   none      = "NONE",
 }
 
