@@ -14,7 +14,17 @@ function M.load()
   vim.g.colors_name   = "tawny"
   vim.o.termguicolors = true
 
-  require("tawny.highlights").setup(palette.colors, config.options)
+  local variant = config.options.variant
+  local colors
+  if variant == "light" or (variant == nil and vim.o.background == "light") then
+    colors = palette.light
+    vim.o.background = "light"
+  else
+    colors = palette.dark
+    vim.o.background = "dark"
+  end
+
+  require("tawny.highlights").setup(colors, config.options)
 end
 
 return M

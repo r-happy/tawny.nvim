@@ -2,6 +2,7 @@ local M = {}
 
 M.defaults = {
   transparent = false,
+  variant = nil, -- "dark" | "light" | nil (follows vim.o.background)
   styles = {
     comments = { italic = true },
     keywords = { bold = false, italic = true },
