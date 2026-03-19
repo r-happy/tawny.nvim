@@ -14,7 +14,7 @@ M.dark = {
   blue      = "#7090a0",
   violet    = "#a48494",
   border    = "#3a2c26",
-  selection = "#282423",
+  selection = "#221e1b",
   none      = "NONE",
 }
 
