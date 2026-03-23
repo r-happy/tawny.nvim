@@ -27,7 +27,7 @@ function M.get(c, opts)
     -- 行番号・サイン
     LineNr        = { fg = c.fg_dim, bg = c.bg_light },
     SignColumn    = { bg = c.bg_light },
-    FoldColumn    = { fg = c.fg_dim, bg = c.light },
+    FoldColumn    = { fg = c.fg_dim, bg = c.bg_light },
     Folded        = { fg = c.fg_dim, bg = c.bg_light },
 
     -- ステータス・タブ

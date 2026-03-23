@@ -35,7 +35,7 @@ function M.get(c, _)
     PreCondit      = { fg = c.teal },
 
     -- 型
-    Type           = { fg = c.fg },
+    Type           = { fg = c.teal },
     StorageClass   = { fg = c.fg },
     Structure      = { fg = c.fg },
     Typedef        = { fg = c.fg },
