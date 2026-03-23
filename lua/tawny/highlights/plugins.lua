@@ -119,6 +119,24 @@ function M.get(c, _)
     MiniStatuslineModeCommand = { fg = c.bg, bg = c.orange, bold = true },
     MiniStatuslineModeOther   = { fg = c.bg, bg = c.teal, bold = true },
 
+    -- snacks.nvim
+    SnacksPickerFile                = { fg = c.fg },
+    SnacksPickerDirectory           = { fg = c.blue },
+    SnacksPickerDir                 = { fg = c.fg_dim },
+    SnacksPickerTree                = { fg = c.border },
+    SnacksPickerMatch               = { fg = c.yellow, bold = true },
+    SnacksPickerSearch              = { fg = c.bg, bg = c.yellow },
+    SnacksPickerPathIgnored         = { fg = c.fg_dim },
+    SnacksPickerPathHidden          = { fg = c.fg_dim },
+    SnacksPickerGitStatusAdded      = { fg = c.green },
+    SnacksPickerGitStatusModified   = { fg = c.orange },
+    SnacksPickerGitStatusDeleted    = { fg = c.red },
+    SnacksPickerGitStatusRenamed    = { fg = c.orange },
+    SnacksPickerGitStatusUntracked  = { fg = c.fg_dim },
+    SnacksPickerGitStatusIgnored    = { fg = c.fg_dim },
+    SnacksPickerGitStatusUnmerged   = { fg = c.red },
+    SnacksPickerGitStatusStaged     = { fg = c.teal },
+
     -- blink.cmp
     BlinkCmpMenu              = { fg = c.fg, bg = c.bg_dim },
     BlinkCmpMenuBorder        = { fg = c.border, bg = c.bg_dim },
