@@ -1,22 +1,24 @@
 local M = {}
 
 M.dark = {
-  bg       = "#171310",
-  bg_dim   = "#14100d",
-  bg_light = "#221e1b",
-  fg       = "#f0d3ae",
-  border   = "#3a2c26",
+  bg        = "#171310",
+  bg_dim    = "#14100d",
+  bg_light  = "#221e1b",
+  fg        = "#f0d3ae",
+  border    = "#3a2c26",
 
   -- accent colors
-  yellow   = "#ddb46e",
-  fg_dim   = "#9a7f68",
-  red      = "#c05868",
-  orange   = "#c4883e",
-  green    = "#7a9860",
-  teal     = "#5e8c7a",
-  blue     = "#6888a8",
-  violet   = "#a48494",
-  none     = "NONE",
+  yellow    = "#ddb46e",
+  fg_dim    = "#9a7f68",
+  red       = "#c05868",
+  orange    = "#c4883e",
+  green     = "#7a9860",
+  teal      = "#5e8c7a",
+  blue      = "#6888a8",
+  violet    = "#a48494",
+  none      = "NONE",
+  selection = "#3a2e28",
+
 }
 
 M.light = {
