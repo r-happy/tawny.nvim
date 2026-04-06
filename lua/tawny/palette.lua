@@ -1,23 +1,31 @@
 local M = {}
 
 M.dark = {
-  bg        = "#171310",
-  bg_dim    = "#14100d",
-  bg_light  = "#221e1b",
-  fg        = "#f0d3ae",
-  border    = "#3a2c26",
+  bg        = "#2b241f",
+  bg_dim    = "#241d19",
+  bg_light  = "#35302a",
+  fg        = "#ead6b4",
+  border    = "#5d4d42",
 
   -- accent colors
-  yellow    = "#ddb46e",
-  fg_dim    = "#9a7f68",
-  red       = "#c05868",
-  orange    = "#c4883e",
-  green     = "#7a9860",
-  teal      = "#5e8c7a",
-  blue      = "#6888a8",
-  violet    = "#a48494",
+  yellow    = "#dfb978",
+  fg_dim    = "#b39a82",
+  red       = "#c86a68",
+  orange    = "#cf9150",
+  green     = "#86a96c",
+  teal      = "#6f9c89",
+  blue      = "#7f98b2",
+  violet    = "#b0919e",
   none      = "NONE",
-  selection = "#3a2e28",
+  selection = "#43362d",
+  diff_add  = "#31402d",
+  diff_change = "#433722",
+  diff_delete = "#472a28",
+  diff_text = "#584728",
+  diag_error_bg = "#432927",
+  diag_warn_bg  = "#43331f",
+  diag_info_bg  = "#253544",
+  diag_hint_bg  = "#273932",
 
 }
 

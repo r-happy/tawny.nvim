@@ -62,9 +62,9 @@ function M.get(c, _)
     GitSignsAddNr            = { fg = c.green },
     GitSignsChangeNr         = { fg = c.orange },
     GitSignsDeleteNr         = { fg = c.red },
-    GitSignsAddLn            = { bg = "#1e2e1a" },
-    GitSignsChangeLn         = { bg = "#2a2310" },
-    GitSignsDeleteLn         = { bg = "#2e1a18" },
+    GitSignsAddLn            = { bg = c.diff_add },
+    GitSignsChangeLn         = { bg = c.diff_change },
+    GitSignsDeleteLn         = { bg = c.diff_delete },
     GitSignsCurrentLineBlame = { fg = c.fg_dim, italic = true },
 
     -- nvim-cmp

@@ -16,10 +16,10 @@ function M.get(c, _)
     DiagnosticUnderlineHint    = { undercurl = true, sp = c.teal },
 
     -- 診断バーチャルテキスト
-    DiagnosticVirtualTextError = { fg = c.red, bg = "#2a1a18", italic = true },
-    DiagnosticVirtualTextWarn  = { fg = c.orange, bg = "#2a2010", italic = true },
-    DiagnosticVirtualTextInfo  = { fg = c.blue, bg = "#182028", italic = true },
-    DiagnosticVirtualTextHint  = { fg = c.teal, bg = "#182420", italic = true },
+    DiagnosticVirtualTextError = { fg = c.red, bg = c.diag_error_bg, italic = true },
+    DiagnosticVirtualTextWarn  = { fg = c.orange, bg = c.diag_warn_bg, italic = true },
+    DiagnosticVirtualTextInfo  = { fg = c.blue, bg = c.diag_info_bg, italic = true },
+    DiagnosticVirtualTextHint  = { fg = c.teal, bg = c.diag_hint_bg, italic = true },
 
     -- 診断サイン
     DiagnosticSignError        = { fg = c.red },

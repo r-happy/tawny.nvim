@@ -8,6 +8,11 @@ function M.load()
   local config  = require("tawny.config")
   local palette = require("tawny.palette")
 
+  -- `:colorscheme tawny` must work even if setup() was never called.
+  if type(config.options) ~= "table" or type(config.options.overrides) ~= "function" then
+    config.setup()
+  end
+
   vim.cmd("hi clear")
   if vim.fn.exists("syntax_on") then vim.cmd("syntax reset") end
 

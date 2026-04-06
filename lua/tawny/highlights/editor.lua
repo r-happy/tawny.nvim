@@ -60,10 +60,10 @@ function M.get(c, opts)
     MsgSeparator  = { fg = c.border },
     Question      = { fg = c.yellow },
     -- Diff
-    DiffAdd       = { bg = "#1e2e1a" },
-    DiffChange    = { bg = "#2a2310" },
-    DiffDelete    = { bg = "#2e1a18" },
-    DiffText      = { bg = "#3a3010" },
+    DiffAdd       = { bg = c.diff_add },
+    DiffChange    = { bg = c.diff_change },
+    DiffDelete    = { bg = c.diff_delete },
+    DiffText      = { bg = c.diff_text },
     -- スペルチェック
     SpellBad      = { undercurl = true, sp = c.red },
     SpellCap      = { undercurl = true, sp = c.yellow },
