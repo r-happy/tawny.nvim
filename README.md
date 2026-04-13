@@ -25,14 +25,14 @@ A warm, earthy Neovim colorscheme with muted tones inspired by tawny browns and 
 | Name       | Hex       |
 |------------|-----------|
 | Background | `#2b241f` |
-| Foreground | `#ead6b4` |
-| Red        | `#c86a68` |
-| Orange     | `#cf9150` |
-| Yellow     | `#dfb978` |
-| Green      | `#86a96c` |
-| Teal       | `#6f9c89` |
-| Blue       | `#7f98b2` |
-| Violet     | `#b0919e` |
+| Foreground | `#e2d1b3` |
+| Red        | `#b67a70` |
+| Orange     | `#bc8a58` |
+| Yellow     | `#cdb07a` |
+| Green      | `#7e9670` |
+| Teal       | `#6d8f82` |
+| Blue       | `#798da0` |
+| Violet     | `#9f8b95` |
 
 ## Installation
 
