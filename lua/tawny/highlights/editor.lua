@@ -11,7 +11,7 @@ function M.get(c, opts)
     CursorColumn = { bg = c.bg_light },
     CursorLineNr = { fg = c.yellow, bold = true, bg = c.bg_light },
 
-    LineNr       = { fg = c.fg_dim },
+    LineNr       = { fg = c.border },
     SignColumn   = { bg = c.none },
     FoldColumn   = { fg = c.fg_dim, bg = c.none },
     Folded       = { fg = c.fg_dim, bg = c.bg_light },

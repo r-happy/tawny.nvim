@@ -5,28 +5,29 @@ M.dark = {
   bg_dim        = "#211a17",
   bg_light      = "#312c27",
   fg            = "#e2d1b3",
-  border        = "#584a40",
+  fg_dim        = "#b39a80",
+  border        = "#4c4037",
 
-  -- accent colors
-  yellow        = "#cdb07a",
-  fg_dim        = "#aa947d",
+  yellow        = "#d6bc82",
   red           = "#b67a70",
-  orange        = "#bc8a58",
-  green         = "#7e9670",
-  teal          = "#6d8f82",
-  blue          = "#798da0",
-  violet        = "#9f8b95",
-  none          = "NONE",
-  selection     = "#43362d",
-  diff_add      = "#313b2e",
-  diff_change   = "#403523",
-  diff_delete   = "#432c2a",
-  diff_text     = "#524329",
-  diag_error_bg = "#3f2a28",
-  diag_warn_bg  = "#403221",
-  diag_info_bg  = "#293440",
-  diag_hint_bg  = "#293731",
+  orange        = "#cb7b42",
+  green         = "#86a06c",
+  teal          = "#5f958a",
+  blue          = "#7096b8",
+  violet        = "#a482a8",
 
+  none          = "NONE",
+  selection     = "#4b3b31",
+
+  diff_add      = "#34402f",
+  diff_change   = "#463821",
+  diff_delete   = "#472d2b",
+  diff_text     = "#5a4727",
+
+  diag_error_bg = "#452b29",
+  diag_warn_bg  = "#46331f",
+  diag_info_bg  = "#2b3744",
+  diag_hint_bg  = "#2b3b35",
 }
 
 M.light = {

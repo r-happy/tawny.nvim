@@ -27,7 +27,7 @@ function M.get(c, opts)
     Statement      = { fg = c.violet },
     Keyword        = { fg = c.violet, italic = italic_keywords },
     Exception      = { fg = c.red },
-    Operator       = { fg = c.fg_dim },
+    Operator       = { fg = c.fg },
 
     PreProc        = { fg = c.teal },
     Type           = { fg = c.teal },
