@@ -1,33 +1,33 @@
 local M = {}
 
 M.dark = {
-  bg            = "#28211d",
-  bg_dim        = "#211a17",
-  bg_light      = "#312c27",
-  fg            = "#e2d1b3",
-  fg_dim        = "#b39a80",
-  border        = "#4c4037",
+  bg            = "#171310",
+  bg_dim        = "#14100d",
+  bg_light      = "#221e1b",
+  fg            = "#f0d3ae",
+  fg_dim        = "#9a7f68",
+  border        = "#3a2c26",
 
-  yellow        = "#d6bc82",
-  red           = "#b67a70",
-  orange        = "#cb7b42",
-  green         = "#86a06c",
-  teal          = "#5f958a",
-  blue          = "#7096b8",
-  violet        = "#a482a8",
+  yellow        = "#ddb46e",
+  red           = "#c05868",
+  orange        = "#c97a3a",
+  green         = "#7a9860",
+  teal          = "#5e8c7a",
+  blue          = "#6888a8",
+  violet        = "#a48494",
 
   none          = "NONE",
-  selection     = "#4b3b31",
+  selection     = "#3a2e28",
 
-  diff_add      = "#34402f",
-  diff_change   = "#463821",
-  diff_delete   = "#472d2b",
+  diff_add      = "#2c3828",
+  diff_change   = "#43351f",
+  diff_delete   = "#432927",
   diff_text     = "#5a4727",
 
-  diag_error_bg = "#452b29",
-  diag_warn_bg  = "#46331f",
-  diag_info_bg  = "#2b3744",
-  diag_hint_bg  = "#2b3b35",
+  diag_error_bg = "#432927",
+  diag_warn_bg  = "#43351f",
+  diag_info_bg  = "#24303d",
+  diag_hint_bg  = "#25352f",
 }
 
 M.light = {
@@ -48,7 +48,6 @@ M.light = {
   none      = "NONE",
 }
 
--- backward compat
 M.colors = M.dark
 
 return M
