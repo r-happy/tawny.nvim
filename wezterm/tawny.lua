@@ -3,56 +3,56 @@
 
 return {
   colors = {
-    foreground    = "#e2d1b3",
-    background    = "#28211d",
-    cursor_bg     = "#e2d1b3",
-    cursor_border = "#e2d1b3",
-    cursor_fg     = "#28211d",
-    selection_bg  = "#43362d",
-    selection_fg  = "#e2d1b3",
+    foreground    = "#f0d3ae",
+    background    = "#171310",
+    cursor_bg     = "#f0d3ae",
+    cursor_border = "#f0d3ae",
+    cursor_fg     = "#171310",
+    selection_bg  = "#3a2e28",
+    selection_fg  = "#f0d3ae",
 
     ansi = {
-      "#211a17", -- black
-      "#b67a70", -- red
-      "#7e9670", -- green
-      "#cdb07a", -- yellow
-      "#798da0", -- blue
-      "#9f8b95", -- magenta
-      "#6d8f82", -- cyan
-      "#e2d1b3", -- white
+      "#171310", -- black
+      "#d45f70", -- red
+      "#83aa5f", -- green
+      "#f1bc63", -- yellow
+      "#739bc4", -- blue
+      "#b08fae", -- magenta
+      "#64a08b", -- cyan
+      "#f0d3ae", -- white
     },
     brights = {
-      "#584a40", -- bright black
-      "#b67a70", -- bright red
-      "#7e9670", -- bright green
-      "#cdb07a", -- bright yellow
-      "#798da0", -- bright blue
-      "#9f8b95", -- bright magenta
-      "#6d8f82", -- bright cyan
-      "#e2d1b3", -- bright white
+      "#3a2c26", -- bright black
+      "#d45f70", -- bright red
+      "#83aa5f", -- bright green
+      "#f1bc63", -- bright yellow
+      "#739bc4", -- bright blue
+      "#b08fae", -- bright magenta
+      "#64a08b", -- bright cyan
+      "#f0d3ae", -- bright white
     },
 
     tab_bar = {
-      background = "#211a17",
+      background = "#14100d",
       active_tab = {
-        bg_color  = "#28211d",
-        fg_color  = "#e2d1b3",
+        bg_color  = "#171310",
+        fg_color  = "#f0d3ae",
       },
       inactive_tab = {
-        bg_color  = "#211a17",
-        fg_color  = "#aa947d",
+        bg_color  = "#14100d",
+        fg_color  = "#9a7f68",
       },
       inactive_tab_hover = {
-        bg_color  = "#312c27",
-        fg_color  = "#e2d1b3",
+        bg_color  = "#221e1b",
+        fg_color  = "#f0d3ae",
       },
       new_tab = {
-        bg_color  = "#211a17",
-        fg_color  = "#aa947d",
+        bg_color  = "#14100d",
+        fg_color  = "#9a7f68",
       },
       new_tab_hover = {
-        bg_color  = "#312c27",
-        fg_color  = "#e2d1b3",
+        bg_color  = "#221e1b",
+        fg_color  = "#f0d3ae",
       },
     },
   },
