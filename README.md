@@ -24,7 +24,7 @@ A warm, earthy Neovim colorscheme with muted tones inspired by tawny browns and 
 ## Color Palette
 
 | Name       | Hex       |
-|------------|-----------|
+| ---------- | --------- |
 | Background | `#2b241f` |
 | Foreground | `#e2d1b3` |
 | Red        | `#b67a70` |
@@ -41,7 +41,7 @@ A warm, earthy Neovim colorscheme with muted tones inspired by tawny browns and 
 
 ```lua
 {
-  "rhappy/tawny.nvim",
+  "r-happy/tawny.nvim",
   priority = 1000,
   config = function()
     require("tawny").setup()
@@ -54,7 +54,7 @@ A warm, earthy Neovim colorscheme with muted tones inspired by tawny browns and 
 
 ```lua
 use {
-  "rhappy/tawny.nvim",
+  "r-happy/tawny.nvim",
   config = function()
     require("tawny").setup()
     vim.cmd("colorscheme tawny")
