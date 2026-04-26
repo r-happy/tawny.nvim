@@ -2,7 +2,7 @@ local M = {}
 
 M.defaults = {
   transparent = false,
-  variant = nil, -- "dark" | "light" | nil (follows vim.o.background)
+  variant = nil, -- "dark" | "light" | nil (used by require("tawny").load())
   styles = {
     comments = { italic = true },
     keywords = { bold = false, italic = true },

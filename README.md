@@ -17,7 +17,7 @@ A warm, earthy Neovim colorscheme with muted tones inspired by tawny browns and 
   - [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
   - [mini.nvim](https://github.com/echasnovski/mini.nvim)
   - [dropbar.nvim](https://github.com/Bekaboo/dropbar.nvim)
-- Dark and light mode (follows `vim.o.background`)
+- Dark and light colorschemes
 - Optional transparency
 - Customizable styles
 
@@ -66,7 +66,9 @@ use {
 
 ```lua
 require("tawny").setup({
-  -- "dark" | "light" | nil (nil follows vim.o.background)
+  -- "dark" | "light" | nil
+  -- Used when calling require("tawny").load() directly.
+  -- :colorscheme tawny and :colorscheme tawny-light are fixed.
   variant = nil,
 
   -- Enable transparent background
@@ -91,13 +93,7 @@ require("tawny").setup({
 ### Light mode
 
 ```lua
--- Option 1: via vim.o.background
-vim.o.background = "light"
-vim.cmd("colorscheme tawny")
-
--- Option 2: via setup option
-require("tawny").setup({ variant = "light" })
-vim.cmd("colorscheme tawny")
+vim.cmd("colorscheme tawny-light")
 ```
 
 ## License

@@ -1,1 +1,1 @@
-require("tawny").load()
+require("tawny").load("dark")
