@@ -25,6 +25,8 @@ function M.get(c, opts)
 
     StatusLine   = { fg = c.fg, bg = c.bg_dim },
     StatusLineNC = { fg = c.fg_dim, bg = c.bg_dim },
+    WinBar       = { fg = c.fg, bg = c.bg_dim },
+    WinBarNC     = { fg = c.fg_dim, bg = c.bg_dim },
 
     FloatBorder  = { fg = c.border, bg = c.bg_dim },
     FloatTitle   = { fg = c.yellow, bg = c.bg_dim, bold = true },
