@@ -124,7 +124,7 @@ function M.get(c, _)
     barbecue_ellipsis          = { fg = c.fg_dim },
     barbecue_separator         = { fg = c.border },
     barbecue_modified          = { fg = c.orange },
-    barbecue_directory         = { fg = c.blue },
+    barbecue_dirname           = { fg = c.fg_dim },
     barbecue_basename          = { fg = c.fg, bold = true },
     barbecue_context           = { fg = c.fg },
     barbecue_context_file      = { fg = c.fg },
