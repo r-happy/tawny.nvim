@@ -16,7 +16,7 @@ A warm, earthy Neovim colorscheme with muted tones inspired by tawny browns and 
   - [which-key](https://github.com/folke/which-key.nvim)
   - [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
   - [mini.nvim](https://github.com/echasnovski/mini.nvim)
-  - [barbecue.nvim](https://github.com/utilyre/barbecue.nvim)
+  - [dropbar.nvim](https://github.com/Bekaboo/dropbar.nvim)
 - Dark and light mode (follows `vim.o.background`)
 - Optional transparency
 - Customizable styles
