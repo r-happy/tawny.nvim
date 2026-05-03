@@ -26,11 +26,17 @@ function M.get(c, _)
     DiagnosticSignWarn         = { fg = c.orange },
     DiagnosticSignInfo         = { fg = c.blue },
     DiagnosticSignHint         = { fg = c.teal },
+    DiagnosticFloatingError    = { fg = c.red },
+    DiagnosticFloatingWarn     = { fg = c.orange },
+    DiagnosticFloatingInfo     = { fg = c.blue },
+    DiagnosticFloatingHint     = { fg = c.teal },
+    DiagnosticDeprecated       = { strikethrough = true, sp = c.fg_dim },
+    DiagnosticUnnecessary      = { fg = c.fg_dim },
 
     -- LSPリファレンス
-    LspReferenceText           = { bg = c.selection },
-    LspReferenceRead           = { bg = c.selection },
-    LspReferenceWrite          = { bg = c.selection, underline = true },
+    LspReferenceText           = { bg = c.bg_highlight },
+    LspReferenceRead           = { bg = c.bg_highlight },
+    LspReferenceWrite          = { bg = c.bg_highlight, underline = true },
 
     -- コードレンズ
     LspCodeLens                = { fg = c.fg_dim, italic = true },

@@ -2,6 +2,7 @@ local M = {}
 
 M.defaults = {
   transparent = false,
+  terminal_colors = true,
   variant = nil, -- "dark" | "light" | nil (used by require("tawny").load())
   styles = {
     comments = { italic = true },

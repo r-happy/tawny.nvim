@@ -25,15 +25,15 @@ A warm, earthy Neovim colorscheme with muted tones inspired by tawny browns and 
 
 | Name       | Hex       |
 | ---------- | --------- |
-| Background | `#2b241f` |
-| Foreground | `#e2d1b3` |
-| Red        | `#b67a70` |
-| Orange     | `#bc8a58` |
-| Yellow     | `#cdb07a` |
-| Green      | `#7e9670` |
-| Teal       | `#6d8f82` |
-| Blue       | `#798da0` |
-| Violet     | `#9f8b95` |
+| Background | `#16110e` |
+| Foreground | `#f1d8b8` |
+| Red        | `#e26d7d` |
+| Orange     | `#ee9b52` |
+| Yellow     | `#f4c96b` |
+| Green      | `#96bd6f` |
+| Teal       | `#6fb9a1` |
+| Blue       | `#7eadd6` |
+| Violet     | `#c09ac0` |
 
 ## Installation
 
@@ -73,6 +73,9 @@ require("tawny").setup({
 
   -- Enable transparent background
   transparent = false,
+
+  -- Configure colors used by :terminal
+  terminal_colors = true,
 
   -- Customize highlight styles
   styles = {

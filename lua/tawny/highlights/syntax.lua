@@ -6,16 +6,17 @@ end
 
 function M.get(c, opts)
   opts = opts or {}
+  local styles = opts.styles or {}
 
-  local italic_comments = opts.italic_comments ~= false
-  local italic_keywords = opts.italic_keywords ~= false
+  local comment_style = styles.comments or {}
+  local keyword_style = styles.keywords or {}
   local bold_todo = opts.bold_todo ~= false
 
   return {
     ----------------------------------------------------------------
     -- ベース実体
     ----------------------------------------------------------------
-    Comment        = { fg = c.fg_dim, italic = italic_comments },
+    Comment        = vim.tbl_extend("force", { fg = c.fg_dim }, comment_style),
 
     Constant       = { fg = c.yellow },
     String         = { fg = c.green },
@@ -25,9 +26,9 @@ function M.get(c, opts)
     Function       = { fg = c.blue },
 
     Statement      = { fg = c.violet },
-    Keyword        = { fg = c.violet, italic = italic_keywords },
+    Keyword        = vim.tbl_extend("force", { fg = c.violet }, keyword_style),
     Exception      = { fg = c.red },
-    Operator       = { fg = c.fg },
+    Operator       = { fg = c.fg_dark },
 
     PreProc        = { fg = c.teal },
     Type           = { fg = c.teal },
@@ -36,9 +37,9 @@ function M.get(c, opts)
     Tag            = { fg = c.blue },
     Delimiter      = { fg = c.fg_dim },
 
-    Error          = { fg = c.red },
+    Error          = { fg = c.red, bold = true },
     Todo           = { fg = c.bg, bg = c.yellow, bold = bold_todo },
-    Underlined     = { underline = true },
+    Underlined     = { fg = c.blue, underline = true },
 
     ----------------------------------------------------------------
     -- エイリアス

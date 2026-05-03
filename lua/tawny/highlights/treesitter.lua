@@ -1,15 +1,19 @@
 local M = {}
 
 function M.get(c, opts)
+  opts = opts or {}
+  local styles = opts.styles or {}
+  local keyword_style = styles.keywords or {}
+
   return {
     -- 変数
     ["@variable"]              = { link = "Variable" },
     ["@variable.builtin"]      = { fg = c.orange },
-    ["@variable.parameter"]    = { fg = c.fg },
-    ["@variable.member"]       = { fg = c.yellow },
+    ["@variable.parameter"]    = { fg = c.fg_dark },
+    ["@variable.member"]       = { fg = c.yellow_dim },
     -- キーワード
-    ["@keyword"]               = { link = "Keyword" },
-    ["@keyword.function"]      = { link = "Keyword" },
+    ["@keyword"]               = vim.tbl_extend("force", { fg = c.violet }, keyword_style),
+    ["@keyword.function"]      = vim.tbl_extend("force", { fg = c.violet }, keyword_style),
     ["@keyword.operator"]      = { link = "Operator" },
     ["@keyword.import"]        = { link = "Include" },
     ["@keyword.conditional"]   = { link = "Conditional" },
@@ -25,7 +29,7 @@ function M.get(c, opts)
     ["@function.method.call"]  = { link = "Function" },
     -- 型
     ["@type"]                  = { link = "Type" },
-    ["@type.builtin"]          = { fg = c.teal, italic = true },
+    ["@type.builtin"]          = { fg = c.teal_dim, italic = true },
     ["@type.definition"]       = { fg = c.teal },
     -- 定数
     ["@constant"]              = { link = "Constant" },
@@ -53,7 +57,7 @@ function M.get(c, opts)
     ["@operator"]              = { fg = c.fg_dim },
     ["@label"]                 = { fg = c.violet },
     -- 区切り
-    ["@punctuation.bracket"]   = { fg = c.fg },
+    ["@punctuation.bracket"]   = { fg = c.fg_dark },
     ["@punctuation.delimiter"] = { fg = c.fg_dim },
     ["@punctuation.special"]   = { fg = c.yellow },
     -- モジュール
