@@ -99,6 +99,30 @@ require("tawny").setup({
 vim.cmd("colorscheme tawny-light")
 ```
 
+## Companion Themes
+
+### Zed
+
+[zed/tawny.json](./zed/tawny.json) contains both `Tawny` and `Tawny Light`.
+
+Copy or symlink it into your Zed themes directory:
+
+```sh
+mkdir -p ~/.config/zed/themes
+ln -sf /path/to/tawny.nvim/zed/tawny.json ~/.config/zed/themes/tawny.json
+```
+
+Then select `Tawny` or `Tawny Light` from the theme picker.
+
+### VS Code
+
+Theme definition files live in [vscode/themes](./vscode/themes):
+
+- `tawny-dark-color-theme.json`
+- `tawny-light-color-theme.json`
+
+These are ready to drop into a VS Code theme extension scaffold created with `yo code`, or to reuse as the source theme JSON inside an existing extension.
+
 ## License
 
 MIT
