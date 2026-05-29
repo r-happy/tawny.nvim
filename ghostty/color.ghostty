@@ -8,7 +8,7 @@ foreground = #f1d8b8
 selection-background = #3a3029
 selection-foreground = #f1d8b8
 
-cursor-color = #fff0d2
+cursor-color = #f0ce9d
 cursor-text = #110d0c
 
 palette = 0=#080706

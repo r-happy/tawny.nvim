@@ -12,6 +12,7 @@ M.dark = {
   bg_statusline    = hsl(20.0, 16.0, 7.2),
   fg               = hsl(33.7, 67.1, 83.3),
   fg_bright        = hsl(40.0, 100.0, 91.2),
+  cursor           = hsl(35.0, 74.0, 78.0),
   fg_dark          = hsl(29.5, 30.3, 60.6),
   fg_dim           = hsl(28.1, 19.2, 48.0),
   border           = hsl(22.9, 19.3, 21.4),
@@ -49,19 +50,19 @@ M.dark = {
 }
 
 M.light = {
-  bg               = hsl(42.0, 80.0, 98.6),
-  bg_dim           = hsl(38.0, 35.0, 95.0),
-  bg_dark          = hsl(36.0, 28.0, 91.5),
-  bg_light         = hsl(45.0, 100.0, 99.4),
-  bg_highlight     = hsl(36.0, 30.0, 93.2),
-  bg_popup         = hsl(42.0, 70.0, 98.8),
-  bg_sidebar       = hsl(38.0, 28.0, 94.2),
-  bg_statusline    = hsl(36.0, 28.0, 92.8),
-
+  bg               = hsl(40.0, 46.0, 95.8),
+  bg_dim           = hsl(38.0, 32.0, 92.4),
+  bg_dark          = hsl(36.0, 26.0, 88.8),
+  bg_light         = hsl(42.0, 60.0, 97.2),
+  bg_highlight     = hsl(36.0, 28.0, 91.0),
+  bg_popup         = hsl(40.0, 48.0, 96.2),
+  bg_sidebar       = hsl(38.0, 26.0, 92.8),
+  bg_statusline    = hsl(36.0, 24.0, 90.8),
   fg               = hsl(24.0, 24.0, 8.5),
   fg_bright        = hsl(22.0, 28.0, 4.5),
+  cursor           = hsl(24.0, 24.0, 8.5),
   fg_dark          = hsl(24.0, 18.0, 22.0),
-  fg_dim           = hsl(24.0, 14.0, 34.0),
+  fg_dim           = hsl(24.0, 14.0, 28.0),
 
   border           = hsl(32.0, 20.0, 72.0),
   border_highlight = hsl(31.0, 22.0, 48.0),

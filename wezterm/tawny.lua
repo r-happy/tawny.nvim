@@ -25,8 +25,8 @@ return {
       "#7fc7c8",
       "#fff0d2"
     },
-    cursor_bg = "#fff0d2",
-    cursor_border = "#fff0d2",
+    cursor_bg = "#f0ce9d",
+    cursor_border = "#f0ce9d",
     cursor_fg = "#110d0c",
     foreground = "#f1d8b8",
     selection_bg = "#3a3029",

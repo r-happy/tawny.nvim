@@ -9,7 +9,7 @@ function M.get(c, opts)
     NormalNC     = { fg = c.fg_dark, bg = opts.transparent and c.none or c.bg },
     EndOfBuffer  = { fg = opts.transparent and c.none or c.bg },
 
-    Cursor        = { fg = c.bg, bg = c.fg_bright },
+    Cursor        = { fg = c.bg, bg = c.cursor },
     lCursor       = { link = "Cursor" },
     CursorIM      = { link = "Cursor" },
     CursorLine    = { bg = c.bg_light },
