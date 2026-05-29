@@ -1,4 +1,5 @@
 # tawny dark color theme for Ghostty
+# generated from lua/tawny/palette.lua by scripts/generate_companion_themes.lua
 # import this file from ~/.config/ghostty/config:
 #   config-file = /path/to/tawny.nvim/ghostty/color.ghostty
 

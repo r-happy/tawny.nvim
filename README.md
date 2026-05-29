@@ -101,6 +101,12 @@ vim.cmd("colorscheme tawny-light")
 
 ## Companion Themes
 
+Regenerate companion theme files from [`lua/tawny/palette.lua`](./lua/tawny/palette.lua) with:
+
+```sh
+XDG_STATE_HOME=/tmp nvim --headless -u NORC -i NONE "+set rtp+=." "+luafile scripts/generate_companion_themes.lua" "+qa"
+```
+
 ### Zed
 
 [zed/tawny.json](./zed/tawny.json) contains both `Tawny` and `Tawny Light`.
