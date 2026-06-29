@@ -16,9 +16,13 @@ function M.get(c, opts)
     ----------------------------------------------------------------
     -- ベース実体
     ----------------------------------------------------------------
-    Comment        = vim.tbl_extend("force", { fg = c.fg_dim }, comment_style),
+    Comment        = vim.tbl_extend(
+      "force",
+      { fg = c.fg_dim },
+      comment_style
+    ),
 
-    Constant       = { fg = c.yellow },
+    Constant       = { fg = c.yellow_dim },
     String         = { fg = c.green },
     Number         = { fg = c.orange },
 
@@ -26,14 +30,19 @@ function M.get(c, opts)
     Function       = { fg = c.blue },
 
     Statement      = { fg = c.violet },
-    Keyword        = vim.tbl_extend("force", { fg = c.violet }, keyword_style),
+    Keyword        = vim.tbl_extend(
+      "force",
+      { fg = c.violet },
+      keyword_style
+    ),
+
     Exception      = { fg = c.red },
     Operator       = { fg = c.fg_dark },
 
-    PreProc        = { fg = c.teal },
+    PreProc        = { fg = c.teal_dim },
     Type           = { fg = c.teal },
 
-    Special        = { fg = c.yellow },
+    Special        = { fg = c.fg_dark },
     Tag            = { fg = c.blue },
     Delimiter      = { fg = c.fg_dim },
 
@@ -46,7 +55,7 @@ function M.get(c, opts)
     ----------------------------------------------------------------
     Character      = link("String"),
     Float          = link("Number"),
-    Boolean        = link("Number"),
+    Boolean        = link("Constant"),
 
     Variable       = link("Identifier"),
 
