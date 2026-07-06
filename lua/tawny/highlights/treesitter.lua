@@ -11,9 +11,9 @@ function M.get(c, opts)
     -- 変数
     ----------------------------------------------------------------
     ["@variable"]              = { link = "Variable" },
-    ["@variable.builtin"]      = { fg = c.orange_dim },
-    ["@variable.parameter"]    = { fg = c.fg_dark },
-    ["@variable.member"]       = { fg = c.fg_dark },
+    ["@variable.builtin"]      = { fg = c.orange },
+    ["@variable.parameter"]    = { fg = c.fg },
+    ["@variable.member"]       = { fg = c.fg },
 
     ----------------------------------------------------------------
     -- キーワード
@@ -36,7 +36,7 @@ function M.get(c, opts)
     -- 関数
     ----------------------------------------------------------------
     ["@function"]              = { link = "Function" },
-    ["@function.builtin"]      = { fg = c.blue_dim, italic = true },
+    ["@function.builtin"]      = { fg = c.blue, italic = true },
     ["@function.call"]         = { link = "Function" },
     ["@function.method"]       = { link = "Function" },
     ["@function.method.call"]  = { link = "Function" },
@@ -45,23 +45,23 @@ function M.get(c, opts)
     -- 型
     ----------------------------------------------------------------
     ["@type"]                  = { link = "Type" },
-    ["@type.builtin"]          = { fg = c.teal_dim, italic = true },
+    ["@type.builtin"]          = { fg = c.teal, italic = true },
     ["@type.definition"]       = { fg = c.teal },
 
     ----------------------------------------------------------------
     -- 定数
     ----------------------------------------------------------------
     ["@constant"]              = { link = "Constant" },
-    ["@constant.builtin"]      = { fg = c.yellow_dim, italic = true },
+    ["@constant.builtin"]      = { fg = c.yellow, italic = true },
     ["@constant.macro"]        = { link = "Macro" },
 
     ----------------------------------------------------------------
     -- 文字列
     ----------------------------------------------------------------
     ["@string"]                = { link = "String" },
-    ["@string.regexp"]         = { fg = c.teal_dim },
-    ["@string.escape"]         = { fg = c.orange_dim },
-    ["@string.special"]        = { fg = c.yellow_dim },
+    ["@string.regexp"]         = { fg = c.teal },
+    ["@string.escape"]         = { fg = c.orange },
+    ["@string.special"]        = { fg = c.yellow },
 
     ----------------------------------------------------------------
     -- 数値
@@ -77,35 +77,35 @@ function M.get(c, opts)
     ["@comment.todo"]          = { link = "Todo" },
     ["@comment.error"]         = { fg = c.red, italic = true },
     ["@comment.warning"]       = { fg = c.orange, italic = true },
-    ["@comment.note"]          = { fg = c.blue_dim, italic = true },
+    ["@comment.note"]          = { fg = c.blue, italic = true },
 
     ----------------------------------------------------------------
     -- 構造
     ----------------------------------------------------------------
     ["@constructor"]           = { link = "Function" },
-    ["@property"]              = { fg = c.yellow_dim },
-    ["@attribute"]             = { fg = c.teal_dim },
-    ["@operator"]              = { fg = c.fg_dim },
-    ["@label"]                 = { fg = c.violet_dim },
+    ["@property"]              = { fg = c.fg },
+    ["@attribute"]             = { fg = c.teal },
+    ["@operator"]              = { fg = c.fg },
+    ["@label"]                 = { fg = c.violet },
 
     ----------------------------------------------------------------
     -- 区切り
     ----------------------------------------------------------------
     ["@punctuation.bracket"]   = { fg = c.fg_dark },
-    ["@punctuation.delimiter"] = { fg = c.fg_dim },
+    ["@punctuation.delimiter"] = { fg = c.fg_dark },
     ["@punctuation.special"]   = { fg = c.fg_dark },
 
     ----------------------------------------------------------------
     -- モジュール
     ----------------------------------------------------------------
-    ["@module"]                = { fg = c.teal_dim, italic = true },
-    ["@namespace"]             = { fg = c.teal_dim, italic = true },
+    ["@module"]                = { fg = c.teal, italic = true },
+    ["@namespace"]             = { fg = c.teal, italic = true },
 
     ----------------------------------------------------------------
     -- HTML / JSX
     ----------------------------------------------------------------
     ["@tag"]                   = { fg = c.blue },
-    ["@tag.attribute"]         = { fg = c.teal_dim },
+    ["@tag.attribute"]         = { fg = c.teal },
     ["@tag.delimiter"]         = { fg = c.border },
   }
 end

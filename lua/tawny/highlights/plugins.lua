@@ -22,9 +22,9 @@ function M.get(c, _)
     TelescopeMatching        = { fg = c.yellow, bold = true },
 
     -- nvim-tree
-    NvimTreeNormal           = { fg = c.fg, bg = c.bg_dim },
-    NvimTreeNormalNC         = { fg = c.fg_dim, bg = c.bg_dim },
-    NvimTreeWinSeparator     = { fg = c.border, bg = c.bg_dim },
+    NvimTreeNormal           = { fg = c.fg, bg = c.bg_sidebar },
+    NvimTreeNormalNC         = { fg = c.fg_dim, bg = c.bg_sidebar },
+    NvimTreeWinSeparator     = { fg = c.border, bg = c.bg_sidebar },
     NvimTreeCursorLine       = { bg = c.selection },
     NvimTreeRootFolder       = { fg = c.orange, bold = true },
     NvimTreeFolderName       = { fg = c.blue },
@@ -41,8 +41,8 @@ function M.get(c, _)
     NvimTreeIndentMarker     = { fg = c.border },
 
     -- neo-tree
-    NeoTreeNormal            = { fg = c.fg, bg = c.bg_dim },
-    NeoTreeNormalNC          = { fg = c.fg_dim, bg = c.bg_dim },
+    NeoTreeNormal            = { fg = c.fg, bg = c.bg_sidebar },
+    NeoTreeNormalNC          = { fg = c.fg_dim, bg = c.bg_sidebar },
     NeoTreeCursorLine        = { bg = c.selection },
     NeoTreeRootName          = { fg = c.orange, bold = true },
     NeoTreeDirectoryName     = { fg = c.blue },

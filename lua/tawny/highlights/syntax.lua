@@ -22,7 +22,7 @@ function M.get(c, opts)
       comment_style
     ),
 
-    Constant       = { fg = c.yellow_dim },
+    Constant       = { fg = c.yellow },
     String         = { fg = c.green },
     Number         = { fg = c.orange },
 
@@ -37,14 +37,14 @@ function M.get(c, opts)
     ),
 
     Exception      = { fg = c.red },
-    Operator       = { fg = c.fg_dark },
+    Operator       = { fg = c.fg },
 
-    PreProc        = { fg = c.teal_dim },
+    PreProc        = { fg = c.teal },
     Type           = { fg = c.teal },
 
-    Special        = { fg = c.fg_dark },
+    Special        = { fg = c.fg },
     Tag            = { fg = c.blue },
-    Delimiter      = { fg = c.fg_dim },
+    Delimiter      = { fg = c.fg_dark },
 
     Error          = { fg = c.red, bold = true },
     Todo           = { fg = c.bg, bg = c.yellow, bold = bold_todo },

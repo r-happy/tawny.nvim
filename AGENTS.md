@@ -7,19 +7,19 @@
 There is no build step for this repository. Use Neovim directly for local verification:
 
 ```sh
-nvim --clean -u NORC "+set rtp+=." "+colorscheme tawny"
+nvim --clean -u NORC "+set rtp^=." "+colorscheme tawny"
 ```
 
 Use this variant to exercise setup code:
 
 ```sh
-nvim --clean -u NORC "+set rtp+=." "+lua require('tawny').setup({ variant = 'light' })" "+colorscheme tawny"
+nvim --clean -u NORC "+set rtp^=." "+lua require('tawny').setup({ variant = 'light' })" "+colorscheme tawny"
 ```
 
 If you edit `lua/tawny/palette.lua`, `scripts/generate_companion_themes.lua`, or any companion theme output, regenerate the synced theme files with:
 
 ```sh
-XDG_STATE_HOME=/tmp nvim --headless -u NORC -i NONE "+set rtp+=." "+luafile scripts/generate_companion_themes.lua" "+qa"
+XDG_STATE_HOME=/tmp nvim --headless -u NORC -i NONE "+set rtp^=." "+luafile scripts/generate_companion_themes.lua" "+qa"
 ```
 
 Before opening a PR, manually check dark/light mode, transparency, and any plugin highlight groups you changed.

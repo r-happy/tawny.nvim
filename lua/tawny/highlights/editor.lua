@@ -18,8 +18,8 @@ function M.get(c, opts)
     ColorColumn   = { bg = c.bg_light },
 
     LineNr       = { fg = c.fg_dim, bg = opts.transparent and c.none or c.bg },
-    SignColumn   = { bg = c.none },
-    FoldColumn   = { fg = c.fg_dim, bg = c.none },
+    SignColumn   = { bg = opts.transparent and c.none or c.bg },
+    FoldColumn   = { fg = c.fg_dim, bg = opts.transparent and c.none or c.bg },
     Folded       = { fg = c.fg_dim, bg = c.bg_highlight },
 
     Search       = { fg = c.bg, bg = c.yellow },
