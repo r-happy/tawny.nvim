@@ -2,50 +2,57 @@ local M = {}
 local hsl = require("tawny.util.color").hsl
 
 M.dark = {
-  bg               = hsl(25.0, 2.0, 8.0),
-  bg_dim           = hsl(25.0, 2.0, 7.0),
-  bg_dark          = hsl(25.0, 2.0, 5.4),
-  bg_light         = hsl(25.0, 3.0, 10.8),
-  bg_highlight     = hsl(25.0, 3.0, 13.8),
-  bg_popup         = hsl(25.0, 3.0, 9.6),
-  bg_sidebar       = hsl(25.0, 2.0, 7.4),
-  bg_statusline    = hsl(25.0, 3.0, 9.4),
+  -- Background
+  bg               = hsl(25.0, 8.0, 12.5), -- #221f1d
+  bg_dim           = hsl(25.0, 7.0, 10.5),
+  bg_dark          = hsl(25.0, 8.0, 8.5),
+  bg_light         = hsl(25.0, 9.0, 15.5),
+  bg_highlight     = hsl(25.0, 10.0, 18.5),
+  bg_popup         = hsl(25.0, 9.0, 14.0),
+  bg_sidebar       = hsl(25.0, 7.0, 10.8),
+  bg_statusline    = hsl(25.0, 9.0, 14.5),
 
-  fg               = hsl(33.7, 24.0, 72.0),
-  fg_bright        = hsl(40.0, 40.0, 88.0),
-  cursor           = hsl(35.0, 40.0, 75.0),
-  fg_dark          = hsl(29.5, 18.0, 58.0),
-  fg_dim           = hsl(28.1, 10.0, 46.0),
+  -- Foreground
+  fg               = hsl(31.8, 24.6, 72.9),
+  fg_bright        = hsl(35.6, 49.1, 89.2),
+  cursor           = hsl(34.4, 49.6, 75.9),
+  fg_dark          = hsl(29.1, 15.6, 58.6),
 
-  border           = hsl(22.9, 10.0, 21.0),
-  border_highlight = hsl(24.6, 13.0, 35.0),
+  -- UI用。コード本文には原則使用しない
+  fg_dim           = hsl(25.7, 8.2, 44.0),
 
-  yellow           = hsl(41.2, 50.0, 70.0),
-  yellow_dim       = hsl(36.8, 30.0, 47.0),
+  -- コメント専用
+  comment          = hsl(25.7, 8.2, 50.0),
 
-  red              = hsl(351.8, 52.0, 63.0),
-  red_dim          = hsl(352.9, 28.0, 46.0),
+  border           = hsl(24.0, 21.7, 22.5),
+  border_highlight = hsl(23.7, 19.4, 38.4),
 
-  orange           = hsl(28.1, 55.0, 69.0),
-  orange_dim       = hsl(24.7, 38.0, 45.0),
+  yellow           = hsl(40.9, 57.8, 63.7),
+  yellow_dim       = hsl(40.7, 25.5, 45.3),
 
-  green            = hsl(90.0, 28.0, 68.0),
-  green_dim        = hsl(91.0, 22.0, 42.0),
+  red              = hsl(354.2, 55.1, 63.3),
+  red_dim          = hsl(355.2, 28.0, 55.9),
 
-  teal             = hsl(160.5, 25.0, 68.0),
-  teal_dim         = hsl(161.9, 21.0, 41.0),
+  orange           = hsl(24.6, 61.9, 62.9),
+  orange_dim       = hsl(24.3, 29.8, 48.6),
 
-  blue             = hsl(208.0, 36.0, 70.0),
-  blue_dim         = hsl(209.1, 23.0, 48.0),
+  green            = hsl(82.1, 31.8, 58.0),
+  green_dim        = hsl(82.5, 17.4, 45.1),
 
-  violet           = hsl(300.0, 18.0, 70.0),
-  violet_dim       = hsl(298.2, 11.0, 48.0),
+  teal             = hsl(153.6, 30.8, 58.0),
+  teal_dim         = hsl(153.2, 16.0, 46.7),
 
-  magenta          = hsl(334.3, 28.0, 70.0),
-  cyan             = hsl(180.8, 28.0, 69.0),
+  blue             = hsl(207.4, 64.0, 65.1),
+  blue_dim         = hsl(208.1, 25.6, 51.0),
+
+  violet           = hsl(261.2, 45.5, 72.0),
+  violet_dim       = hsl(260.0, 15.5, 54.5),
+
+  magenta          = hsl(325.9, 42.5, 65.9),
+  cyan             = hsl(185.9, 39.8, 59.6),
 
   none             = "NONE",
-  selection        = hsl(24.7, 11.0, 18.0),
+  selection        = hsl(24.4, 27.3, 19.4),
 
   diff_add         = hsl(123.5, 15.0, 16.5),
   diff_change      = hsl(41.4, 23.0, 16.5),

@@ -18,9 +18,13 @@ function M.get(c, opts)
     ----------------------------------------------------------------
     Comment        = vim.tbl_extend(
       "force",
-      { fg = c.fg_dim },
+      { fg = c.comment },
       comment_style
     ),
+
+    Operator       = { fg = c.fg_dark },
+    Special        = { fg = c.orange_dim },
+    Delimiter      = { fg = c.fg_dark },
 
     Constant       = { fg = c.yellow },
     String         = { fg = c.green },
@@ -37,14 +41,11 @@ function M.get(c, opts)
     ),
 
     Exception      = { fg = c.red },
-    Operator       = { fg = c.fg },
 
     PreProc        = { fg = c.teal },
     Type           = { fg = c.teal },
 
-    Special        = { fg = c.fg },
     Tag            = { fg = c.blue },
-    Delimiter      = { fg = c.fg_dark },
 
     Error          = { fg = c.red, bold = true },
     Todo           = { fg = c.bg, bg = c.yellow, bold = bold_todo },

@@ -12,8 +12,15 @@ function M.get(c, opts)
     ----------------------------------------------------------------
     ["@variable"]              = { link = "Variable" },
     ["@variable.builtin"]      = { fg = c.orange },
-    ["@variable.parameter"]    = { fg = c.fg },
-    ["@variable.member"]       = { fg = c.fg },
+    ["@variable.parameter"]    = { fg = c.fg_dark },
+    ["@variable.member"]       = { fg = c.yellow_dim },
+
+    ["@property"]              = { fg = c.yellow_dim },
+    ["@attribute"]             = { fg = c.teal_dim },
+    ["@operator"]              = { fg = c.fg_dark },
+
+    ["@module"]                = { fg = c.teal_dim },
+    ["@namespace"]             = { fg = c.teal_dim },
 
     ----------------------------------------------------------------
     -- キーワード
@@ -83,9 +90,6 @@ function M.get(c, opts)
     -- 構造
     ----------------------------------------------------------------
     ["@constructor"]           = { link = "Function" },
-    ["@property"]              = { fg = c.fg },
-    ["@attribute"]             = { fg = c.teal },
-    ["@operator"]              = { fg = c.fg },
     ["@label"]                 = { fg = c.violet },
 
     ----------------------------------------------------------------
@@ -94,12 +98,6 @@ function M.get(c, opts)
     ["@punctuation.bracket"]   = { fg = c.fg_dark },
     ["@punctuation.delimiter"] = { fg = c.fg_dark },
     ["@punctuation.special"]   = { fg = c.fg_dark },
-
-    ----------------------------------------------------------------
-    -- モジュール
-    ----------------------------------------------------------------
-    ["@module"]                = { fg = c.teal, italic = true },
-    ["@namespace"]             = { fg = c.teal, italic = true },
 
     ----------------------------------------------------------------
     -- HTML / JSX
