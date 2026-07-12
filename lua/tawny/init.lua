@@ -1,5 +1,9 @@
 local M = {}
 
+function M.get_colors()
+  return M.colors
+end
+
 function M.setup(opts)
   require("tawny.config").setup(opts)
 end
@@ -48,6 +52,8 @@ function M.load(variant)
     vim.g.colors_name = "tawny"
     vim.o.background = "dark"
   end
+
+  M.colors = colors
 
   if config.options.terminal_colors ~= false then
     set_terminal_colors(colors)
