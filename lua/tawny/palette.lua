@@ -3,14 +3,14 @@ local hsl = require("tawny.util.color").hsl
 
 M.dark = {
   -- gray base
-  bg               = hsl(220.0, 13.0, 15.0),
-  bg_dim           = hsl(220.0, 14.0, 12.5),
-  bg_dark          = hsl(220.0, 15.0, 10.5),
-  bg_light         = hsl(220.0, 12.0, 18.5),
-  bg_highlight     = hsl(220.0, 12.0, 22.0),
-  bg_popup         = hsl(220.0, 13.0, 16.5),
-  bg_sidebar       = hsl(220.0, 14.0, 13.0),
-  bg_statusline    = hsl(220.0, 13.0, 14.5),
+  bg               = hsl(30.0, 4.0, 15.5),
+  bg_dim           = hsl(30.0, 4.0, 13.0),
+  bg_dark          = hsl(30.0, 5.0, 11.0),
+  bg_light         = hsl(30.0, 4.0, 18.5),
+  bg_highlight     = hsl(30.0, 5.0, 22.0),
+  bg_popup         = hsl(30.0, 4.0, 16.5),
+  bg_sidebar       = hsl(30.0, 4.0, 14.0),
+  bg_statusline    = hsl(30.0, 4.0, 13.5),
 
   -- readable foreground
   fg               = hsl(35.0, 18.0, 80.0),
@@ -20,8 +20,8 @@ M.dark = {
   fg_dim           = hsl(30.0, 9.0, 52.0),
   comment          = hsl(30.0, 8.0, 58.0),
 
-  border           = hsl(220.0, 10.0, 27.0),
-  border_highlight = hsl(220.0, 10.0, 38.0),
+  border           = hsl(30.0, 6.0, 27.0),
+  border_highlight = hsl(30.0, 7.0, 38.0),
 
   -- tawny accents
   yellow           = hsl(40.0, 58.0, 67.0),
@@ -49,7 +49,7 @@ M.dark = {
   cyan             = hsl(186.0, 28.0, 64.0),
 
   none             = "NONE",
-  selection        = hsl(220.0, 12.0, 24.0),
+  selection        = hsl(30.0, 5.0, 24.0),
 
   diff_add         = hsl(123.0, 18.0, 20.0),
   diff_change      = hsl(42.0, 24.0, 20.0),

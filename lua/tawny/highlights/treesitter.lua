@@ -5,14 +5,13 @@ function M.get(c, opts)
 
   local styles = opts.styles or {}
   local comment_style = styles.comments or {}
-  local keyword_style = styles.keywords or {}
 
   return {
     ----------------------------------------------------------------
     -- 変数
     ----------------------------------------------------------------
     ["@variable"]              = { link = "Variable" },
-    ["@variable.builtin"]      = { fg = c.orange },
+    ["@variable.builtin"]      = { fg = c.violet },
     ["@variable.parameter"]    = { fg = c.fg },
     ["@variable.member"]       = { fg = c.yellow_dim },
 
@@ -26,11 +25,8 @@ function M.get(c, opts)
     ----------------------------------------------------------------
     -- キーワード
     ----------------------------------------------------------------
-    ["@keyword"]               =
-        vim.tbl_extend("force", { fg = c.violet }, keyword_style),
-
-    ["@keyword.function"]      =
-        vim.tbl_extend("force", { fg = c.violet }, keyword_style),
+    ["@keyword"]               = { link = "Keyword" },
+    ["@keyword.function"]      = { link = "Keyword" },
 
     ["@keyword.operator"]      = { link = "Operator" },
     ["@keyword.import"]        = { link = "Include" },

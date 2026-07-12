@@ -34,10 +34,10 @@ function M.get(c, opts)
     Identifier     = { fg = c.fg },
     Function       = { fg = c.blue },
 
-    Statement      = { fg = c.violet },
+    Statement      = { fg = c.orange },
     Keyword        = vim.tbl_extend(
       "force",
-      { fg = c.violet },
+      { fg = c.orange },
       keyword_style
     ),
 

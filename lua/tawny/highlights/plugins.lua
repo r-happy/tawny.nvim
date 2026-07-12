@@ -5,17 +5,14 @@ function M.get(c, _)
 
   return {
     -- bufferline.nvim
-    BufferLineFill                   = { bg = c.bg_dim },
+    BufferLineFill                   = { bg = c.bg_statusline },
     BufferLineBackground             = { fg = c.fg_dim, bg = c.bg_statusline },
     BufferLineBufferVisible          = { fg = c.fg, bg = c.bg_statusline },
     BufferLineBufferSelected         = { fg = c.bg, bg = c.yellow_dim, bold = true },
-    BufferLineDevIconNix             = { fg = c.blue, bg = c.bg_statusline },
-    BufferLineDevIconNixVisible      = { fg = c.blue, bg = c.bg_statusline },
-    BufferLineDevIconNixSelected     = { fg = c.blue, bg = c.yellow_dim },
     BufferLineIndicatorSelected      = { fg = c.orange, bg = c.yellow_dim },
-    BufferLineSeparator              = { fg = c.bg_dim, bg = c.bg_statusline },
-    BufferLineSeparatorVisible       = { fg = c.bg_dim, bg = c.bg_statusline },
-    BufferLineSeparatorSelected      = { fg = c.bg_dim, bg = c.yellow_dim },
+    BufferLineSeparator              = { fg = c.bg_statusline, bg = c.bg_statusline },
+    BufferLineSeparatorVisible       = { fg = c.bg_statusline, bg = c.bg_statusline },
+    BufferLineSeparatorSelected      = { fg = c.bg_statusline, bg = c.yellow_dim },
     BufferLineCloseButton            = { fg = c.fg_dim, bg = c.bg_statusline },
     BufferLineCloseButtonVisible     = { fg = c.fg, bg = c.bg_statusline },
     BufferLineCloseButtonSelected    = { fg = c.red, bg = c.yellow_dim },
