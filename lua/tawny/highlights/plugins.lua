@@ -1,6 +1,8 @@
 local M = {}
 
 function M.get(c, _)
+  local comment = c.comment or c.fg_dim
+
   return {
     -- bufferline.nvim
     BufferLineFill                   = { bg = c.bg_dim },
@@ -152,7 +154,7 @@ function M.get(c, _)
     CmpItemKindClass         = { fg = c.teal },
     CmpItemKindInterface     = { fg = c.teal },
     CmpItemKindModule        = { fg = c.teal },
-    CmpItemKindProperty      = { fg = c.fg },
+    CmpItemKindProperty      = { fg = c.yellow_dim },
     CmpItemKindKeyword       = { fg = c.violet },
     CmpItemKindSnippet       = { fg = c.orange },
     CmpItemKindColor         = { fg = c.yellow },
@@ -216,7 +218,7 @@ function M.get(c, _)
     DropBarKindPackage         = { fg = c.orange },
     DropBarKindClass           = { fg = c.teal },
     DropBarKindMethod          = { fg = c.blue },
-    DropBarKindProperty        = { fg = c.fg },
+    DropBarKindProperty        = { fg = c.yellow_dim },
     DropBarKindField           = { fg = c.fg },
     DropBarKindConstructor     = { fg = c.blue },
     DropBarKindEnum            = { fg = c.yellow },
@@ -234,7 +236,7 @@ function M.get(c, _)
     DropBarKindEnumMember      = { fg = c.yellow },
     DropBarKindStruct          = { fg = c.teal },
     DropBarKindEvent           = { fg = c.orange },
-    DropBarKindOperator        = { fg = c.fg },
+    DropBarKindOperator        = { fg = c.fg_dark },
     DropBarKindTypeParameter   = { fg = c.teal },
 
     -- snacks.nvim
@@ -276,7 +278,7 @@ function M.get(c, _)
     BlinkCmpKindClass         = { fg = c.teal, bg = c.bg_popup },
     BlinkCmpKindInterface     = { fg = c.teal, bg = c.bg_popup },
     BlinkCmpKindModule        = { fg = c.teal, bg = c.bg_popup },
-    BlinkCmpKindProperty      = { fg = c.yellow, bg = c.bg_popup },
+    BlinkCmpKindProperty      = { fg = c.yellow_dim, bg = c.bg_popup },
     BlinkCmpKindKeyword       = { fg = c.violet, bg = c.bg_popup },
     BlinkCmpKindSnippet       = { fg = c.orange, bg = c.bg_popup },
     BlinkCmpKindColor         = { fg = c.yellow, bg = c.bg_popup },
@@ -284,10 +286,10 @@ function M.get(c, _)
     BlinkCmpKindFolder        = { fg = c.blue, bg = c.bg_popup },
     BlinkCmpKindEnumMember    = { fg = c.yellow, bg = c.bg_popup },
     BlinkCmpKindConstant      = { fg = c.yellow, bg = c.bg_popup },
-    BlinkCmpKindStruct        = { fg = c.fg, bg = c.bg_popup },
-    BlinkCmpKindTypeParameter = { fg = c.fg, bg = c.bg_popup },
+    BlinkCmpKindStruct        = { fg = c.teal, bg = c.bg_popup },
+    BlinkCmpKindTypeParameter = { fg = c.teal, bg = c.bg_popup },
     BlinkCmpKindEnum          = { fg = c.yellow, bg = c.bg_popup },
-    BlinkCmpKindOperator      = { fg = c.fg, bg = c.bg_popup },
+    BlinkCmpKindOperator      = { fg = c.fg_dark, bg = c.bg_popup },
     BlinkCmpKindReference     = { fg = c.fg, bg = c.bg_popup },
     BlinkCmpKindUnit          = { fg = c.orange, bg = c.bg_popup },
     BlinkCmpKindValue         = { fg = c.orange, bg = c.bg_popup },
@@ -330,7 +332,7 @@ function M.get(c, _)
     RenderMarkdownSign        = { fg = c.fg_dim, bg = c.none },
     RenderMarkdownMath        = { fg = c.teal },
     RenderMarkdownIndent      = { fg = c.border },
-    RenderMarkdownHtmlComment = { fg = c.fg_dim, italic = true },
+    RenderMarkdownHtmlComment = { fg = comment, italic = true },
     RenderMarkdownLink        = { fg = c.blue },
     RenderMarkdownLinkTitle   = { fg = c.teal, underline = true },
     RenderMarkdownWikiLink    = { fg = c.blue, underline = true },

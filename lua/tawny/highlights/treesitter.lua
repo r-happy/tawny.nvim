@@ -4,6 +4,7 @@ function M.get(c, opts)
   opts = opts or {}
 
   local styles = opts.styles or {}
+  local comment_style = styles.comments or {}
   local keyword_style = styles.keywords or {}
 
   return {
@@ -12,7 +13,7 @@ function M.get(c, opts)
     ----------------------------------------------------------------
     ["@variable"]              = { link = "Variable" },
     ["@variable.builtin"]      = { fg = c.orange },
-    ["@variable.parameter"]    = { fg = c.fg_dark },
+    ["@variable.parameter"]    = { fg = c.fg },
     ["@variable.member"]       = { fg = c.yellow_dim },
 
     ["@property"]              = { fg = c.yellow_dim },
@@ -82,9 +83,9 @@ function M.get(c, opts)
     ----------------------------------------------------------------
     ["@comment"]               = { link = "Comment" },
     ["@comment.todo"]          = { link = "Todo" },
-    ["@comment.error"]         = { fg = c.red, italic = true },
-    ["@comment.warning"]       = { fg = c.orange, italic = true },
-    ["@comment.note"]          = { fg = c.blue, italic = true },
+    ["@comment.error"]         = vim.tbl_extend("force", { fg = c.red }, comment_style),
+    ["@comment.warning"]       = vim.tbl_extend("force", { fg = c.orange }, comment_style),
+    ["@comment.note"]          = vim.tbl_extend("force", { fg = c.blue }, comment_style),
 
     ----------------------------------------------------------------
     -- 構造
@@ -104,7 +105,7 @@ function M.get(c, opts)
     ----------------------------------------------------------------
     ["@tag"]                   = { fg = c.blue },
     ["@tag.attribute"]         = { fg = c.teal },
-    ["@tag.delimiter"]         = { fg = c.border },
+    ["@tag.delimiter"]         = { fg = c.fg_dark },
   }
 end
 

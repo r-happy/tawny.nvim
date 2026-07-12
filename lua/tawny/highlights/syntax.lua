@@ -11,6 +11,7 @@ function M.get(c, opts)
   local comment_style = styles.comments or {}
   local keyword_style = styles.keywords or {}
   local bold_todo = opts.bold_todo ~= false
+  local comment = c.comment or c.fg_dim
 
   return {
     ----------------------------------------------------------------
@@ -18,7 +19,7 @@ function M.get(c, opts)
     ----------------------------------------------------------------
     Comment        = vim.tbl_extend(
       "force",
-      { fg = c.comment },
+      { fg = comment },
       comment_style
     ),
 
