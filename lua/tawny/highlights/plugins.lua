@@ -4,6 +4,12 @@ function M.get(c, _)
   local comment = c.comment or c.fg_dim
 
   return {
+    -- bufferline.nvim
+    BufferLineBufferSelected      = { fg = c.yellow, bg = c.bg, bold = true, italic = false },
+    BufferLineIndicatorSelected   = { fg = c.orange, bg = c.bg },
+    BufferLineCloseButtonSelected = { fg = c.red, bg = c.bg },
+    BufferLineModifiedSelected    = { fg = c.orange, bg = c.bg },
+
     -- lualine.nvim
     LualineNormal                    = { fg = c.fg, bg = c.bg_statusline },
     LualineInactive                  = { fg = c.fg_dim, bg = c.bg_dim },
