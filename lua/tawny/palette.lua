@@ -2,14 +2,20 @@ local M = {}
 local hsl = require("tawny.util.color").hsl
 
 M.dark = {
-  bg               = hsl(38.0, 3.0, 13.8),
-  bg_dim           = hsl(38.0, 3.0, 12.0),
-  bg_dark          = hsl(38.0, 3.0, 9.8),
-  bg_light         = hsl(38.0, 3.0, 16.5),
-  bg_highlight     = hsl(38.0, 4.0, 20.5),
-  bg_popup         = hsl(38.0, 3.0, 14.5),
-  bg_sidebar       = hsl(38.0, 3.0, 12.8),
-  bg_statusline    = hsl(38.0, 3.0, 11.8),
+  -- achromatic near-black base
+  bg               = hsl(0.0, 0.0, 14.0),
+  bg_dim           = hsl(0.0, 0.0, 12.0),
+  bg_dark          = hsl(0.0, 0.0, 10.0),
+  bg_light         = hsl(0.0, 0.0, 17.0),
+  bg_highlight     = hsl(0.0, 0.0, 20.5),
+  bg_popup         = hsl(0.0, 0.0, 15.0),
+  bg_sidebar       = hsl(0.0, 0.0, 13.0),
+  bg_statusline    = hsl(0.0, 0.0, 12.0),
+
+  border           = hsl(0.0, 0.0, 25.0),
+  border_highlight = hsl(0.0, 0.0, 36.0),
+
+  selection        = hsl(0.0, 0.0, 22.0),
 
   -- warm readable foreground
   fg               = hsl(40.0, 18.0, 80.0),
@@ -18,11 +24,6 @@ M.dark = {
   fg_bright        = hsl(40.0, 24.0, 88.0),
   cursor           = hsl(40.0, 38.0, 76.0),
   fg_dark          = hsl(38.0, 12.0, 66.0),
-
-  border           = hsl(38.0, 4.0, 24.5),
-  border_highlight = hsl(38.0, 6.0, 35.0),
-
-  selection        = hsl(38.0, 4.0, 21.5),
 
   -- tawny accents with restrained Monokai influence
   yellow           = hsl(47.0, 62.0, 68.0),
