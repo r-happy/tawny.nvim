@@ -2,54 +2,56 @@ local M = {}
 local hsl = require("tawny.util.color").hsl
 
 M.dark = {
-  -- gray base
-  bg               = hsl(30.0, 4.0, 15.5),
-  bg_dim           = hsl(30.0, 4.0, 13.0),
-  bg_dark          = hsl(30.0, 5.0, 11.0),
-  bg_light         = hsl(30.0, 4.0, 18.5),
-  bg_highlight     = hsl(30.0, 5.0, 22.0),
-  bg_popup         = hsl(30.0, 4.0, 16.5),
-  bg_sidebar       = hsl(30.0, 4.0, 14.0),
-  bg_statusline    = hsl(30.0, 4.0, 13.5),
+  -- olive-gray base
+  bg               = hsl(72.0, 6.0, 15.5),
+  bg_dim           = hsl(72.0, 6.0, 13.0),
+  bg_dark          = hsl(72.0, 7.0, 11.0),
+  bg_light         = hsl(72.0, 6.0, 18.5),
+  bg_highlight     = hsl(72.0, 7.0, 22.0),
+  bg_popup         = hsl(72.0, 6.0, 16.5),
+  bg_sidebar       = hsl(72.0, 6.0, 14.0),
+  bg_statusline    = hsl(72.0, 6.0, 13.5),
 
-  -- readable foreground
-  fg               = hsl(35.0, 18.0, 80.0),
-  fg_bright        = hsl(35.0, 24.0, 88.0),
-  cursor           = hsl(35.0, 38.0, 76.0),
-  fg_dark          = hsl(32.0, 12.0, 66.0),
-  fg_dim           = hsl(30.0, 9.0, 52.0),
-  comment          = hsl(30.0, 8.0, 58.0),
+  -- warm readable foreground
+  fg               = hsl(40.0, 18.0, 80.0),
+  fg_bright        = hsl(40.0, 24.0, 88.0),
+  cursor           = hsl(40.0, 38.0, 76.0),
+  fg_dark          = hsl(38.0, 12.0, 66.0),
+  fg_dim           = hsl(55.0, 7.0, 52.0),
+  comment          = hsl(60.0, 8.0, 58.0),
 
-  border           = hsl(30.0, 6.0, 27.0),
-  border_highlight = hsl(30.0, 7.0, 38.0),
+  border           = hsl(72.0, 7.0, 27.0),
+  border_highlight = hsl(68.0, 8.0, 38.0),
 
-  -- tawny accents
-  yellow           = hsl(40.0, 58.0, 67.0),
-  yellow_dim       = hsl(39.0, 28.0, 49.0),
+  -- tawny accents with restrained Monokai influence
+  yellow           = hsl(47.0, 62.0, 68.0),
+  yellow_dim       = hsl(47.0, 30.0, 49.0),
 
   orange           = hsl(28.0, 55.0, 62.0),
   orange_dim       = hsl(27.0, 30.0, 47.0),
 
-  red              = hsl(353.0, 50.0, 66.0),
-  red_dim          = hsl(353.0, 26.0, 50.0),
+  -- slightly pinker than the original red
+  red              = hsl(347.0, 54.0, 67.0),
+  red_dim          = hsl(347.0, 28.0, 50.0),
 
-  green            = hsl(92.0, 28.0, 63.0),
-  green_dim        = hsl(92.0, 18.0, 45.0),
+  -- muted yellow-green rather than vivid Monokai green
+  green            = hsl(84.0, 38.0, 64.0),
+  green_dim        = hsl(84.0, 22.0, 45.0),
 
-  teal             = hsl(165.0, 24.0, 62.0),
+  teal             = hsl(165.0, 25.0, 62.0),
   teal_dim         = hsl(165.0, 16.0, 44.0),
 
   blue             = hsl(212.0, 42.0, 68.0),
   blue_dim         = hsl(212.0, 24.0, 50.0),
 
-  violet           = hsl(285.0, 24.0, 70.0),
-  violet_dim       = hsl(285.0, 15.0, 52.0),
+  violet           = hsl(290.0, 27.0, 70.0),
+  violet_dim       = hsl(290.0, 16.0, 52.0),
 
-  magenta          = hsl(334.0, 30.0, 68.0),
+  magenta          = hsl(331.0, 38.0, 69.0),
   cyan             = hsl(186.0, 28.0, 64.0),
 
   none             = "NONE",
-  selection        = hsl(30.0, 5.0, 24.0),
+  selection        = hsl(72.0, 8.0, 24.0),
 
   diff_add         = hsl(123.0, 18.0, 20.0),
   diff_change      = hsl(42.0, 24.0, 20.0),
