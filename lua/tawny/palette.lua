@@ -2,26 +2,27 @@ local M = {}
 local hsl = require("tawny.util.color").hsl
 
 M.dark = {
-  -- olive-gray base
-  bg               = hsl(72.0, 6.0, 15.5),
-  bg_dim           = hsl(72.0, 6.0, 13.0),
-  bg_dark          = hsl(72.0, 7.0, 11.0),
-  bg_light         = hsl(72.0, 6.0, 18.5),
-  bg_highlight     = hsl(72.0, 7.0, 22.0),
-  bg_popup         = hsl(72.0, 6.0, 16.5),
-  bg_sidebar       = hsl(72.0, 6.0, 14.0),
-  bg_statusline    = hsl(72.0, 6.0, 13.5),
+  bg               = hsl(48.0, 4.0, 15.5),
+  bg_dim           = hsl(48.0, 4.0, 13.0),
+  bg_dark          = hsl(48.0, 4.5, 11.0),
+  bg_light         = hsl(48.0, 4.0, 18.5),
+  bg_highlight     = hsl(48.0, 5.0, 22.0),
+  bg_popup         = hsl(48.0, 4.0, 16.5),
+  bg_sidebar       = hsl(48.0, 4.0, 14.0),
+  bg_statusline    = hsl(48.0, 4.0, 13.5),
 
   -- warm readable foreground
   fg               = hsl(40.0, 18.0, 80.0),
+  fg_dim           = hsl(35.0, 9.0, 52.0),
+  comment          = hsl(38.0, 8.0, 58.0),
   fg_bright        = hsl(40.0, 24.0, 88.0),
   cursor           = hsl(40.0, 38.0, 76.0),
   fg_dark          = hsl(38.0, 12.0, 66.0),
-  fg_dim           = hsl(55.0, 7.0, 52.0),
-  comment          = hsl(60.0, 8.0, 58.0),
 
-  border           = hsl(72.0, 7.0, 27.0),
-  border_highlight = hsl(68.0, 8.0, 38.0),
+  border           = hsl(48.0, 5.0, 27.0),
+  border_highlight = hsl(45.0, 7.0, 38.0),
+
+  selection        = hsl(48.0, 5.0, 24.0),
 
   -- tawny accents with restrained Monokai influence
   yellow           = hsl(47.0, 62.0, 68.0),
@@ -51,7 +52,6 @@ M.dark = {
   cyan             = hsl(186.0, 28.0, 64.0),
 
   none             = "NONE",
-  selection        = hsl(72.0, 8.0, 24.0),
 
   diff_add         = hsl(123.0, 18.0, 20.0),
   diff_change      = hsl(42.0, 24.0, 20.0),
