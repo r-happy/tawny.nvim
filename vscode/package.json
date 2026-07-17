@@ -1,0 +1,43 @@
+{
+  "name": "tawny",
+  "displayName": "Tawny",
+  "description": "A warm, earthy color theme for Visual Studio Code.",
+  "version": "0.1.0",
+  "publisher": "r-happy",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/r-happy/tawny.nvim.git"
+  },
+  "bugs": {
+    "url": "https://github.com/r-happy/tawny.nvim/issues"
+  },
+  "homepage": "https://github.com/r-happy/tawny.nvim#readme",
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "color theme",
+    "dark theme",
+    "light theme",
+    "tawny"
+  ],
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Tawny",
+        "uiTheme": "vs-dark",
+        "path": "./themes/tawny-dark-color-theme.json"
+      },
+      {
+        "label": "Tawny Light",
+        "uiTheme": "vs",
+        "path": "./themes/tawny-light-color-theme.json"
+      }
+    ]
+  }
+}

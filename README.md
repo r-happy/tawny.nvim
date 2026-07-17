@@ -122,12 +122,22 @@ Then select `Tawny` or `Tawny Light` from the theme picker.
 
 ### VS Code
 
-Theme definition files live in [vscode/themes](./vscode/themes):
+Tawny is a standalone VS Code theme extension in [vscode](./vscode). It includes:
 
-- `tawny-dark-color-theme.json`
-- `tawny-light-color-theme.json`
+- `Tawny` (dark)
+- `Tawny Light`
 
-These are ready to drop into a VS Code theme extension scaffold created with `yo code`, or to reuse as the source theme JSON inside an existing extension.
+For local development, open `vscode/` in VS Code and press `F5`; then select a
+theme with **Preferences: Color Theme** in the Extension Development Host. To
+create an installable `.vsix` package, run:
+
+```sh
+cd vscode
+npx @vscode/vsce package
+```
+
+The extension is ready for VS Code Marketplace publication once the `r-happy`
+publisher is created or verified there.
 
 ## License
 

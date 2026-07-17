@@ -5,7 +5,7 @@
 return {
   colors = {
     ansi = {
-      "#171717",
+      "#131313",
       "#d87d91",
       "#aac680",
       "#e0ca7b",
@@ -14,7 +14,7 @@ return {
       "#86b6aa",
       "#b3ab9e"
     },
-    background = "#212121",
+    background = "#1c1c1c",
     brights = {
       "#90867a",
       "#d87d91",
@@ -27,30 +27,30 @@ return {
     },
     cursor_bg = "#d9caab",
     cursor_border = "#d9caab",
-    cursor_fg = "#212121",
+    cursor_fg = "#1c1c1c",
     foreground = "#d5cfc3",
-    selection_bg = "#323232",
+    selection_bg = "#2e2e2e",
     selection_fg = "#d5cfc3",
     tab_bar = {
       active_tab = {
-        bg_color = "#212121",
+        bg_color = "#1c1c1c",
         fg_color = "#d5cfc3"
       },
-      background = "#1c1c1c",
+      background = "#181818",
       inactive_tab = {
-        bg_color = "#1c1c1c",
+        bg_color = "#181818",
         fg_color = "#90867a"
       },
       inactive_tab_hover = {
-        bg_color = "#2f2f2f",
+        bg_color = "#2b2b2b",
         fg_color = "#d5cfc3"
       },
       new_tab = {
-        bg_color = "#1c1c1c",
+        bg_color = "#181818",
         fg_color = "#90867a"
       },
       new_tab_hover = {
-        bg_color = "#2f2f2f",
+        bg_color = "#2b2b2b",
         fg_color = "#d5cfc3"
       }
     }
