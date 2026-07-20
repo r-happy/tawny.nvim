@@ -2,19 +2,20 @@ local M = {}
 local hsl = require("tawny.util.color").hsl
 
 M.dark = {
-  bg               = hsl(0.0, 0.0, 10.8),
-  bg_dim           = hsl(0.0, 0.0, 9.3),
-  bg_dark          = hsl(0.0, 0.0, 7.5),
-  bg_light         = hsl(0.0, 0.0, 13.8),
-  bg_highlight     = hsl(0.0, 0.0, 17.0),
-  bg_popup         = hsl(0.0, 0.0, 12.0),
-  bg_sidebar       = hsl(0.0, 0.0, 10.0),
-  bg_statusline    = hsl(0.0, 0.0, 8.8),
+  bg               = hsl(0.0, 0.0, 9.4),
+  bg_dim           = hsl(0.0, 0.0, 8.0),
+  bg_dark          = hsl(0.0, 0.0, 6.5),
+  bg_light         = hsl(0.0, 0.0, 12.2),
+  bg_highlight     = hsl(0.0, 0.0, 15.5),
+  bg_popup         = hsl(0.0, 0.0, 10.7),
+  bg_sidebar       = hsl(0.0, 0.0, 8.7),
+  bg_statusline    = hsl(0.0, 0.0, 7.3),
 
-  border           = hsl(0.0, 0.0, 20.0),
-  border_highlight = hsl(0.0, 0.0, 30.0),
+  border           = hsl(0.0, 0.0, 18.0),
+  border_highlight = hsl(0.0, 0.0, 28.0),
 
-  selection        = hsl(0.0, 0.0, 18.0),
+  selection        = hsl(0.0, 0.0, 16.5),
+
   -- warm readable foreground
   fg               = hsl(40.0, 18.0, 80.0),
   fg_dim           = hsl(35.0, 9.0, 52.0),
