@@ -5,6 +5,11 @@ function M.get(c, _)
 
   return {
     -- bufferline.nvim
+    -- Slanted separators need explicit colors when Normal has a transparent background.
+    BufferLineFill                = { bg = c.bg_dim },
+    BufferLineSeparator           = { fg = c.bg_dim, bg = c.bg_statusline },
+    BufferLineSeparatorVisible    = { fg = c.bg_dim, bg = c.bg_statusline },
+    BufferLineSeparatorSelected   = { fg = c.bg_dim, bg = c.bg },
     BufferLineBufferSelected      = { fg = c.yellow, bg = c.bg, bold = true, italic = false },
     BufferLineIndicatorSelected   = { fg = c.orange, bg = c.bg },
     BufferLineCloseButtonSelected = { fg = c.red, bg = c.bg },
