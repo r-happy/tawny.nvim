@@ -5,7 +5,7 @@ M.dark = {
   bg               = hsl(0.0, 0.0, 9.4),
   bg_dim           = hsl(0.0, 0.0, 8.0),
   bg_dark          = hsl(0.0, 0.0, 6.5),
-  bg_light         = hsl(0.0, 0.0, 12.2),
+  bg_light         = hsl(0.0, 0.0, 15.0),
   bg_highlight     = hsl(0.0, 0.0, 15.5),
   bg_popup         = hsl(0.0, 0.0, 10.7),
   bg_sidebar       = hsl(0.0, 0.0, 8.7),
@@ -14,7 +14,7 @@ M.dark = {
   border           = hsl(0.0, 0.0, 18.0),
   border_highlight = hsl(0.0, 0.0, 28.0),
 
-  selection        = hsl(0.0, 0.0, 16.5),
+  selection        = hsl(0.0, 0.0, 23.0),
 
   -- warm readable foreground
   fg               = hsl(40.0, 18.0, 80.0),
@@ -29,7 +29,7 @@ M.dark = {
   yellow_dim       = hsl(47.0, 30.0, 49.0),
 
   orange           = hsl(28.0, 55.0, 62.0),
-  orange_dim       = hsl(27.0, 30.0, 47.0),
+  orange_dim       = hsl(27.0, 30.0, 57.0),
 
   -- slightly pinker than the original red
   red              = hsl(347.0, 54.0, 67.0),
@@ -40,7 +40,7 @@ M.dark = {
   green_dim        = hsl(84.0, 22.0, 45.0),
 
   teal             = hsl(165.0, 25.0, 62.0),
-  teal_dim         = hsl(165.0, 16.0, 44.0),
+  teal_dim         = hsl(165.0, 16.0, 55.0),
 
   blue             = hsl(212.0, 42.0, 68.0),
   blue_dim         = hsl(212.0, 24.0, 50.0),
@@ -68,7 +68,7 @@ M.light = {
   bg               = hsl(40.0, 16.0, 97.0),
   bg_dim           = hsl(38.0, 12.0, 94.0),
   bg_dark          = hsl(36.0, 10.0, 90.0),
-  bg_light         = hsl(42.0, 18.0, 98.4),
+  bg_light         = hsl(40.0, 16.0, 92.0),
   bg_highlight     = hsl(36.0, 12.0, 92.5),
   bg_popup         = hsl(40.0, 14.0, 97.4),
   bg_sidebar       = hsl(38.0, 10.0, 94.0),
@@ -100,7 +100,7 @@ M.light = {
   magenta          = hsl(335.0, 42.0, 36.0),
   cyan             = hsl(186.0, 48.0, 29.0),
 
-  selection        = hsl(36.0, 38.0, 86.0),
+  selection        = hsl(36.0, 28.0, 80.0),
   none             = "NONE",
 
   diff_add         = hsl(95.0, 36.0, 88.0),

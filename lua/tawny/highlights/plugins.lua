@@ -3,18 +3,7 @@ local M = {}
 function M.get(c, _)
   local comment = c.comment or c.fg_dim
 
-  return {
-    -- bufferline.nvim
-    -- Slanted separators need explicit colors when Normal has a transparent background.
-    BufferLineFill                = { bg = c.bg_dim },
-    BufferLineSeparator           = { fg = c.bg_dim, bg = c.bg_statusline },
-    BufferLineSeparatorVisible    = { fg = c.bg_dim, bg = c.bg_statusline },
-    BufferLineSeparatorSelected   = { fg = c.bg_dim, bg = c.bg },
-    BufferLineBufferSelected      = { fg = c.yellow, bg = c.bg, bold = true, italic = false },
-    BufferLineIndicatorSelected   = { fg = c.orange, bg = c.bg },
-    BufferLineCloseButtonSelected = { fg = c.red, bg = c.bg },
-    BufferLineModifiedSelected    = { fg = c.orange, bg = c.bg },
-
+  local groups = {
     -- lualine.nvim
     LualineNormal                    = { fg = c.fg, bg = c.bg_statusline },
     LualineInactive                  = { fg = c.fg_dim, bg = c.bg_dim },
@@ -318,6 +307,40 @@ function M.get(c, _)
     RenderMarkdownWarn        = { fg = c.orange },
     RenderMarkdownError       = { fg = c.red },
   }
+
+  -- Keep every part of a buffer on the same surface, including diagnostics and
+  -- duplicate prefixes. Explicit colors also support transparent Normal and slants.
+  groups.BufferLineFill = { bg = c.bg_dim }
+  groups.BufferLineBackground = { fg = c.fg_dim, bg = c.bg_statusline }
+  for _, state in ipairs({
+    { suffix = "", bg = c.bg_statusline, fg = c.fg_dim },
+    { suffix = "Visible", bg = c.bg, fg = c.fg },
+    { suffix = "Selected", bg = c.bg_light, fg = c.yellow },
+  }) do
+    local selected = state.suffix == "Selected"
+    local colors = {
+      Buffer = state.fg, Numbers = state.fg, Diagnostic = state.fg,
+      CloseButton = selected and c.red or c.fg_dim,
+      Modified = c.orange, Duplicate = c.fg_dim,
+      Indicator = selected and c.orange or state.bg,
+      Separator = c.bg_dim, TabSeparator = c.bg_dim,
+      Error = c.red, ErrorDiagnostic = c.red,
+      Warning = c.orange, WarningDiagnostic = c.orange,
+      Info = c.blue, InfoDiagnostic = c.blue,
+      Hint = c.teal, HintDiagnostic = c.teal,
+      Pick = c.red, Tab = state.fg,
+    }
+    for name, fg in pairs(colors) do
+      groups["BufferLine" .. name .. state.suffix] = {
+        fg = fg, bg = state.bg,
+        bold = selected and (name == "Buffer" or name == "Numbers" or name == "Tab"),
+        italic = false,
+      }
+    end
+  end
+  groups.BufferLineTabClose = { fg = c.red, bg = c.bg_statusline }
+
+  return groups
 end
 
 return M

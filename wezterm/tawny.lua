@@ -29,7 +29,7 @@ return {
     cursor_border = "#d9caab",
     cursor_fg = "#181818",
     foreground = "#d5cfc3",
-    selection_bg = "#2a2a2a",
+    selection_bg = "#3b3b3b",
     selection_fg = "#d5cfc3",
     tab_bar = {
       active_tab = {

@@ -1,8 +1,10 @@
 # tawny.nvim
 
-A warm, earthy Neovim colorscheme with muted tones inspired by tawny browns and natural hues.
+A Neovim colorscheme with warm text, muted accents, and neutral dark or paper-like light backgrounds.
 
-<!-- ![tawny.nvim screenshot](./assets/screenshot.png) -->
+![Tawny dark and light highlight previews](./assets/preview.svg)
+
+Generated highlight preview showing syntax, the active buffer, cursor line, selection, and diagnostics. Actual rendering depends on your font and terminal.
 
 ## Features
 
@@ -23,17 +25,20 @@ A warm, earthy Neovim colorscheme with muted tones inspired by tawny browns and 
 
 ## Color Palette
 
-| Name       | Hex       |
-| ---------- | --------- |
-| Background | `#16110e` |
-| Foreground | `#f1d8b8` |
-| Red        | `#e26d7d` |
-| Orange     | `#ee9b52` |
-| Yellow     | `#f4c96b` |
-| Green      | `#96bd6f` |
-| Teal       | `#6fb9a1` |
-| Blue       | `#7eadd6` |
-| Violet     | `#c09ac0` |
+| Name       | Dark      | Light     |
+| ---------- | --------- | --------- |
+| Background | `#181818` | `#f9f8f6` |
+| Foreground | `#d5cfc3` | `#1b1510` |
+| Red        | `#d87d91` | `#992e29` |
+| Orange     | `#d39b69` | `#9a5213` |
+| Yellow     | `#e0ca7b` | `#7b5a0f` |
+| Green      | `#aac680` | `#3a6222` |
+| Teal       | `#86b6aa` | `#235c4b` |
+| Blue       | `#8babd0` | `#265887` |
+| Violet     | `#c09ec7` | `#6f3e6f` |
+
+Transparency clears the main editing background and gutter. Selection, cursor line,
+popups, and buffer tabs retain their palette backgrounds so their states remain visible.
 
 ## Installation
 
@@ -106,6 +111,8 @@ Regenerate companion theme files from [`lua/tawny/palette.lua`](./lua/tawny/pale
 ```sh
 make generate-companion-themes
 ```
+
+Regenerate the README highlight preview with `make generate-preview`.
 
 ### Zed
 
