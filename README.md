@@ -1,6 +1,7 @@
 # tawny.nvim
 
-A Neovim colorscheme with warm text, muted accents, and neutral dark or paper-like light backgrounds.
+A Neovim colorscheme with readable neutral text, blue and green syntax accents,
+and neutral dark or paper-like light backgrounds.
 
 ![Tawny dark and light highlight previews](./assets/preview.svg)
 
@@ -84,8 +85,8 @@ require("tawny").setup({
 
   -- Customize highlight styles
   styles = {
-    comments = { italic = true },
-    keywords = { bold = false, italic = true },
+    comments = { italic = false },
+    keywords = { bold = false, italic = false },
   },
 
   -- Override specific highlight groups
@@ -120,8 +121,10 @@ palette consistency, and the tmux colors-only contract. Run generation before
 the check when changing the source. No third-party test packages are required.
 
 VS Code and Zed derive their shared syntax roles from the Neovim highlight
-definitions: orange keywords, blue functions, teal types, muted yellow properties,
-and readable comments. Token classification still depends on each editor's language
+definitions: neutral identifiers, properties, types, numbers and punctuation;
+blue keywords and functions; green strings; and readable gray comments.
+Syntax uses upright text by default. Diagnostic and Git status colors remain distinct.
+Token classification still depends on each editor's language
 grammar and language server.
 
 ### Ghostty

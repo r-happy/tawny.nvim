@@ -13,38 +13,38 @@
 <text x="25" y="151" fill="#90867a" font-size="15">1</text>
 <text x="54" y="151" fill="#9c968b" font-size="16">-- Warm colors, readable structure</text>
 <text x="25" y="178" fill="#90867a" font-size="15">2</text>
-<text x="54" y="178" fill="#d39b69" font-size="16">local </text>
-<text x="114" y="178" fill="#7a9f95" font-size="16">catalog</text>
-<text x="184" y="178" fill="#b3ab9e" font-size="16"> = </text>
+<text x="54" y="178" fill="#8babd0" font-size="16">local </text>
+<text x="114" y="178" fill="#d5cfc3" font-size="16">catalog</text>
+<text x="184" y="178" fill="#d5cfc3" font-size="16"> = </text>
 <text x="214" y="178" fill="#8babd0" font-size="16">require</text>
-<text x="284" y="178" fill="#b3ab9e" font-size="16">(</text>
+<text x="284" y="178" fill="#d5cfc3" font-size="16">(</text>
 <text x="294" y="178" fill="#aac680" font-size="16">"catalog"</text>
-<text x="384" y="178" fill="#b3ab9e" font-size="16">)</text>
+<text x="384" y="178" fill="#d5cfc3" font-size="16">)</text>
 <text x="25" y="205" fill="#90867a" font-size="15">3</text>
 <text x="25" y="232" fill="#90867a" font-size="15">4</text>
-<text x="54" y="232" fill="#d39b69" font-size="16">local function </text>
+<text x="54" y="232" fill="#8babd0" font-size="16">local function </text>
 <text x="204" y="232" fill="#8babd0" font-size="16">greet</text>
-<text x="254" y="232" fill="#b3ab9e" font-size="16">(</text>
+<text x="254" y="232" fill="#d5cfc3" font-size="16">(</text>
 <text x="264" y="232" fill="#d5cfc3" font-size="16">name</text>
-<text x="304" y="232" fill="#b3ab9e" font-size="16">)</text>
+<text x="304" y="232" fill="#d5cfc3" font-size="16">)</text>
 <text x="25" y="259" fill="#e0ca7b" font-size="15">5</text>
-<text x="54" y="259" fill="#d39b69" font-size="16">  local </text>
+<text x="54" y="259" fill="#8babd0" font-size="16">  local </text>
 <text x="134" y="259" fill="#d5cfc3" font-size="16">message</text>
-<text x="204" y="259" fill="#b3ab9e" font-size="16"> = </text>
+<text x="204" y="259" fill="#d5cfc3" font-size="16"> = </text>
 <text x="234" y="259" fill="#aac680" font-size="16">"Hello, "</text>
-<text x="324" y="259" fill="#b3ab9e" font-size="16"> .. </text>
+<text x="324" y="259" fill="#d5cfc3" font-size="16"> .. </text>
 <text x="364" y="259" fill="#d5cfc3" font-size="16">name</text>
 <text x="25" y="286" fill="#90867a" font-size="15">6</text>
-<text x="54" y="286" fill="#d39b69" font-size="16">  return </text>
+<text x="54" y="286" fill="#8babd0" font-size="16">  return </text>
 <text x="144" y="286" fill="#d5cfc3" font-size="16">message</text>
 <text x="25" y="313" fill="#90867a" font-size="15">7</text>
-<text x="54" y="313" fill="#d39b69" font-size="16">end</text>
+<text x="54" y="313" fill="#8babd0" font-size="16">end</text>
 <text x="25" y="340" fill="#90867a" font-size="15">8</text>
 <text x="25" y="367" fill="#90867a" font-size="15">9</text>
 <text x="54" y="367" fill="#8babd0" font-size="16">greet</text>
-<text x="104" y="367" fill="#b3ab9e" font-size="16">(</text>
+<text x="104" y="367" fill="#d5cfc3" font-size="16">(</text>
 <text x="114" y="367" fill="#aac680" font-size="16">"Tawny"</text>
-<text x="184" y="367" fill="#b3ab9e" font-size="16">)</text>
+<text x="184" y="367" fill="#d5cfc3" font-size="16">)</text>
 <text x="24" y="423" fill="#d87d91" font-size="14">● error</text>
 <text x="144" y="423" fill="#d39b69" font-size="14">● warning</text>
 <text x="284" y="423" fill="#8babd0" font-size="14">● info</text>
@@ -63,38 +63,38 @@
 <text x="585" y="151" fill="#51453d" font-size="15">1</text>
 <text x="614" y="151" fill="#51453d" font-size="16">-- Warm colors, readable structure</text>
 <text x="585" y="178" fill="#51453d" font-size="15">2</text>
-<text x="614" y="178" fill="#9a5213" font-size="16">local </text>
-<text x="674" y="178" fill="#20463c" font-size="16">catalog</text>
-<text x="744" y="178" fill="#42362e" font-size="16"> = </text>
+<text x="614" y="178" fill="#265887" font-size="16">local </text>
+<text x="674" y="178" fill="#1b1510" font-size="16">catalog</text>
+<text x="744" y="178" fill="#1b1510" font-size="16"> = </text>
 <text x="774" y="178" fill="#265887" font-size="16">require</text>
-<text x="844" y="178" fill="#42362e" font-size="16">(</text>
+<text x="844" y="178" fill="#1b1510" font-size="16">(</text>
 <text x="854" y="178" fill="#3a6222" font-size="16">"catalog"</text>
-<text x="944" y="178" fill="#42362e" font-size="16">)</text>
+<text x="944" y="178" fill="#1b1510" font-size="16">)</text>
 <text x="585" y="205" fill="#51453d" font-size="15">3</text>
 <text x="585" y="232" fill="#51453d" font-size="15">4</text>
-<text x="614" y="232" fill="#9a5213" font-size="16">local function </text>
+<text x="614" y="232" fill="#265887" font-size="16">local function </text>
 <text x="764" y="232" fill="#265887" font-size="16">greet</text>
-<text x="814" y="232" fill="#42362e" font-size="16">(</text>
+<text x="814" y="232" fill="#1b1510" font-size="16">(</text>
 <text x="824" y="232" fill="#1b1510" font-size="16">name</text>
-<text x="864" y="232" fill="#42362e" font-size="16">)</text>
+<text x="864" y="232" fill="#1b1510" font-size="16">)</text>
 <text x="585" y="259" fill="#7b5a0f" font-size="15">5</text>
-<text x="614" y="259" fill="#9a5213" font-size="16">  local </text>
+<text x="614" y="259" fill="#265887" font-size="16">  local </text>
 <text x="694" y="259" fill="#1b1510" font-size="16">message</text>
-<text x="764" y="259" fill="#42362e" font-size="16"> = </text>
+<text x="764" y="259" fill="#1b1510" font-size="16"> = </text>
 <text x="794" y="259" fill="#3a6222" font-size="16">"Hello, "</text>
-<text x="884" y="259" fill="#42362e" font-size="16"> .. </text>
+<text x="884" y="259" fill="#1b1510" font-size="16"> .. </text>
 <text x="924" y="259" fill="#1b1510" font-size="16">name</text>
 <text x="585" y="286" fill="#51453d" font-size="15">6</text>
-<text x="614" y="286" fill="#9a5213" font-size="16">  return </text>
+<text x="614" y="286" fill="#265887" font-size="16">  return </text>
 <text x="704" y="286" fill="#1b1510" font-size="16">message</text>
 <text x="585" y="313" fill="#51453d" font-size="15">7</text>
-<text x="614" y="313" fill="#9a5213" font-size="16">end</text>
+<text x="614" y="313" fill="#265887" font-size="16">end</text>
 <text x="585" y="340" fill="#51453d" font-size="15">8</text>
 <text x="585" y="367" fill="#51453d" font-size="15">9</text>
 <text x="614" y="367" fill="#265887" font-size="16">greet</text>
-<text x="664" y="367" fill="#42362e" font-size="16">(</text>
+<text x="664" y="367" fill="#1b1510" font-size="16">(</text>
 <text x="674" y="367" fill="#3a6222" font-size="16">"Tawny"</text>
-<text x="744" y="367" fill="#42362e" font-size="16">)</text>
+<text x="744" y="367" fill="#1b1510" font-size="16">)</text>
 <text x="584" y="423" fill="#992e29" font-size="14">● error</text>
 <text x="704" y="423" fill="#9a5213" font-size="14">● warning</text>
 <text x="844" y="423" fill="#265887" font-size="14">● info</text>

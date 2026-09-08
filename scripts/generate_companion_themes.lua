@@ -381,11 +381,11 @@ local function vscode_theme(name, theme_type, c)
     tokenColors = list({
       {
         scope = list({ "comment", "punctuation.definition.comment" }),
-        settings = { foreground = s.comment, fontStyle = "italic" },
+        settings = { foreground = s.comment, fontStyle = "" },
       },
       {
         scope = list({ "keyword", "storage", "storage.type" }),
-        settings = { foreground = s.keyword, fontStyle = "italic" },
+        settings = { foreground = s.keyword, fontStyle = "" },
       },
       {
         scope = list({ "entity.name.function", "support.function", "variable.function" }),
@@ -461,8 +461,8 @@ local function vscode_theme(name, theme_type, c)
       },
     }),
     semanticTokenColors = {
-      comment = { foreground = s.comment, italic = true },
-      keyword = { foreground = s.keyword, italic = true },
+      comment = { foreground = s.comment, italic = false },
+      keyword = { foreground = s.keyword, italic = false },
       variable = s.variable,
       parameter = s.parameter,
       property = s.property,
@@ -616,8 +616,8 @@ local function zed_style(c)
     syntax = {
       attribute = { color = s.attribute },
       boolean = { color = s.boolean },
-      comment = { color = s.comment, font_style = "italic" },
-      ["comment.doc"] = { color = s.comment, font_style = "italic" },
+      comment = { color = s.comment, font_style = "normal" },
+      ["comment.doc"] = { color = s.comment, font_style = "normal" },
       constant = { color = s.constant },
       constructor = { color = s["function"] },
       embedded = { color = c.fg },
@@ -626,8 +626,8 @@ local function zed_style(c)
       enum = { color = s.type },
       ["function"] = { color = s["function"] },
       hint = { color = c.teal },
-      keyword = { color = s.keyword, font_style = "italic" },
-      label = { color = c.violet },
+      keyword = { color = s.keyword, font_style = "normal" },
+      label = { color = s.variable },
       link_text = { color = c.blue },
       link_uri = { color = c.teal, font_style = "italic" },
       number = { color = s.number },
@@ -643,14 +643,14 @@ local function zed_style(c)
       string = { color = s.string },
       ["string.escape"] = { color = s.escape },
       ["string.regex"] = { color = s.regexp },
-      ["string.special"] = { color = c.yellow },
+      ["string.special"] = { color = s.string },
       tag = { color = s.tag },
       ["text.literal"] = { color = c.green },
       title = { color = c.yellow, font_weight = 700 },
       type = { color = s.type },
       variable = { color = s.variable },
       ["variable.special"] = { color = s.builtin },
-      variant = { color = c.fg_dark },
+      variant = { color = s.constant },
     },
   }
 end

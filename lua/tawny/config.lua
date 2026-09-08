@@ -5,8 +5,8 @@ M.defaults = {
   terminal_colors = true,
   variant = nil, -- "dark" | "light" | nil (used by require("tawny").load())
   styles = {
-    comments = { italic = true },
-    keywords = { bold = false, italic = true },
+    comments = { italic = false },
+    keywords = { bold = false, italic = false },
   },
   overrides = function(_) return {} end,
 }

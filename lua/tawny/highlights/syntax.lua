@@ -23,28 +23,28 @@ function M.get(c, opts)
       comment_style
     ),
 
-    Operator       = { fg = c.fg_dark },
-    Special        = { fg = c.orange_dim },
-    Delimiter      = { fg = c.fg_dark },
+    Operator       = { fg = c.fg },
+    Special        = { fg = c.blue },
+    Delimiter      = { fg = c.fg },
 
-    Constant       = { fg = c.yellow },
+    Constant       = { fg = c.fg },
     String         = { fg = c.green },
-    Number         = { fg = c.orange },
+    Number         = { fg = c.fg },
 
     Identifier     = { fg = c.fg },
     Function       = { fg = c.blue },
 
-    Statement      = { fg = c.orange },
+    Statement      = { fg = c.blue },
     Keyword        = vim.tbl_extend(
       "force",
-      { fg = c.orange },
+      { fg = c.blue },
       keyword_style
     ),
 
-    Exception      = { fg = c.red },
+    Exception      = { fg = c.blue },
 
-    PreProc        = { fg = c.teal },
-    Type           = { fg = c.teal },
+    PreProc        = { fg = c.blue },
+    Type           = { fg = c.fg },
 
     Tag            = { fg = c.blue },
 

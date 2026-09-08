@@ -11,16 +11,16 @@ function M.get(c, opts)
     -- 変数
     ----------------------------------------------------------------
     ["@variable"]              = { link = "Variable" },
-    ["@variable.builtin"]      = { fg = c.violet },
+    ["@variable.builtin"]      = { fg = c.fg },
     ["@variable.parameter"]    = { fg = c.fg },
-    ["@variable.member"]       = { fg = c.yellow_dim },
+    ["@variable.member"]       = { fg = c.fg },
 
-    ["@property"]              = { fg = c.yellow_dim },
-    ["@attribute"]             = { fg = c.teal_dim },
-    ["@operator"]              = { fg = c.fg_dark },
+    ["@property"]              = { fg = c.fg },
+    ["@attribute"]             = { fg = c.fg },
+    ["@operator"]              = { link = "Operator" },
 
-    ["@module"]                = { fg = c.teal_dim },
-    ["@namespace"]             = { fg = c.teal_dim },
+    ["@module"]                = { fg = c.fg },
+    ["@namespace"]             = { fg = c.fg },
 
     ----------------------------------------------------------------
     -- キーワード
@@ -40,7 +40,7 @@ function M.get(c, opts)
     -- 関数
     ----------------------------------------------------------------
     ["@function"]              = { link = "Function" },
-    ["@function.builtin"]      = { fg = c.blue, italic = true },
+    ["@function.builtin"]      = { link = "Function" },
     ["@function.call"]         = { link = "Function" },
     ["@function.method"]       = { link = "Function" },
     ["@function.method.call"]  = { link = "Function" },
@@ -49,23 +49,23 @@ function M.get(c, opts)
     -- 型
     ----------------------------------------------------------------
     ["@type"]                  = { link = "Type" },
-    ["@type.builtin"]          = { fg = c.teal, italic = true },
-    ["@type.definition"]       = { fg = c.teal },
+    ["@type.builtin"]          = { link = "Type" },
+    ["@type.definition"]       = { link = "Type" },
 
     ----------------------------------------------------------------
     -- 定数
     ----------------------------------------------------------------
     ["@constant"]              = { link = "Constant" },
-    ["@constant.builtin"]      = { fg = c.yellow, italic = true },
+    ["@constant.builtin"]      = { link = "Constant" },
     ["@constant.macro"]        = { link = "Macro" },
 
     ----------------------------------------------------------------
     -- 文字列
     ----------------------------------------------------------------
     ["@string"]                = { link = "String" },
-    ["@string.regexp"]         = { fg = c.teal },
-    ["@string.escape"]         = { fg = c.orange },
-    ["@string.special"]        = { fg = c.yellow },
+    ["@string.regexp"]         = { link = "String" },
+    ["@string.escape"]         = { fg = c.blue },
+    ["@string.special"]        = { link = "String" },
 
     ----------------------------------------------------------------
     -- 数値
@@ -87,21 +87,21 @@ function M.get(c, opts)
     -- 構造
     ----------------------------------------------------------------
     ["@constructor"]           = { link = "Function" },
-    ["@label"]                 = { fg = c.violet },
+    ["@label"]                 = { fg = c.fg },
 
     ----------------------------------------------------------------
     -- 区切り
     ----------------------------------------------------------------
-    ["@punctuation.bracket"]   = { fg = c.fg_dark },
-    ["@punctuation.delimiter"] = { fg = c.fg_dark },
-    ["@punctuation.special"]   = { fg = c.fg_dark },
+    ["@punctuation.bracket"]   = { link = "Delimiter" },
+    ["@punctuation.delimiter"] = { link = "Delimiter" },
+    ["@punctuation.special"]   = { link = "Delimiter" },
 
     ----------------------------------------------------------------
     -- HTML / JSX
     ----------------------------------------------------------------
     ["@tag"]                   = { fg = c.blue },
-    ["@tag.attribute"]         = { fg = c.teal },
-    ["@tag.delimiter"]         = { fg = c.fg_dark },
+    ["@tag.attribute"]         = { fg = c.fg },
+    ["@tag.delimiter"]         = { link = "Delimiter" },
   }
 end
 

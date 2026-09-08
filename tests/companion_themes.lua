@@ -48,6 +48,13 @@ for i, variant in ipairs({ 'dark', 'light' }) do
   equal(zed.themes[i].appearance, variant, 'Zed variant')
   require('tawny').setup({ transparent = false })
   vim.cmd.colorscheme(variant == 'light' and 'tawny-light' or 'tawny')
+  for _, group in ipairs({ 'Identifier', '@property', '@variable.member', '@module',
+    'Type', 'Number', 'Constant', 'Operator', 'Delimiter', '@tag.attribute' }) do
+    equal(fg(group), c.fg, variant .. ' readable neutral ' .. group)
+  end
+  for _, group in ipairs({ 'Comment', 'Keyword', '@function.builtin', '@constant.builtin' }) do
+    assert(not vim.api.nvim_get_hl(0, { name = group, link = false }).italic, group .. ' should be upright')
+  end
   for _, role in ipairs(roles) do
     local expected = fg(role[1])
     equal(textmate(theme, role[2]), expected, variant .. ' TextMate ' .. role[2])
