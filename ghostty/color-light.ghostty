@@ -1,0 +1,29 @@
+# tawny light color theme for Ghostty
+# generated from lua/tawny/palette.lua by scripts/generate_companion_themes.lua
+# import this file from ~/.config/ghostty/config:
+#   config-file = /path/to/tawny.nvim/ghostty/color-light.ghostty
+
+background = #f9f8f6
+foreground = #1b1510
+selection-background = #dacfbe
+selection-foreground = #1b1510
+
+cursor-color = #1b1510
+cursor-text = #f9f8f6
+
+palette = 0=#e8e6e3
+palette = 1=#992e29
+palette = 2=#3a6222
+palette = 3=#7b5a0f
+palette = 4=#265887
+palette = 5=#6f3e6f
+palette = 6=#235c4b
+palette = 7=#42362e
+palette = 8=#51453d
+palette = 9=#992e29
+palette = 10=#3a6222
+palette = 11=#7b5a0f
+palette = 12=#265887
+palette = 13=#823555
+palette = 14=#26666d
+palette = 15=#0f0b08

@@ -62,27 +62,68 @@
         "info": "#8babd0",
         "info.background": "#28353e",
         "info.border": "#8babd0",
+        "modified": "#d39b69",
+        "modified.background": "#3f3827",
         "pane.focused_border": "#474747",
         "panel.background": "#141414",
+        "panel.focused_border": "#e0ca7b",
+        "players": [
+          {
+            "background": "#e0ca7b",
+            "cursor": "#d9caab",
+            "selection": "#3b3b3bcc"
+          },
+          {
+            "background": "#8babd0",
+            "cursor": "#8babd0",
+            "selection": "#8babd030"
+          },
+          {
+            "background": "#86b6aa",
+            "cursor": "#86b6aa",
+            "selection": "#86b6aa30"
+          },
+          {
+            "background": "#c09ec7",
+            "cursor": "#c09ec7",
+            "selection": "#c09ec730"
+          },
+          {
+            "background": "#d39b69",
+            "cursor": "#d39b69",
+            "selection": "#d39b6930"
+          },
+          {
+            "background": "#d87d91",
+            "cursor": "#d87d91",
+            "selection": "#d87d9130"
+          }
+        ],
+        "predictive": "#90867a",
+        "renamed": "#8babd0",
+        "renamed.background": "#28353e",
         "scrollbar.thumb.background": "#2e2e2e",
         "scrollbar.thumb.border": "#282828",
         "scrollbar.thumb.hover_background": "#474747",
         "scrollbar.track.background": "#141414",
+        "search.match_background": "#e0ca7b40",
         "status_bar.background": "#131313",
+        "success": "#aac680",
+        "success.background": "#283936",
         "surface.background": "#141414",
         "syntax": {
           "attribute": {
             "color": "#86b6aa"
           },
           "boolean": {
-            "color": "#d39b69"
+            "color": "#e0ca7b"
           },
           "comment": {
-            "color": "#90867a",
+            "color": "#9c968b",
             "font_style": "italic"
           },
           "comment.doc": {
-            "color": "#90867a",
+            "color": "#9c968b",
             "font_style": "italic"
           },
           "constant": {
@@ -110,7 +151,7 @@
             "color": "#86b6aa"
           },
           "keyword": {
-            "color": "#c09ec7",
+            "color": "#d39b69",
             "font_style": "italic"
           },
           "label": {
@@ -136,28 +177,28 @@
             "color": "#d5cfc3"
           },
           "property": {
-            "color": "#e0ca7b"
+            "color": "#a29257"
           },
           "punctuation": {
-            "color": "#90867a"
+            "color": "#b3ab9e"
           },
           "punctuation.bracket": {
             "color": "#b3ab9e"
           },
           "punctuation.delimiter": {
-            "color": "#90867a"
+            "color": "#b3ab9e"
           },
           "punctuation.list_marker": {
             "color": "#d39b69"
           },
           "punctuation.special": {
-            "color": "#e0ca7b"
+            "color": "#b3ab9e"
           },
           "string": {
             "color": "#aac680"
           },
           "string.escape": {
-            "color": "#e0ca7b"
+            "color": "#d39b69"
           },
           "string.regex": {
             "color": "#86b6aa"
@@ -182,7 +223,7 @@
             "color": "#d5cfc3"
           },
           "variable.special": {
-            "color": "#d39b69"
+            "color": "#c09ec7"
           },
           "variant": {
             "color": "#b3ab9e"
@@ -291,20 +332,61 @@
         "info": "#265887",
         "info.background": "#d9e5ec",
         "info.border": "#265887",
+        "modified": "#9a5213",
+        "modified.background": "#ece4ca",
         "pane.focused_border": "#957b5f",
         "panel.background": "#f2f0ee",
+        "panel.focused_border": "#7b5a0f",
+        "players": [
+          {
+            "background": "#7b5a0f",
+            "cursor": "#1b1510",
+            "selection": "#dacfbecc"
+          },
+          {
+            "background": "#265887",
+            "cursor": "#265887",
+            "selection": "#26588730"
+          },
+          {
+            "background": "#235c4b",
+            "cursor": "#235c4b",
+            "selection": "#235c4b30"
+          },
+          {
+            "background": "#6f3e6f",
+            "cursor": "#6f3e6f",
+            "selection": "#6f3e6f30"
+          },
+          {
+            "background": "#9a5213",
+            "cursor": "#9a5213",
+            "selection": "#9a521330"
+          },
+          {
+            "background": "#992e29",
+            "cursor": "#992e29",
+            "selection": "#992e2930"
+          }
+        ],
+        "predictive": "#51453d",
+        "renamed": "#265887",
+        "renamed.background": "#d9e5ec",
         "scrollbar.thumb.background": "#c6b9a9",
         "scrollbar.thumb.border": "#eeecea",
         "scrollbar.thumb.hover_background": "#957b5f",
         "scrollbar.track.background": "#f2f0ee",
+        "search.match_background": "#7b5a0f40",
         "status_bar.background": "#ecebe8",
+        "success": "#3a6222",
+        "success.background": "#d8e8e0",
         "surface.background": "#f2f0ee",
         "syntax": {
           "attribute": {
             "color": "#235c4b"
           },
           "boolean": {
-            "color": "#9a5213"
+            "color": "#7b5a0f"
           },
           "comment": {
             "color": "#51453d",
@@ -339,7 +421,7 @@
             "color": "#235c4b"
           },
           "keyword": {
-            "color": "#6f3e6f",
+            "color": "#9a5213",
             "font_style": "italic"
           },
           "label": {
@@ -365,28 +447,28 @@
             "color": "#1b1510"
           },
           "property": {
-            "color": "#7b5a0f"
+            "color": "#5d4813"
           },
           "punctuation": {
-            "color": "#51453d"
+            "color": "#42362e"
           },
           "punctuation.bracket": {
             "color": "#42362e"
           },
           "punctuation.delimiter": {
-            "color": "#51453d"
+            "color": "#42362e"
           },
           "punctuation.list_marker": {
             "color": "#9a5213"
           },
           "punctuation.special": {
-            "color": "#7b5a0f"
+            "color": "#42362e"
           },
           "string": {
             "color": "#3a6222"
           },
           "string.escape": {
-            "color": "#7b5a0f"
+            "color": "#9a5213"
           },
           "string.regex": {
             "color": "#235c4b"
@@ -411,7 +493,7 @@
             "color": "#1b1510"
           },
           "variable.special": {
-            "color": "#9a5213"
+            "color": "#6f3e6f"
           },
           "variant": {
             "color": "#42362e"

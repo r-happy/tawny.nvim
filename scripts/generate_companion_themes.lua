@@ -168,20 +168,81 @@ local function terminal_palette(c)
   }
 end
 
+-- Resolve Neovim's default syntax roles instead of maintaining a second palette
+-- of token meanings. Companion themes follow future changes to these highlights.
+local function syntax_colors(c)
+  local groups = vim.tbl_extend("force",
+    require("tawny.highlights.syntax").get(c, {}),
+    require("tawny.highlights.treesitter").get(c, {}))
+  local roles = {
+    comment = "Comment", keyword = "Keyword", variable = "Identifier",
+    parameter = "@variable.parameter", property = "@property",
+    builtin = "@variable.builtin", namespace = "@module",
+    boolean = "Boolean", number = "Number", constant = "Constant",
+    string = "String", escape = "@string.escape", regexp = "@string.regexp",
+    punctuation = "Delimiter", operator = "Operator", preproc = "PreProc",
+    ["function"] = "Function", type = "Type", tag = "@tag", attribute = "@tag.attribute",
+  }
+  local result = {}
+  for role, name in pairs(roles) do
+    local group = assert(groups[name], name)
+    while group.link do group = assert(groups[group.link], group.link) end
+    result[role] = assert(group.fg, name)
+  end
+  return result
+end
+
 local function vscode_theme(name, theme_type, c)
   local terminal = terminal_palette(c)
+  local s = syntax_colors(c)
 
   return {
     name = name,
     type = theme_type,
     semanticHighlighting = true,
     colors = {
+      ["foreground"] = c.fg,
+      ["descriptionForeground"] = c.fg_dark,
+      ["disabledForeground"] = c.fg_dim,
+      ["errorForeground"] = c.red,
+      ["icon.foreground"] = c.fg,
+      ["focusBorder"] = c.yellow,
+      ["selection.background"] = c.selection,
+      ["widget.border"] = c.border_highlight,
+      ["widget.shadow"] = c.bg_dark .. "80",
+      ["button.background"] = c.yellow,
+      ["button.foreground"] = c.bg,
+      ["button.hoverBackground"] = c.orange,
+      ["button.secondaryBackground"] = c.selection,
+      ["button.secondaryForeground"] = c.fg,
+      ["button.secondaryHoverBackground"] = c.bg_highlight,
+      ["checkbox.background"] = c.bg_popup,
+      ["checkbox.foreground"] = c.yellow,
+      ["checkbox.border"] = c.border_highlight,
+      ["textLink.foreground"] = c.blue,
+      ["textLink.activeForeground"] = c.teal,
+      ["textCodeBlock.background"] = c.bg_light,
+      ["textBlockQuote.background"] = c.bg_light,
+      ["textBlockQuote.border"] = c.yellow,
+      ["textPreformat.foreground"] = c.green,
       ["editor.background"] = c.bg,
       ["editor.foreground"] = c.fg,
       ["editorLineNumber.foreground"] = c.fg_dim,
       ["editorLineNumber.activeForeground"] = c.yellow,
       ["editorCursor.foreground"] = c.cursor,
       ["editor.selectionBackground"] = c.selection,
+      ["editor.inactiveSelectionBackground"] = c.selection .. "80",
+      ["editor.selectionHighlightBackground"] = c.yellow .. "20",
+      ["editor.findMatchBackground"] = c.orange .. "55",
+      ["editor.findMatchBorder"] = c.orange,
+      ["editor.findMatchHighlightBackground"] = c.yellow .. "30",
+      ["editor.findRangeHighlightBackground"] = c.yellow .. "15",
+      ["editor.wordHighlightBackground"] = c.blue .. "25",
+      ["editor.wordHighlightStrongBackground"] = c.teal .. "35",
+      ["editor.wordHighlightTextBackground"] = c.blue .. "25",
+      ["editorInlayHint.foreground"] = c.fg_dim,
+      ["editorInlayHint.background"] = c.bg_light,
+      ["editorGhostText.foreground"] = c.fg_dim,
       ["editor.lineHighlightBackground"] = c.bg_light,
       ["editorIndentGuide.background1"] = c.border,
       ["editorIndentGuide.activeBackground1"] = c.border_highlight,
@@ -199,10 +260,17 @@ local function vscode_theme(name, theme_type, c)
       ["editorGroupHeader.tabsBackground"] = c.bg_dim,
       ["tab.activeBackground"] = c.bg,
       ["tab.activeForeground"] = c.fg,
+      ["tab.activeBorderTop"] = c.yellow,
+      ["tab.unfocusedActiveBorderTop"] = c.fg_dim,
+      ["tab.unfocusedActiveForeground"] = c.fg_dark,
+      ["tab.unfocusedInactiveForeground"] = c.fg_dim,
+      ["tab.hoverBackground"] = c.bg_light,
       ["tab.inactiveBackground"] = c.bg_statusline,
       ["tab.inactiveForeground"] = c.fg_dim,
       ["activityBar.background"] = c.bg_dim,
       ["activityBar.foreground"] = c.fg,
+      ["activityBar.inactiveForeground"] = c.fg_dim,
+      ["activityBar.activeBorder"] = c.yellow,
       ["activityBarBadge.background"] = c.yellow,
       ["activityBarBadge.foreground"] = c.bg,
       ["sideBar.background"] = c.bg_sidebar,
@@ -212,19 +280,60 @@ local function vscode_theme(name, theme_type, c)
       ["sideBarSectionHeader.foreground"] = c.fg,
       ["titleBar.activeBackground"] = c.bg_dim,
       ["titleBar.activeForeground"] = c.fg,
+      ["titleBar.inactiveBackground"] = c.bg_dim,
+      ["titleBar.inactiveForeground"] = c.fg_dim,
       ["statusBar.background"] = c.bg_statusline,
       ["statusBar.foreground"] = c.fg,
       ["statusBar.border"] = c.border,
+      ["statusBar.debuggingBackground"] = c.orange,
+      ["statusBar.debuggingForeground"] = c.bg,
+      ["statusBar.noFolderBackground"] = c.bg_dim,
+      ["statusBar.noFolderForeground"] = c.fg,
+      ["statusBarItem.remoteBackground"] = c.teal,
+      ["statusBarItem.remoteForeground"] = c.bg,
       ["panel.background"] = c.bg_dim,
       ["panel.border"] = c.border,
+      ["panelTitle.activeForeground"] = c.fg,
+      ["panelTitle.activeBorder"] = c.yellow,
+      ["panelTitle.inactiveForeground"] = c.fg_dim,
       ["list.activeSelectionBackground"] = c.selection,
       ["list.activeSelectionForeground"] = c.fg,
+      ["list.inactiveSelectionBackground"] = c.bg_light,
+      ["list.inactiveSelectionForeground"] = c.fg,
+      ["list.focusBackground"] = c.bg_light,
+      ["list.focusForeground"] = c.fg,
+      ["list.focusOutline"] = c.yellow,
       ["list.hoverBackground"] = c.bg_light,
       ["list.highlightForeground"] = c.yellow,
       ["input.background"] = c.bg_popup,
       ["input.foreground"] = c.fg,
       ["input.border"] = c.border_highlight,
       ["input.placeholderForeground"] = c.fg_dim,
+      ["inputOption.activeBackground"] = c.selection,
+      ["inputOption.activeForeground"] = c.yellow,
+      ["inputOption.activeBorder"] = c.yellow,
+      ["inputValidation.errorBackground"] = c.diag_error_bg,
+      ["inputValidation.errorForeground"] = c.fg,
+      ["inputValidation.errorBorder"] = c.red,
+      ["inputValidation.warningBackground"] = c.diag_warn_bg,
+      ["inputValidation.warningForeground"] = c.fg,
+      ["inputValidation.warningBorder"] = c.orange,
+      ["inputValidation.infoBackground"] = c.diag_info_bg,
+      ["inputValidation.infoForeground"] = c.fg,
+      ["inputValidation.infoBorder"] = c.blue,
+      ["quickInput.background"] = c.bg_popup,
+      ["quickInput.foreground"] = c.fg,
+      ["quickInputList.focusBackground"] = c.selection,
+      ["quickInputList.focusForeground"] = c.fg,
+      ["notifications.background"] = c.bg_popup,
+      ["notifications.foreground"] = c.fg,
+      ["notifications.border"] = c.border_highlight,
+      ["notificationCenterHeader.background"] = c.bg_dim,
+      ["notificationCenterHeader.foreground"] = c.fg,
+      ["scrollbarSlider.background"] = c.border_highlight .. "80",
+      ["scrollbarSlider.hoverBackground"] = c.fg_dim .. "80",
+      ["scrollbarSlider.activeBackground"] = c.fg_dim .. "b0",
+      ["progressBar.background"] = c.yellow,
       ["dropdown.background"] = c.bg_popup,
       ["dropdown.foreground"] = c.fg,
       ["dropdown.border"] = c.border_highlight,
@@ -233,6 +342,9 @@ local function vscode_theme(name, theme_type, c)
       ["terminal.background"] = c.bg,
       ["terminal.foreground"] = c.fg,
       ["terminalCursor.foreground"] = c.cursor,
+      ["terminalCursor.background"] = c.bg,
+      ["terminal.selectionBackground"] = c.selection,
+      ["terminal.inactiveSelectionBackground"] = c.selection .. "80",
       ["terminal.ansiBlack"] = terminal.ansi[1],
       ["terminal.ansiRed"] = terminal.ansi[2],
       ["terminal.ansiGreen"] = terminal.ansi[3],
@@ -252,8 +364,14 @@ local function vscode_theme(name, theme_type, c)
       ["gitDecoration.addedResourceForeground"] = c.green,
       ["gitDecoration.modifiedResourceForeground"] = c.orange,
       ["gitDecoration.deletedResourceForeground"] = c.red,
-      ["diffEditor.insertedTextBackground"] = c.diff_add,
-      ["diffEditor.removedTextBackground"] = c.diff_delete,
+      -- Text overlays must be translucent so diagnostics and selections show through.
+      ["diffEditor.insertedTextBackground"] = c.green .. "40",
+      ["diffEditor.removedTextBackground"] = c.red .. "40",
+      ["diffEditor.insertedLineBackground"] = c.green .. "15",
+      ["diffEditor.removedLineBackground"] = c.red .. "15",
+      ["editorGutter.addedBackground"] = c.green,
+      ["editorGutter.modifiedBackground"] = c.orange,
+      ["editorGutter.deletedBackground"] = c.red,
       ["diffEditor.diagonalFill"] = c.bg_dim,
       ["editorError.foreground"] = c.red,
       ["editorWarning.foreground"] = c.orange,
@@ -263,86 +381,113 @@ local function vscode_theme(name, theme_type, c)
     tokenColors = list({
       {
         scope = list({ "comment", "punctuation.definition.comment" }),
-        settings = { foreground = c.fg_dim, fontStyle = "italic" },
+        settings = { foreground = s.comment, fontStyle = "italic" },
       },
       {
         scope = list({ "keyword", "storage", "storage.type" }),
-        settings = { foreground = c.violet, fontStyle = "italic" },
+        settings = { foreground = s.keyword, fontStyle = "italic" },
       },
       {
-        scope = list({ "entity.name.function", "support.function", "meta.function-call", "variable.function" }),
-        settings = { foreground = c.blue },
+        scope = list({ "entity.name.function", "support.function", "variable.function" }),
+        settings = { foreground = s["function"] },
       },
       {
         scope = list({ "entity.name.type", "support.type", "support.class" }),
-        settings = { foreground = c.teal },
+        settings = { foreground = s.type },
       },
       {
         scope = list({ "variable", "identifier" }),
-        settings = { foreground = c.fg },
+        settings = { foreground = s.variable },
       },
       {
         scope = list({ "variable.parameter" }),
-        settings = { foreground = c.fg_dark },
+        settings = { foreground = s.parameter },
       },
       {
         scope = list({ "variable.other.property", "meta.object-literal.key" }),
-        settings = { foreground = c.yellow },
+        settings = { foreground = s.property },
       },
       {
         scope = list({ "string" }),
-        settings = { foreground = c.green },
+        settings = { foreground = s.string },
       },
       {
-        scope = list({ "constant.character.escape", "string.regexp" }),
-        settings = { foreground = c.teal },
+        scope = list({ "constant.character.escape" }),
+        settings = { foreground = s.escape },
       },
       {
-        scope = list({ "constant.numeric", "constant.language.boolean" }),
-        settings = { foreground = c.orange },
+        scope = list({ "string.regexp" }),
+        settings = { foreground = s.regexp },
+      },
+      {
+        scope = list({ "constant.numeric" }),
+        settings = { foreground = s.number },
       },
       {
         scope = list({ "constant", "support.constant" }),
-        settings = { foreground = c.yellow },
+        settings = { foreground = s.constant },
       },
       {
         scope = list({ "entity.name.tag" }),
-        settings = { foreground = c.blue },
+        settings = { foreground = s.tag },
       },
       {
         scope = list({ "entity.other.attribute-name" }),
-        settings = { foreground = c.teal },
+        settings = { foreground = s.attribute },
       },
       {
         scope = list({ "punctuation", "meta.brace", "meta.delimiter" }),
-        settings = { foreground = c.fg_dim },
+        settings = { foreground = s.punctuation },
       },
       {
         scope = list({ "keyword.operator" }),
-        settings = { foreground = c.fg_dark },
+        settings = { foreground = s.operator },
       },
+      { scope = list({ "constant.language.boolean" }), settings = { foreground = s.boolean } },
+      { scope = list({ "variable.language", "support.variable" }), settings = { foreground = s.builtin } },
+      { scope = list({ "entity.name.namespace", "entity.name.module" }), settings = { foreground = s.namespace } },
+      { scope = list({ "keyword.control.import", "keyword.control.from", "keyword.control.export", "meta.preprocessor" }), settings = { foreground = s.preproc } },
+      { scope = list({ "markup.heading", "entity.name.section" }), settings = { foreground = c.yellow, fontStyle = "bold" } },
+      { scope = list({ "markup.bold" }), settings = { fontStyle = "bold" } },
+      { scope = list({ "markup.italic" }), settings = { fontStyle = "italic" } },
+      { scope = list({ "markup.inline.raw", "markup.fenced_code.block.markdown" }), settings = { foreground = s.string } },
+      { scope = list({ "markup.underline.link", "string.other.link" }), settings = { foreground = c.blue, fontStyle = "underline" } },
+      { scope = list({ "markup.quote" }), settings = { foreground = s.comment } },
+      { scope = list({ "markup.inserted" }), settings = { foreground = c.green } },
+      { scope = list({ "markup.deleted" }), settings = { foreground = c.red } },
       {
         scope = list({ "invalid" }),
         settings = { foreground = c.red },
       },
     }),
     semanticTokenColors = {
-      parameter = c.fg_dark,
-      property = c.yellow,
-      enumMember = c.yellow,
-      type = c.teal,
-      class = c.teal,
-      interface = c.teal,
-      ["function"] = c.blue,
-      method = c.blue,
-      namespace = c.teal,
-      ["variable.defaultLibrary"] = c.orange,
+      comment = { foreground = s.comment, italic = true },
+      keyword = { foreground = s.keyword, italic = true },
+      variable = s.variable,
+      parameter = s.parameter,
+      property = s.property,
+      enumMember = s.constant,
+      type = s.type,
+      typeParameter = s.type,
+      class = s.type,
+      interface = s.type,
+      struct = s.type,
+      enum = s.type,
+      ["function"] = s["function"],
+      method = s["function"],
+      namespace = s.namespace,
+      string = s.string,
+      number = s.number,
+      operator = s.operator,
+      ["variable.readonly"] = s.constant,
+      ["variable.defaultLibrary"] = s.builtin,
     },
   }
 end
 
 local function zed_style(c)
   local terminal = terminal_palette(c)
+  local s = syntax_colors(c)
 
   return {
     background = c.bg,
@@ -402,6 +547,24 @@ local function zed_style(c)
     ["info.border"] = c.blue,
     ["panel.background"] = c.bg_dim,
     ["pane.focused_border"] = c.border_highlight,
+    ["panel.focused_border"] = c.yellow,
+    ["search.match_background"] = c.yellow .. "40",
+    -- First player supplies the local cursor/selection; others distinguish collaborators.
+    players = list({
+      { cursor = c.cursor, background = c.yellow, selection = c.selection .. "cc" },
+      { cursor = c.blue, background = c.blue, selection = c.blue .. "30" },
+      { cursor = c.teal, background = c.teal, selection = c.teal .. "30" },
+      { cursor = c.violet, background = c.violet, selection = c.violet .. "30" },
+      { cursor = c.orange, background = c.orange, selection = c.orange .. "30" },
+      { cursor = c.red, background = c.red, selection = c.red .. "30" },
+    }),
+    modified = c.orange,
+    ["modified.background"] = c.diff_change,
+    renamed = c.blue,
+    ["renamed.background"] = c.diag_info_bg,
+    success = c.green,
+    ["success.background"] = c.diag_hint_bg,
+    predictive = c.fg_dim,
     ["scrollbar.thumb.background"] = c.border,
     ["scrollbar.thumb.border"] = c.bg_highlight,
     ["scrollbar.thumb.hover_background"] = c.border_highlight,
@@ -451,49 +614,49 @@ local function zed_style(c)
     ["warning.background"] = c.diag_warn_bg or c.diff_change,
     ["warning.border"] = c.orange,
     syntax = {
-      attribute = { color = c.teal },
-      boolean = { color = c.orange },
-      comment = { color = c.fg_dim, font_style = "italic" },
-      ["comment.doc"] = { color = c.fg_dim, font_style = "italic" },
-      constant = { color = c.yellow },
-      constructor = { color = c.blue },
+      attribute = { color = s.attribute },
+      boolean = { color = s.boolean },
+      comment = { color = s.comment, font_style = "italic" },
+      ["comment.doc"] = { color = s.comment, font_style = "italic" },
+      constant = { color = s.constant },
+      constructor = { color = s["function"] },
       embedded = { color = c.fg },
       emphasis = { font_style = "italic" },
       ["emphasis.strong"] = { font_weight = 700 },
-      enum = { color = c.teal },
-      ["function"] = { color = c.blue },
+      enum = { color = s.type },
+      ["function"] = { color = s["function"] },
       hint = { color = c.teal },
-      keyword = { color = c.violet, font_style = "italic" },
+      keyword = { color = s.keyword, font_style = "italic" },
       label = { color = c.violet },
       link_text = { color = c.blue },
       link_uri = { color = c.teal, font_style = "italic" },
-      number = { color = c.orange },
-      operator = { color = c.fg_dark },
-      preproc = { color = c.teal },
+      number = { color = s.number },
+      operator = { color = s.operator },
+      preproc = { color = s.preproc },
       primary = { color = c.fg },
-      property = { color = c.yellow },
-      punctuation = { color = c.fg_dim },
-      ["punctuation.bracket"] = { color = c.fg_dark },
-      ["punctuation.delimiter"] = { color = c.fg_dim },
+      property = { color = s.property },
+      punctuation = { color = s.punctuation },
+      ["punctuation.bracket"] = { color = s.punctuation },
+      ["punctuation.delimiter"] = { color = s.punctuation },
       ["punctuation.list_marker"] = { color = c.orange },
-      ["punctuation.special"] = { color = c.yellow },
-      string = { color = c.green },
-      ["string.escape"] = { color = c.yellow },
-      ["string.regex"] = { color = c.teal },
+      ["punctuation.special"] = { color = s.punctuation },
+      string = { color = s.string },
+      ["string.escape"] = { color = s.escape },
+      ["string.regex"] = { color = s.regexp },
       ["string.special"] = { color = c.yellow },
-      tag = { color = c.blue },
+      tag = { color = s.tag },
       ["text.literal"] = { color = c.green },
       title = { color = c.yellow, font_weight = 700 },
-      type = { color = c.teal },
-      variable = { color = c.fg },
-      ["variable.special"] = { color = c.orange },
+      type = { color = s.type },
+      variable = { color = s.variable },
+      ["variable.special"] = { color = s.builtin },
       variant = { color = c.fg_dark },
     },
   }
 end
 
-local function write_wezterm()
-  local c = palette.dark
+local function write_wezterm(variant)
+  local c = palette[variant]
   local terminal = terminal_palette(c)
   local payload = {
     colors = {
@@ -509,8 +672,9 @@ local function write_wezterm()
       tab_bar = {
         background = c.bg_dim,
         active_tab = {
-          bg_color = c.bg,
-          fg_color = c.fg,
+          bg_color = c.selection,
+          fg_color = c.yellow,
+          intensity = "Bold",
         },
         inactive_tab = {
           bg_color = c.bg_dim,
@@ -533,8 +697,8 @@ local function write_wezterm()
   }
 
   write_file(
-    "wezterm/tawny.lua",
-    "-- tawny dark color scheme for WezTerm\n"
+    "wezterm/tawny" .. (variant == "light" and "-light" or "") .. ".lua",
+    "-- tawny " .. variant .. " color scheme for WezTerm\n"
       .. "-- generated from lua/tawny/palette.lua by scripts/generate_companion_themes.lua\n"
       .. "-- https://github.com/r-happy/tawny.nvim\n\n"
       .. "return "
@@ -543,12 +707,14 @@ local function write_wezterm()
   )
 end
 
-local function write_tmux()
-  local c = palette.dark
+local function write_tmux(variant)
+  local c = palette[variant]
+  local stem = "tmux/tawny" .. (variant == "light" and "-light" or "")
   write_file(
-    "tmux/tawny.conf",
+    stem .. ".conf",
     table.concat({
-      "# tawny dark theme for tmux",
+      "# tawny " .. variant .. " theme for tmux (includes status bar layout)",
+      "# For colors only, source " .. stem .. "-colors.conf instead.",
       "# generated from lua/tawny/palette.lua by scripts/generate_companion_themes.lua",
       "# https://github.com/r-happy/tawny.nvim",
       "",
@@ -563,7 +729,7 @@ local function write_tmux()
       "",
       "# status-right: [host] [date time]",
       "set -g status-right \\",
-      string.format('  "#[bg=%s,fg=%s]#[bg=%s,fg=%s] #h #[bg=%s,fg=%s]#[bg=%s,fg=%s] %%Y-%%m-%%d  %%H:%%M "', c.selection, c.bg_dim, c.selection, c.fg_dim, c.fg_dim, c.selection, c.fg_dim, c.bg),
+      string.format('  "#[bg=%s,fg=%s] #h #[bg=%s,fg=%s] %%Y-%%m-%%d  %%H:%%M "', c.selection, c.fg, c.fg_dim, c.bg),
       "",
       "# window list",
       "set -g window-status-format \\",
@@ -577,7 +743,7 @@ local function write_tmux()
       "",
       "# pane borders",
       string.format('set -g pane-border-style             "fg=%s"', c.border),
-      string.format('set -g pane-active-border-style      "fg=%s"', c.border_highlight),
+      string.format('set -g pane-active-border-style      "fg=%s"', c.yellow),
       "",
       "# message / command prompt",
       string.format('set -g message-style                 "bg=%s,fg=%s"', c.bg_highlight, c.fg),
@@ -588,16 +754,34 @@ local function write_tmux()
       "",
     }, "\n")
   )
+
+  -- Optional entrypoint that preserves the user's status text and lengths.
+  write_file(stem .. "-colors.conf", table.concat({
+    "# tawny " .. variant .. " colors for tmux; preserves status bar layout",
+    "# generated by scripts/generate_companion_themes.lua",
+    string.format('set -g status-style "bg=%s,fg=%s"', c.bg_dim, c.fg),
+    string.format('set -g window-status-style "bg=%s,fg=%s"', c.bg_dim, c.fg_dim),
+    string.format('set -g window-status-current-style "bg=%s,fg=%s,bold"', c.selection, c.yellow),
+    string.format('set -g window-status-activity-style "bg=%s,fg=%s"', c.bg_dim, c.yellow),
+    string.format('set -g window-status-bell-style "bg=%s,fg=%s"', c.bg_dim, c.red),
+    string.format('set -g pane-border-style "fg=%s"', c.border),
+    string.format('set -g pane-active-border-style "fg=%s"', c.yellow),
+    string.format('set -g message-style "bg=%s,fg=%s"', c.bg_highlight, c.fg),
+    string.format('set -g message-command-style "bg=%s,fg=%s"', c.bg_highlight, c.fg),
+    string.format('set -g mode-style "bg=%s,fg=%s"', c.selection, c.fg),
+    "",
+  }, "\n"))
 end
 
-local function write_ghostty()
-  local c = palette.dark
+local function write_ghostty(variant)
+  local c = palette[variant]
+  local path = "ghostty/color" .. (variant == "light" and "-light" or "") .. ".ghostty"
   local terminal = terminal_palette(c)
   local lines = {
-    "# tawny dark color theme for Ghostty",
+    "# tawny " .. variant .. " color theme for Ghostty",
     "# generated from lua/tawny/palette.lua by scripts/generate_companion_themes.lua",
     "# import this file from ~/.config/ghostty/config:",
-    "#   config-file = /path/to/tawny.nvim/ghostty/color.ghostty",
+    "#   config-file = /path/to/tawny.nvim/" .. path,
     "",
     "background = " .. c.bg,
     "foreground = " .. c.fg,
@@ -617,7 +801,7 @@ local function write_ghostty()
   end
 
   lines[#lines + 1] = ""
-  write_file("ghostty/color.ghostty", table.concat(lines, "\n"))
+  write_file(path, table.concat(lines, "\n"))
 end
 
 local function write_vscode()
@@ -653,8 +837,10 @@ local function write_zed()
   write_file("zed/tawny.json", json_encode(payload) .. "\n")
 end
 
-write_wezterm()
-write_tmux()
-write_ghostty()
+for _, variant in ipairs({ "dark", "light" }) do
+  write_wezterm(variant)
+  write_tmux(variant)
+  write_ghostty(variant)
+end
 write_vscode()
 write_zed()

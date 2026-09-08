@@ -114,6 +114,49 @@ make generate-companion-themes
 
 Regenerate the README highlight preview with `make generate-preview`.
 
+Run `make check` to check generated syntax colors against Neovim's actual
+highlights in both variants, translucent editor overlays, cursor colors, terminal
+palette consistency, and the tmux colors-only contract. Run generation before
+the check when changing the source. No third-party test packages are required.
+
+VS Code and Zed derive their shared syntax roles from the Neovim highlight
+definitions: orange keywords, blue functions, teal types, muted yellow properties,
+and readable comments. Token classification still depends on each editor's language
+grammar and language server.
+
+### Ghostty
+
+Choose one file in your Ghostty config:
+
+```ini
+config-file = /path/to/tawny.nvim/ghostty/color.ghostty
+# Light alternative: /path/to/tawny.nvim/ghostty/color-light.ghostty
+```
+
+### WezTerm
+
+In your existing `wezterm.lua`, assign the returned colors:
+
+```lua
+config.colors = dofile('/path/to/tawny.nvim/wezterm/tawny.lua').colors
+-- Light alternative: /path/to/tawny.nvim/wezterm/tawny-light.lua
+```
+
+The active tab uses a distinct background and a bold yellow label.
+
+### tmux
+
+To preserve your status bar text and lengths, source the colors-only file:
+
+```tmux
+source-file /path/to/tawny.nvim/tmux/tawny-colors.conf
+# Light alternative: /path/to/tawny.nvim/tmux/tawny-light-colors.conf
+```
+
+Existing inline `#[...]` colors in custom status formats take precedence over
+these styles. For Tawny's session/host/time layout as well, use `tmux/tawny.conf`
+or `tmux/tawny-light.conf` instead. The original dark file paths remain supported.
+
 ### Zed
 
 [zed/tawny.json](./zed/tawny.json) contains both `Tawny` and `Tawny Light`.

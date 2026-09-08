@@ -33,8 +33,9 @@ return {
     selection_fg = "#d5cfc3",
     tab_bar = {
       active_tab = {
-        bg_color = "#181818",
-        fg_color = "#d5cfc3"
+        bg_color = "#3b3b3b",
+        fg_color = "#e0ca7b",
+        intensity = "Bold"
       },
       background = "#141414",
       inactive_tab = {
