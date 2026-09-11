@@ -29,13 +29,13 @@ Generated highlight preview showing syntax, the active buffer, cursor line, sele
 | Name       | Dark      | Light     |
 | ---------- | --------- | --------- |
 | Background | `#181818` | `#f9f8f6` |
-| Foreground | `#d5cfc3` | `#1b1510` |
+| Foreground | `#e2ded5` | `#1b1510` |
 | Red        | `#d87d91` | `#992e29` |
 | Orange     | `#d39b69` | `#9a5213` |
 | Yellow     | `#e0ca7b` | `#7b5a0f` |
-| Green      | `#aac680` | `#3a6222` |
+| Green      | `#abcd7a` | `#3a6222` |
 | Teal       | `#86b6aa` | `#235c4b` |
-| Blue       | `#8babd0` | `#265887` |
+| Blue       | `#85abd5` | `#265887` |
 | Violet     | `#c09ec7` | `#6f3e6f` |
 
 Transparency clears the main editing background and gutter. Selection, cursor line,

@@ -17,7 +17,7 @@ M.dark = {
   selection        = hsl(0.0, 0.0, 23.0),
 
   -- warm readable foreground
-  fg               = hsl(40.0, 18.0, 80.0),
+  fg               = hsl(41.5, 18.3, 86.1),
   fg_dim           = hsl(35.0, 9.0, 52.0),
   comment          = hsl(38.0, 8.0, 58.0),
   fg_bright        = hsl(40.0, 24.0, 88.0),
@@ -36,13 +36,13 @@ M.dark = {
   red_dim          = hsl(347.0, 28.0, 50.0),
 
   -- muted yellow-green rather than vivid Monokai green
-  green            = hsl(84.0, 38.0, 64.0),
+  green            = hsl(84.0, 45.0, 64.0),
   green_dim        = hsl(84.0, 22.0, 45.0),
 
   teal             = hsl(165.0, 25.0, 62.0),
   teal_dim         = hsl(165.0, 16.0, 55.0),
 
-  blue             = hsl(212.0, 42.0, 68.0),
+  blue             = hsl(212.0, 49.0, 68.0),
   blue_dim         = hsl(212.0, 24.0, 50.0),
 
   violet           = hsl(290.0, 27.0, 70.0),
