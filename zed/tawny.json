@@ -142,7 +142,7 @@
             "font_weight": 700
           },
           "enum": {
-            "color": "#e2ded5"
+            "color": "#e0ca7b"
           },
           "function": {
             "color": "#85abd5"
@@ -217,7 +217,7 @@
             "font_weight": 700
           },
           "type": {
-            "color": "#e2ded5"
+            "color": "#e0ca7b"
           },
           "variable": {
             "color": "#e2ded5"
@@ -412,7 +412,7 @@
             "font_weight": 700
           },
           "enum": {
-            "color": "#1b1510"
+            "color": "#7b5a0f"
           },
           "function": {
             "color": "#265887"
@@ -487,7 +487,7 @@
             "font_weight": 700
           },
           "type": {
-            "color": "#1b1510"
+            "color": "#7b5a0f"
           },
           "variable": {
             "color": "#1b1510"

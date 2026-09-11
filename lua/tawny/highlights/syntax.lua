@@ -44,7 +44,7 @@ function M.get(c, opts)
     Exception      = { fg = c.blue },
 
     PreProc        = { fg = c.blue },
-    Type           = { fg = c.fg },
+    Type           = { fg = c.yellow },
 
     Tag            = { fg = c.blue },
 

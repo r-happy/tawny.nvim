@@ -49,8 +49,13 @@ for i, variant in ipairs({ 'dark', 'light' }) do
   require('tawny').setup({ transparent = false })
   vim.cmd.colorscheme(variant == 'light' and 'tawny-light' or 'tawny')
   for _, group in ipairs({ 'Identifier', '@property', '@variable.member', '@module',
-    'Type', 'Number', 'Constant', 'Operator', 'Delimiter', '@tag.attribute' }) do
+    'Number', 'Constant', 'Operator', 'Delimiter', '@tag.attribute' }) do
     equal(fg(group), c.fg, variant .. ' readable neutral ' .. group)
+  end
+  for _, group in ipairs({ 'Type', '@type', '@type.builtin', '@type.definition',
+    '@lsp.type.class', '@lsp.type.struct', '@lsp.type.enum', '@lsp.type.interface',
+    '@lsp.type.typeParameter' }) do
+    equal(fg(group), c.yellow, variant .. ' amber type ' .. group)
   end
   for _, group in ipairs({ 'Comment', 'Keyword', '@function.builtin', '@constant.builtin' }) do
     assert(not vim.api.nvim_get_hl(0, { name = group, link = false }).italic, group .. ' should be upright')

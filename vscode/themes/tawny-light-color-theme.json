@@ -179,15 +179,15 @@
   "name": "Tawny Light",
   "semanticHighlighting": true,
   "semanticTokenColors": {
-    "class": "#1b1510",
+    "class": "#7b5a0f",
     "comment": {
       "foreground": "#51453d",
       "italic": false
     },
-    "enum": "#1b1510",
+    "enum": "#7b5a0f",
     "enumMember": "#1b1510",
     "function": "#265887",
-    "interface": "#1b1510",
+    "interface": "#7b5a0f",
     "keyword": {
       "foreground": "#265887",
       "italic": false
@@ -199,9 +199,9 @@
     "parameter": "#1b1510",
     "property": "#1b1510",
     "string": "#3a6222",
-    "struct": "#1b1510",
-    "type": "#1b1510",
-    "typeParameter": "#1b1510",
+    "struct": "#7b5a0f",
+    "type": "#7b5a0f",
+    "typeParameter": "#7b5a0f",
     "variable": "#1b1510",
     "variable.defaultLibrary": "#1b1510",
     "variable.readonly": "#1b1510"
@@ -245,7 +245,7 @@
         "support.class"
       ],
       "settings": {
-        "foreground": "#1b1510"
+        "foreground": "#7b5a0f"
       }
     },
     {

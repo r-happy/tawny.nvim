@@ -179,15 +179,15 @@
   "name": "Tawny",
   "semanticHighlighting": true,
   "semanticTokenColors": {
-    "class": "#e2ded5",
+    "class": "#e0ca7b",
     "comment": {
       "foreground": "#9c968b",
       "italic": false
     },
-    "enum": "#e2ded5",
+    "enum": "#e0ca7b",
     "enumMember": "#e2ded5",
     "function": "#85abd5",
-    "interface": "#e2ded5",
+    "interface": "#e0ca7b",
     "keyword": {
       "foreground": "#85abd5",
       "italic": false
@@ -199,9 +199,9 @@
     "parameter": "#e2ded5",
     "property": "#e2ded5",
     "string": "#abcd7a",
-    "struct": "#e2ded5",
-    "type": "#e2ded5",
-    "typeParameter": "#e2ded5",
+    "struct": "#e0ca7b",
+    "type": "#e0ca7b",
+    "typeParameter": "#e0ca7b",
     "variable": "#e2ded5",
     "variable.defaultLibrary": "#e2ded5",
     "variable.readonly": "#e2ded5"
@@ -245,7 +245,7 @@
         "support.class"
       ],
       "settings": {
-        "foreground": "#e2ded5"
+        "foreground": "#e0ca7b"
       }
     },
     {
