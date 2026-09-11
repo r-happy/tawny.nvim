@@ -1,6 +1,6 @@
 local M = {}
 
-function M.get(c, _)
+function M.get(c, opts)
   local comment = c.comment or c.fg_dim
 
   local groups = {
@@ -310,7 +310,8 @@ function M.get(c, _)
 
   -- Keep every part of a buffer on the same surface, including diagnostics and
   -- duplicate prefixes. Explicit colors also support transparent Normal and slants.
-  groups.BufferLineFill = { bg = c.bg_dim }
+  local bufferline_fill = opts.transparent and c.bg or c.bg_dim
+  groups.BufferLineFill = { bg = bufferline_fill }
   groups.BufferLineBackground = { fg = c.fg_dim, bg = c.bg_statusline }
   for _, state in ipairs({
     { suffix = "", bg = c.bg_statusline, fg = c.fg_dim },
@@ -323,7 +324,7 @@ function M.get(c, _)
       CloseButton = selected and c.red or c.fg_dim,
       Modified = c.orange, Duplicate = c.fg_dim,
       Indicator = selected and c.orange or state.bg,
-      Separator = c.bg_dim, TabSeparator = c.bg_dim,
+      Separator = bufferline_fill, TabSeparator = bufferline_fill,
       Error = c.red, ErrorDiagnostic = c.red,
       Warning = c.orange, WarningDiagnostic = c.orange,
       Info = c.blue, InfoDiagnostic = c.blue,
