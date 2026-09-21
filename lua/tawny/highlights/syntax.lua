@@ -12,6 +12,7 @@ function M.get(c, opts)
   local keyword_style = styles.keywords or {}
   local bold_todo = opts.bold_todo ~= false
   local comment = c.comment or c.fg_dim
+  local keyword = c.keyword or c.blue
 
   return {
     ----------------------------------------------------------------
@@ -34,16 +35,16 @@ function M.get(c, opts)
     Identifier     = { fg = c.fg },
     Function       = { fg = c.blue },
 
-    Statement      = { fg = c.blue },
+    Statement      = { fg = keyword },
     Keyword        = vim.tbl_extend(
       "force",
-      { fg = c.blue },
+      { fg = keyword },
       keyword_style
     ),
 
-    Exception      = { fg = c.blue },
+    Exception      = { fg = keyword },
 
-    PreProc        = { fg = c.blue },
+    PreProc        = { fg = keyword },
     Type           = { fg = c.yellow },
 
     Tag            = { fg = c.blue },

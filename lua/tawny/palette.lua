@@ -95,6 +95,8 @@ M.light = {
   teal_dim         = hsl(164.0, 38.0, 20.0),
   blue             = hsl(209.0, 63.0, 34.0),
   blue_dim         = hsl(210.0, 44.0, 27.0),
+  -- Separate control flow from blue function names on a light background.
+  keyword          = hsl(300.0, 28.0, 34.0),
   violet           = hsl(300.0, 28.0, 34.0),
   violet_dim       = hsl(300.0, 22.0, 27.0),
   magenta          = hsl(335.0, 42.0, 36.0),

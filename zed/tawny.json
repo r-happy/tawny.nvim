@@ -421,7 +421,7 @@
             "color": "#235c4b"
           },
           "keyword": {
-            "color": "#20598d",
+            "color": "#6f3e6f",
             "font_style": "normal"
           },
           "label": {
@@ -441,7 +441,7 @@
             "color": "#2a221d"
           },
           "preproc": {
-            "color": "#20598d"
+            "color": "#6f3e6f"
           },
           "primary": {
             "color": "#2a221d"

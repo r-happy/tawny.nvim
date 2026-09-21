@@ -189,7 +189,7 @@
     "function": "#20598d",
     "interface": "#7b5a0f",
     "keyword": {
-      "foreground": "#20598d",
+      "foreground": "#6f3e6f",
       "italic": false
     },
     "method": "#20598d",
@@ -225,7 +225,7 @@
       ],
       "settings": {
         "fontStyle": "",
-        "foreground": "#20598d"
+        "foreground": "#6f3e6f"
       }
     },
     {
@@ -383,7 +383,7 @@
         "meta.preprocessor"
       ],
       "settings": {
-        "foreground": "#20598d"
+        "foreground": "#6f3e6f"
       }
     },
     {
