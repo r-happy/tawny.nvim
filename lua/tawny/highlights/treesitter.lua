@@ -100,8 +100,8 @@ function M.get(c, opts)
     -- HTML / JSX
     ----------------------------------------------------------------
     ["@tag"]                   = { fg = c.blue },
-    ["@tag.attribute"]         = { fg = c.fg },
-    ["@tag.delimiter"]         = { link = "Delimiter" },
+    ["@tag.attribute"]         = { fg = c.teal },
+    ["@tag.delimiter"]         = { fg = c.fg_dark },
     -- JSX link labels include surrounding newlines and indentation. Underlining
     -- that capture draws horizontal strokes through the indent guides.
     ["@markup.link.label"]     = { fg = c.blue, underline = false },

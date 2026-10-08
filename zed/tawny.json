@@ -113,7 +113,7 @@
         "surface.background": "#161513",
         "syntax": {
           "attribute": {
-            "color": "#e2ded5"
+            "color": "#86b6aa"
           },
           "boolean": {
             "color": "#e2ded5"
@@ -383,7 +383,7 @@
         "surface.background": "#f3f1ec",
         "syntax": {
           "attribute": {
-            "color": "#2a221d"
+            "color": "#235c4b"
           },
           "boolean": {
             "color": "#2a221d"

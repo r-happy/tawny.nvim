@@ -34,6 +34,8 @@ local roles = {
   { 'Function', 'entity.name.function', 'function', 'function' },
   { 'Type', 'entity.name.type', 'type', 'type' },
   { 'String', 'string', 'string', 'string' },
+  { '@tag', 'entity.name.tag', nil, 'tag' },
+  { '@tag.attribute', 'entity.other.attribute-name', nil, 'attribute' },
   { 'Number', 'constant.numeric', 'number', 'number' },
   { 'Delimiter', 'punctuation', nil, 'punctuation' },
   { 'Boolean', 'constant.language.boolean', nil, 'boolean' },
@@ -49,7 +51,7 @@ for i, variant in ipairs({ 'dark', 'light' }) do
   require('tawny').setup({ transparent = false })
   vim.cmd.colorscheme(variant == 'light' and 'tawny-light' or 'tawny')
   for _, group in ipairs({ 'Identifier', '@property', '@variable.member', '@module',
-    'Number', 'Constant', 'Operator', 'Delimiter', '@tag.attribute' }) do
+    'Number', 'Constant', 'Operator', 'Delimiter' }) do
     equal(fg(group), c.fg, variant .. ' readable neutral ' .. group)
   end
   for _, group in ipairs({ 'Type', '@type', '@type.builtin', '@type.definition',

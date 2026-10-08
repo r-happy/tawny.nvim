@@ -124,7 +124,8 @@ the check when changing the source. No third-party test packages are required.
 VS Code and Zed derive their shared syntax roles from the Neovim highlight
 definitions: neutral identifiers, properties, numbers and punctuation;
 brass-colored types; copper keywords; steel-blue functions; honeyed strings; and
-readable gray comments.
+readable gray comments. HTML/JSX attributes use muted teal to separate prop names
+from their values.
 Syntax uses upright text by default. Diagnostic and Git status colors remain distinct.
 Token classification still depends on each editor's language
 grammar and language server.

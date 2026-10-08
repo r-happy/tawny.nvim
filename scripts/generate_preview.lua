@@ -1,9 +1,9 @@
 -- A reproducible highlight preview, not a terminal screenshot.
 -- Run from the repository root with Neovim and this repository on runtimepath.
 local output = {
-  '<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="490" viewBox="0 0 1120 490">',
+  '<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="670" viewBox="0 0 1120 670">',
   '<title>Tawny dark and light highlight previews</title>',
-  '<desc>Lua syntax, active buffer, cursor line, visual selection, and diagnostics using the theme highlight colors.</desc>',
+  '<desc>Lua and JSX syntax, active buffer, cursor line, visual selection, and diagnostics using the theme highlight colors.</desc>',
 }
 local function add(s) output[#output + 1] = s end
 local function escape(s)
@@ -29,12 +29,19 @@ local lines = {
   { { 'end', 'Keyword' } },
   {},
   { { 'greet', 'Function' }, { '(', 'Delimiter' }, { '"Tawny"', 'String' }, { ')', 'Delimiter' } },
+  {},
+  { { '{/* JSX / TSX */}', 'Comment' } },
+  { { '<', '@tag.delimiter' }, { 'CartCard', '@tag' } },
+  { { '  ', 'Identifier' }, { 'cart', '@tag.attribute' }, { '={', 'Delimiter' }, { 'cart', 'Identifier' }, { '}', 'Delimiter' } },
+  { { '  ', 'Identifier' }, { 'studentId', '@tag.attribute' }, { '=', 'Operator' }, { '"new"', 'String' } },
+  { { '  ', 'Identifier' }, { 'onCheckout', '@tag.attribute' }, { '={', 'Delimiter' }, { 'handleCheckout', 'Identifier' }, { '}', 'Delimiter' } },
+  { { '/>', '@tag.delimiter' } },
 }
 for i, name in ipairs({ 'tawny', 'tawny-light' }) do
   require('tawny').setup({ transparent = false })
   vim.cmd.colorscheme(name)
   local x = (i - 1) * 560
-  rect(x, 0, 560, 490, color('Normal', 'bg'))
+  rect(x, 0, 560, 670, color('Normal', 'bg'))
   add('<g font-family="Menlo,DejaVu Sans Mono,monospace" xml:space="preserve">')
   text(x + 24, 38, i == 1 and 'TAWNY / DARK' or 'TAWNY / LIGHT', color('Title'), 19)
   rect(x, 60, 560, 38, color('BufferLineFill', 'bg'))
@@ -52,11 +59,11 @@ for i, name in ipairs({ 'tawny', 'tawny-light' }) do
       pos = pos + #token[1] * 10
     end
   end
-  text(x + 24, 423, '● error', color('DiagnosticError'), 14)
-  text(x + 144, 423, '● warning', color('DiagnosticWarn'), 14)
-  text(x + 284, 423, '● info', color('DiagnosticInfo'), 14)
-  text(x + 404, 423, '● hint', color('DiagnosticHint'), 14)
-  text(x + 24, 464, 'Row 5: cursor line   Row 6: selection', color('Comment'), 13)
+  text(x + 24, 603, '● error', color('DiagnosticError'), 14)
+  text(x + 144, 603, '● warning', color('DiagnosticWarn'), 14)
+  text(x + 284, 603, '● info', color('DiagnosticInfo'), 14)
+  text(x + 404, 603, '● hint', color('DiagnosticHint'), 14)
+  text(x + 24, 644, 'Row 5: cursor line   Row 6: selection', color('Comment'), 13)
   add('</g>')
 end
 add('</svg>')
