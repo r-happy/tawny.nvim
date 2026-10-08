@@ -1,7 +1,7 @@
 # tawny.nvim
 
-A Neovim colorscheme with readable neutral text, blue, green and amber syntax accents,
-and neutral dark or paper-like light backgrounds.
+A Neovim colorscheme with readable neutral text, honeyed strings, copper keywords,
+and steel-blue functions on warm charcoal or paper-like light backgrounds.
 
 ![Tawny dark and light highlight previews](./assets/preview.svg)
 
@@ -28,14 +28,15 @@ Generated highlight preview showing syntax, the active buffer, cursor line, sele
 
 | Name       | Dark      | Light     |
 | ---------- | --------- | --------- |
-| Background | `#181818` | `#f9f8f6` |
-| Foreground | `#e2ded5` | `#1b1510` |
+| Background | `#1a1816` | `#fbfaf8` |
+| Foreground | `#e2ded5` | `#2a221d` |
 | Red        | `#d87d91` | `#992e29` |
+| Tawny      | `#d4ad77` | `#84581f` |
 | Orange     | `#d39b69` | `#9a5213` |
 | Yellow     | `#e0ca7b` | `#7b5a0f` |
-| Green      | `#abcd7a` | `#3a6222` |
+| Green      | `#9db780` | `#49612e` |
 | Teal       | `#86b6aa` | `#235c4b` |
-| Blue       | `#85abd5` | `#265887` |
+| Blue       | `#8ea8c2` | `#2e547a` |
 | Violet     | `#c09ec7` | `#6f3e6f` |
 
 Transparency clears the main editing background and gutter. Selection, cursor line,
@@ -122,7 +123,8 @@ the check when changing the source. No third-party test packages are required.
 
 VS Code and Zed derive their shared syntax roles from the Neovim highlight
 definitions: neutral identifiers, properties, numbers and punctuation;
-amber types; blue keywords and functions; green strings; and readable gray comments.
+brass-colored types; copper keywords; steel-blue functions; honeyed strings; and
+readable gray comments.
 Syntax uses upright text by default. Diagnostic and Git status colors remain distinct.
 Token classification still depends on each editor's language
 grammar and language server.

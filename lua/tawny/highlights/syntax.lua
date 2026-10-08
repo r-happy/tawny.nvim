@@ -12,7 +12,7 @@ function M.get(c, opts)
   local keyword_style = styles.keywords or {}
   local bold_todo = opts.bold_todo ~= false
   local comment = c.comment or c.fg_dim
-  local keyword = c.keyword or c.blue
+  local keyword = c.keyword or c.orange
 
   return {
     ----------------------------------------------------------------
@@ -29,7 +29,7 @@ function M.get(c, opts)
     Delimiter      = { fg = c.fg },
 
     Constant       = { fg = c.fg },
-    String         = { fg = c.green },
+    String         = { fg = c.tawny },
     Number         = { fg = c.fg },
 
     Identifier     = { fg = c.fg },

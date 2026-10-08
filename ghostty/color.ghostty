@@ -3,27 +3,27 @@
 # import this file from ~/.config/ghostty/config:
 #   config-file = /path/to/tawny.nvim/ghostty/color.ghostty
 
-background = #181818
+background = #1a1816
 foreground = #e2ded5
-selection-background = #3b3b3b
+selection-background = #423a2e
 selection-foreground = #e2ded5
 
 cursor-color = #d9caab
-cursor-text = #181818
+cursor-text = #1a1816
 
-palette = 0=#111111
+palette = 0=#12110f
 palette = 1=#d87d91
-palette = 2=#abcd7a
+palette = 2=#9db780
 palette = 3=#e0ca7b
-palette = 4=#85abd5
+palette = 4=#8ea8c2
 palette = 5=#c09ec7
 palette = 6=#86b6aa
 palette = 7=#b3ab9e
 palette = 8=#90867a
 palette = 9=#d87d91
-palette = 10=#abcd7a
+palette = 10=#9db780
 palette = 11=#e0ca7b
-palette = 12=#85abd5
+palette = 12=#8ea8c2
 palette = 13=#ce92af
 palette = 14=#89b8bd
 palette = 15=#e8e3d9

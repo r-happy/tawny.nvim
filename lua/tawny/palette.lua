@@ -2,19 +2,19 @@ local M = {}
 local hsl = require("tawny.util.color").hsl
 
 M.dark = {
-  bg               = hsl(0.0, 0.0, 9.4),
-  bg_dim           = hsl(0.0, 0.0, 8.0),
-  bg_dark          = hsl(0.0, 0.0, 6.5),
-  bg_light         = hsl(0.0, 0.0, 15.0),
-  bg_highlight     = hsl(0.0, 0.0, 15.5),
-  bg_popup         = hsl(0.0, 0.0, 10.7),
-  bg_sidebar       = hsl(0.0, 0.0, 8.7),
-  bg_statusline    = hsl(0.0, 0.0, 7.3),
+  bg               = hsl(32.0, 8.0, 9.4),
+  bg_dim           = hsl(32.0, 8.0, 8.0),
+  bg_dark          = hsl(32.0, 8.0, 6.5),
+  bg_light         = hsl(35.0, 14.0, 15.0),
+  bg_highlight     = hsl(35.0, 14.0, 15.5),
+  bg_popup         = hsl(32.0, 12.0, 10.7),
+  bg_sidebar       = hsl(32.0, 10.0, 8.7),
+  bg_statusline    = hsl(32.0, 10.0, 7.3),
 
-  border           = hsl(0.0, 0.0, 18.0),
-  border_highlight = hsl(0.0, 0.0, 28.0),
+  border           = hsl(35.0, 10.0, 18.0),
+  border_highlight = hsl(35.0, 12.0, 28.0),
 
-  selection        = hsl(0.0, 0.0, 23.0),
+  selection        = hsl(35.0, 18.0, 22.0),
 
   -- warm readable foreground
   fg               = hsl(41.5, 18.3, 86.1),
@@ -24,7 +24,8 @@ M.dark = {
   cursor           = hsl(40.0, 38.0, 76.0),
   fg_dark          = hsl(38.0, 12.0, 66.0),
 
-  -- tawny accents with restrained Monokai influence
+  -- Honeyed strings, brass types, and copper keywords.
+  tawny            = hsl(35.0, 52.0, 65.0),
   yellow           = hsl(47.0, 62.0, 68.0),
   yellow_dim       = hsl(47.0, 30.0, 49.0),
 
@@ -35,15 +36,15 @@ M.dark = {
   red              = hsl(347.0, 54.0, 67.0),
   red_dim          = hsl(347.0, 28.0, 50.0),
 
-  -- muted yellow-green rather than vivid Monokai green
-  green            = hsl(84.0, 45.0, 64.0),
-  green_dim        = hsl(84.0, 22.0, 45.0),
+  -- Olive and steel accents balance the warm syntax.
+  green            = hsl(88.0, 28.0, 61.0),
+  green_dim        = hsl(88.0, 20.0, 45.0),
 
   teal             = hsl(165.0, 25.0, 62.0),
   teal_dim         = hsl(165.0, 16.0, 55.0),
 
-  blue             = hsl(212.0, 49.0, 68.0),
-  blue_dim         = hsl(212.0, 24.0, 50.0),
+  blue             = hsl(210.0, 30.0, 66.0),
+  blue_dim         = hsl(210.0, 20.0, 50.0),
 
   violet           = hsl(290.0, 27.0, 70.0),
   violet_dim       = hsl(290.0, 16.0, 52.0),
@@ -65,14 +66,14 @@ M.dark = {
 }
 
 M.light = {
-  bg               = hsl(0.0, 0.0, 98.0),
-  bg_dim           = hsl(0.0, 0.0, 94.0),
-  bg_dark          = hsl(0.0, 0.0, 90.0),
-  bg_light         = hsl(0.0, 0.0, 92.0),
-  bg_highlight     = hsl(0.0, 0.0, 92.5),
-  bg_popup         = hsl(0.0, 0.0, 98.4),
-  bg_sidebar       = hsl(0.0, 0.0, 94.0),
-  bg_statusline    = hsl(0.0, 0.0, 91.8),
+  bg               = hsl(40.0, 30.0, 98.0),
+  bg_dim           = hsl(38.0, 22.0, 94.0),
+  bg_dark          = hsl(38.0, 20.0, 90.0),
+  bg_light         = hsl(38.0, 24.0, 92.0),
+  bg_highlight     = hsl(38.0, 24.0, 92.5),
+  bg_popup         = hsl(40.0, 32.0, 98.4),
+  bg_sidebar       = hsl(38.0, 22.0, 94.0),
+  bg_statusline    = hsl(38.0, 22.0, 91.8),
 
   fg               = hsl(24.0, 18.3, 13.9),
   fg_bright        = hsl(22.0, 28.0, 4.5),
@@ -80,8 +81,8 @@ M.light = {
   fg_dark          = hsl(24.0, 18.0, 22.0),
   fg_dim           = hsl(24.0, 14.0, 28.0),
 
-  border           = hsl(0.0, 0.0, 72.0),
-  border_highlight = hsl(0.0, 0.0, 48.0),
+  border           = hsl(38.0, 12.0, 72.0),
+  border_highlight = hsl(38.0, 12.0, 48.0),
 
   red              = hsl(3.0, 58.0, 38.0),
   red_dim          = hsl(2.0, 45.0, 30.0),
@@ -89,20 +90,19 @@ M.light = {
   orange_dim       = hsl(28.0, 68.0, 27.0),
   yellow           = hsl(42.0, 78.0, 27.0),
   yellow_dim       = hsl(43.0, 66.0, 22.0),
-  green            = hsl(98.0, 55.0, 26.0),
-  green_dim        = hsl(99.0, 42.0, 21.0),
+  green            = hsl(88.0, 36.0, 28.0),
+  green_dim        = hsl(88.0, 30.0, 22.0),
   teal             = hsl(162.0, 45.0, 25.0),
   teal_dim         = hsl(164.0, 38.0, 20.0),
-  blue             = hsl(209.0, 63.0, 34.0),
-  blue_dim         = hsl(210.0, 44.0, 27.0),
-  -- Separate control flow from blue function names on a light background.
-  keyword          = hsl(300.0, 28.0, 34.0),
+  blue             = hsl(210.0, 45.0, 33.0),
+  blue_dim         = hsl(210.0, 34.0, 27.0),
+  tawny            = hsl(34.0, 62.0, 32.0),
   violet           = hsl(300.0, 28.0, 34.0),
   violet_dim       = hsl(300.0, 22.0, 27.0),
   magenta          = hsl(335.0, 42.0, 36.0),
   cyan             = hsl(186.0, 48.0, 29.0),
 
-  selection        = hsl(0.0, 0.0, 80.0),
+  selection        = hsl(38.0, 28.0, 88.0),
   none             = "NONE",
 
   diff_add         = hsl(95.0, 36.0, 88.0),

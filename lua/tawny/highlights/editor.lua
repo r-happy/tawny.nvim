@@ -49,7 +49,7 @@ function M.get(c, opts)
     FloatTitle   = { fg = c.yellow, bg = c.bg_popup, bold = true },
 
     Pmenu        = { fg = c.fg, bg = c.bg_popup },
-    PmenuSel     = { fg = c.fg_bright, bg = c.selection },
+    PmenuSel     = { fg = c.yellow, bg = c.selection },
     PmenuKind    = { fg = c.teal, bg = c.bg_popup },
     PmenuExtra   = { fg = c.fg_dim, bg = c.bg_popup },
     PmenuSbar    = { bg = c.bg_highlight },
