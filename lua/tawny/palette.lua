@@ -116,6 +116,13 @@ M.light = {
   diag_hint_bg     = hsl(150.0, 26.0, 88.0),
 }
 
+-- Syntax roles stay in the palette so highlights and companion themes agree.
+M.light.string   = M.light.green
+M.light.type     = M.light.violet
+M.light.number   = M.light.magenta
+M.light.constant = M.light.magenta
+M.light.comment  = hsl(33.0, 9.0, 40.0)
+
 M.colors = M.dark
 
 return M

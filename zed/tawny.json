@@ -386,18 +386,18 @@
             "color": "#235c4b"
           },
           "boolean": {
-            "color": "#2a221d"
+            "color": "#823555"
           },
           "comment": {
-            "color": "#51453d",
+            "color": "#6f675d",
             "font_style": "normal"
           },
           "comment.doc": {
-            "color": "#51453d",
+            "color": "#6f675d",
             "font_style": "normal"
           },
           "constant": {
-            "color": "#2a221d"
+            "color": "#823555"
           },
           "constructor": {
             "color": "#2e547a"
@@ -412,7 +412,7 @@
             "font_weight": 700
           },
           "enum": {
-            "color": "#7b5a0f"
+            "color": "#6f3e6f"
           },
           "function": {
             "color": "#2e547a"
@@ -435,7 +435,7 @@
             "font_style": "italic"
           },
           "number": {
-            "color": "#2a221d"
+            "color": "#823555"
           },
           "operator": {
             "color": "#2a221d"
@@ -465,29 +465,29 @@
             "color": "#2a221d"
           },
           "string": {
-            "color": "#84581f"
+            "color": "#49612e"
           },
           "string.escape": {
             "color": "#2e547a"
           },
           "string.regex": {
-            "color": "#84581f"
+            "color": "#49612e"
           },
           "string.special": {
-            "color": "#84581f"
+            "color": "#49612e"
           },
           "tag": {
             "color": "#2e547a"
           },
           "text.literal": {
-            "color": "#84581f"
+            "color": "#49612e"
           },
           "title": {
             "color": "#7b5a0f",
             "font_weight": 700
           },
           "type": {
-            "color": "#7b5a0f"
+            "color": "#6f3e6f"
           },
           "variable": {
             "color": "#2a221d"
@@ -496,7 +496,7 @@
             "color": "#2a221d"
           },
           "variant": {
-            "color": "#2a221d"
+            "color": "#823555"
           }
         },
         "tab.active_background": "#fbfaf8",

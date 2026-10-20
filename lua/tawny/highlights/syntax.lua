@@ -28,9 +28,9 @@ function M.get(c, opts)
     Special        = { fg = c.blue },
     Delimiter      = { fg = c.fg },
 
-    Constant       = { fg = c.fg },
-    String         = { fg = c.tawny },
-    Number         = { fg = c.fg },
+    Constant       = { fg = c.constant or c.fg },
+    String         = { fg = c.string or c.tawny },
+    Number         = { fg = c.number or c.fg },
 
     Identifier     = { fg = c.fg },
     Function       = { fg = c.blue },
@@ -45,7 +45,7 @@ function M.get(c, opts)
     Exception      = { fg = keyword },
 
     PreProc        = { fg = keyword },
-    Type           = { fg = c.yellow },
+    Type           = { fg = c.type or c.yellow },
 
     Tag            = { fg = c.blue },
 
