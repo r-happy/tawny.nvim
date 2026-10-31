@@ -2,14 +2,15 @@ local M = {}
 local hsl = require("tawny.util.color").hsl
 
 M.dark = {
-  bg               = hsl(32.0, 8.0, 9.4),
-  bg_dim           = hsl(32.0, 8.0, 8.0),
-  bg_dark          = hsl(32.0, 8.0, 6.5),
+  -- The editor is the darkest surface; panels and bars sit a step above it.
+  bg               = hsl(32.0, 8.0, 6.0),
+  bg_dim           = hsl(32.0, 8.0, 7.2),
+  bg_dark          = hsl(32.0, 8.0, 3.8),
   bg_light         = hsl(35.0, 14.0, 15.0),
   bg_highlight     = hsl(35.0, 14.0, 15.5),
   bg_popup         = hsl(32.0, 12.0, 10.7),
-  bg_sidebar       = hsl(32.0, 10.0, 8.7),
-  bg_statusline    = hsl(32.0, 10.0, 7.3),
+  bg_sidebar       = hsl(32.0, 10.0, 7.8),
+  bg_statusline    = hsl(32.0, 10.0, 9.0),
 
   border           = hsl(35.0, 10.0, 21.0),
   border_highlight = hsl(35.0, 12.0, 28.0),

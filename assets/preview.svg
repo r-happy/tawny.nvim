@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1120" height="670" viewBox="0 0 1120 670">
 <title>Tawny dark and light highlight previews</title>
 <desc>Lua and JSX syntax, active buffer, cursor line, visual selection, and diagnostics using the theme highlight colors.</desc>
-<rect x="0" y="0" width="560" height="670" fill="#1a1816"/>
+<rect x="0" y="0" width="560" height="670" fill="#110f0e"/>
 <g font-family="Menlo,DejaVu Sans Mono,monospace" xml:space="preserve">
 <text x="24" y="38" fill="#d5b981" font-size="19">TAWNY / DARK</text>
-<rect x="0" y="60" width="560" height="38" fill="#161513"/>
+<rect x="0" y="60" width="560" height="38" fill="#141211"/>
 <rect x="16" y="60" width="190" height="38" fill="#2c2721"/>
 <text x="28" y="85" fill="#e2ded5" font-size="16">greet.lua   ×</text>
 <text x="228" y="85" fill="#90867a" font-size="16">catalog.lua</text>
