@@ -5,7 +5,7 @@
 
 background = #1a1816
 foreground = #e2ded5
-selection-background = #423a2e
+selection-background = #4d4233
 selection-foreground = #e2ded5
 
 cursor-color = #d9caab

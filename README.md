@@ -30,14 +30,18 @@ Generated highlight preview showing syntax, the active buffer, cursor line, sele
 | ---------- | --------- | --------- |
 | Background | `#1a1816` | `#fbfaf8` |
 | Foreground | `#e2ded5` | `#2a221d` |
-| Red        | `#d87d91` | `#992e29` |
-| Tawny      | `#d4ad77` | `#84581f` |
-| Orange     | `#d39b69` | `#9a5213` |
-| Yellow     | `#e0ca7b` | `#7b5a0f` |
-| Green      | `#9db780` | `#49612e` |
-| Teal       | `#86b6aa` | `#235c4b` |
-| Blue       | `#8ea8c2` | `#2e547a` |
-| Violet     | `#c09ec7` | `#6f3e6f` |
+| Red        | `#d87d91` | `#9e2e3d` |
+| Tawny      | `#d5b981` | `#7c561d` |
+| Orange     | `#cf9577` | `#9d4525` |
+| Yellow     | `#e0ca7b` | `#765c13` |
+| Green      | `#9db780` | `#496529` |
+| Teal       | `#86b6aa` | `#22594b` |
+| Blue       | `#8ea8c2` | `#305e91` |
+| Violet     | `#c09ec7` | `#783f83` |
+
+Syntax uses only four colored roles: tawny strings, copper (orange) keywords,
+steel-blue functions, and muted comments. Types, numbers, and constants stay on
+the foreground color. Tawny is also the single UI accent.
 
 Transparency clears the main editing background and gutter. Selection, cursor line,
 popups, and buffer tabs retain their palette backgrounds so their states remain visible.

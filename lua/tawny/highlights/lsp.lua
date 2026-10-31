@@ -46,7 +46,7 @@ function M.get(c, _)
     LspInlayHint               = { fg = c.fg_dim, bg = c.bg_light, italic = true },
 
     -- シグネチャヘルプ
-    LspSignatureActiveParameter = { fg = c.yellow, bold = true },
+    LspSignatureActiveParameter = { fg = c.tawny, bold = true },
   }
 end
 

@@ -11,26 +11,26 @@ M.dark = {
   bg_sidebar       = hsl(32.0, 10.0, 8.7),
   bg_statusline    = hsl(32.0, 10.0, 7.3),
 
-  border           = hsl(35.0, 10.0, 18.0),
+  border           = hsl(35.0, 10.0, 21.0),
   border_highlight = hsl(35.0, 12.0, 28.0),
 
-  selection        = hsl(35.0, 18.0, 22.0),
+  selection        = hsl(35.0, 20.0, 25.0),
 
   -- warm readable foreground
   fg               = hsl(41.5, 18.3, 86.1),
   fg_dim           = hsl(35.0, 9.0, 52.0),
-  comment          = hsl(38.0, 8.0, 58.0),
+  comment          = hsl(38.0, 7.0, 55.0),
   fg_bright        = hsl(40.0, 24.0, 88.0),
   cursor           = hsl(40.0, 38.0, 76.0),
   fg_dark          = hsl(38.0, 12.0, 66.0),
 
-  -- Honeyed strings, brass types, and copper keywords.
-  tawny            = hsl(35.0, 52.0, 65.0),
+  -- Honeyed strings and copper keywords; tawny doubles as the UI accent.
+  tawny            = hsl(40.0, 50.0, 67.0),
   yellow           = hsl(47.0, 62.0, 68.0),
   yellow_dim       = hsl(47.0, 30.0, 49.0),
 
-  orange           = hsl(28.0, 55.0, 62.0),
-  orange_dim       = hsl(27.0, 30.0, 57.0),
+  orange           = hsl(20.0, 48.0, 64.0),
+  orange_dim       = hsl(20.0, 30.0, 57.0),
 
   -- slightly pinker than the original red
   red              = hsl(347.0, 54.0, 67.0),
@@ -80,29 +80,31 @@ M.light = {
   cursor           = hsl(24.0, 18.3, 13.9),
   fg_dark          = hsl(24.0, 18.0, 22.0),
   fg_dim           = hsl(24.0, 14.0, 28.0),
+  comment          = hsl(33.0, 9.0, 40.0),
 
   border           = hsl(38.0, 12.0, 72.0),
   border_highlight = hsl(38.0, 12.0, 48.0),
 
-  red              = hsl(3.0, 58.0, 38.0),
-  red_dim          = hsl(2.0, 45.0, 30.0),
-  orange           = hsl(20.0, 88.0, 36.0),
-  orange_dim       = hsl(20.0, 72.0, 28.0),
-  yellow           = hsl(42.0, 78.0, 27.0),
-  yellow_dim       = hsl(43.0, 66.0, 22.0),
-  green            = hsl(140.0, 70.0, 27.0),
-  green_dim        = hsl(140.0, 55.0, 22.0),
-  teal             = hsl(162.0, 45.0, 25.0),
-  teal_dim         = hsl(164.0, 38.0, 20.0),
-  blue             = hsl(216.0, 85.0, 40.0),
-  blue_dim         = hsl(216.0, 65.0, 30.0),
-  tawny            = hsl(34.0, 62.0, 32.0),
-  violet           = hsl(278.0, 70.0, 40.0),
-  violet_dim       = hsl(278.0, 55.0, 30.0),
-  magenta          = hsl(335.0, 78.0, 36.0),
-  cyan             = hsl(186.0, 48.0, 29.0),
+  -- Same hues as dark, darkened for paper instead of saturated.
+  red              = hsl(352.0, 55.0, 40.0),
+  red_dim          = hsl(352.0, 45.0, 32.0),
+  orange           = hsl(16.0, 62.0, 38.0),
+  orange_dim       = hsl(16.0, 55.0, 30.0),
+  yellow           = hsl(44.0, 72.0, 27.0),
+  yellow_dim       = hsl(44.0, 60.0, 22.0),
+  green            = hsl(88.0, 42.0, 28.0),
+  green_dim        = hsl(88.0, 35.0, 22.0),
+  teal             = hsl(165.0, 45.0, 24.0),
+  teal_dim         = hsl(165.0, 38.0, 20.0),
+  blue             = hsl(212.0, 50.0, 38.0),
+  blue_dim         = hsl(212.0, 45.0, 30.0),
+  tawny            = hsl(36.0, 62.0, 30.0),
+  violet           = hsl(290.0, 35.0, 38.0),
+  violet_dim       = hsl(290.0, 30.0, 30.0),
+  magenta          = hsl(331.0, 50.0, 38.0),
+  cyan             = hsl(186.0, 45.0, 27.0),
 
-  selection        = hsl(38.0, 28.0, 88.0),
+  selection        = hsl(38.0, 38.0, 85.0),
   none             = "NONE",
 
   diff_add         = hsl(95.0, 36.0, 88.0),
@@ -115,13 +117,6 @@ M.light = {
   diag_info_bg     = hsl(205.0, 34.0, 89.0),
   diag_hint_bg     = hsl(150.0, 26.0, 88.0),
 }
-
--- Syntax roles stay in the palette so highlights and companion themes agree.
-M.light.string   = M.light.green
-M.light.type     = M.light.violet
-M.light.number   = M.light.magenta
-M.light.constant = M.light.magenta
-M.light.comment  = hsl(33.0, 9.0, 40.0)
 
 M.colors = M.dark
 

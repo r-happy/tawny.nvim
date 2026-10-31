@@ -11,16 +11,16 @@ function M.get(c, opts)
   local comment_style = styles.comments or {}
   local keyword_style = styles.keywords or {}
   local bold_todo = opts.bold_todo ~= false
-  local comment = c.comment or c.fg_dim
-  local keyword = c.keyword or c.orange
 
+  -- Only four roles carry color: comments, strings, keywords, and functions.
+  -- Everything else stays on fg so structure comes from the code itself.
   return {
     ----------------------------------------------------------------
     -- ベース実体
     ----------------------------------------------------------------
     Comment        = vim.tbl_extend(
       "force",
-      { fg = comment },
+      { fg = c.comment },
       comment_style
     ),
 
@@ -28,29 +28,29 @@ function M.get(c, opts)
     Special        = { fg = c.blue },
     Delimiter      = { fg = c.fg },
 
-    Constant       = { fg = c.constant or c.fg },
-    String         = { fg = c.string or c.tawny },
-    Number         = { fg = c.number or c.fg },
+    Constant       = { fg = c.fg },
+    String         = { fg = c.tawny },
+    Number         = { fg = c.fg },
 
     Identifier     = { fg = c.fg },
     Function       = { fg = c.blue },
 
-    Statement      = { fg = keyword },
+    Statement      = { fg = c.orange },
     Keyword        = vim.tbl_extend(
       "force",
-      { fg = keyword },
+      { fg = c.orange },
       keyword_style
     ),
 
-    Exception      = { fg = keyword },
+    Exception      = { fg = c.orange },
 
-    PreProc        = { fg = keyword },
-    Type           = { fg = c.type or c.yellow },
+    PreProc        = { fg = c.orange },
+    Type           = { fg = c.fg },
 
     Tag            = { fg = c.blue },
 
     Error          = { fg = c.red, bold = true },
-    Todo           = { fg = c.bg, bg = c.yellow, bold = bold_todo },
+    Todo           = { fg = c.tawny, bold = bold_todo },
     Underlined     = { fg = c.blue, underline = true },
 
     ----------------------------------------------------------------

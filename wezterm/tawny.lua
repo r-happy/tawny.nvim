@@ -29,12 +29,12 @@ return {
     cursor_border = "#d9caab",
     cursor_fg = "#1a1816",
     foreground = "#e2ded5",
-    selection_bg = "#423a2e",
+    selection_bg = "#4d4233",
     selection_fg = "#e2ded5",
     tab_bar = {
       active_tab = {
-        bg_color = "#423a2e",
-        fg_color = "#e0ca7b",
+        bg_color = "#4d4233",
+        fg_color = "#d5b981",
         intensity = "Bold"
       },
       background = "#161513",
