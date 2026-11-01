@@ -30,14 +30,14 @@ Generated highlight preview showing syntax, the active buffer, cursor line, sele
 | ---------- | --------- | --------- |
 | Background | `#1a1816` | `#fbfaf8` |
 | Foreground | `#e2ded5` | `#2a221d` |
-| Red        | `#d87d91` | `#9e2e3d` |
-| Tawny      | `#d5b981` | `#7c561d` |
-| Orange     | `#cf9577` | `#9d4525` |
-| Yellow     | `#e0ca7b` | `#765c13` |
-| Green      | `#9db780` | `#496529` |
-| Teal       | `#86b6aa` | `#22594b` |
-| Blue       | `#8ea8c2` | `#305e91` |
-| Violet     | `#c09ec7` | `#783f83` |
+| Red        | `#d87d91` | `#992e29` |
+| Tawny      | `#d5b981` | `#84581f` |
+| Orange     | `#cf9577` | `#ad410b` |
+| Yellow     | `#e0ca7b` | `#7b5a0f` |
+| Green      | `#9db780` | `#157535` |
+| Teal       | `#86b6aa` | `#235c4b` |
+| Blue       | `#8ea8c2` | `#0f55bd` |
+| Violet     | `#c09ec7` | `#791fad` |
 
 Syntax uses only four colored roles: tawny strings, copper (orange) keywords,
 steel-blue functions, and muted comments. Types, numbers, and constants stay on
