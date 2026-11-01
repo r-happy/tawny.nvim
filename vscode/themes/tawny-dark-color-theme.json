@@ -179,32 +179,32 @@
   "name": "Tawny",
   "semanticHighlighting": true,
   "semanticTokenColors": {
-    "class": "#e2ded5",
+    "class": "#86b6aa",
     "comment": {
       "foreground": "#948e84",
       "italic": false
     },
-    "enum": "#e2ded5",
-    "enumMember": "#e2ded5",
+    "enum": "#86b6aa",
+    "enumMember": "#c09ec7",
     "function": "#8ea8c2",
-    "interface": "#e2ded5",
+    "interface": "#86b6aa",
     "keyword": {
       "foreground": "#cf9577",
       "italic": false
     },
     "method": "#8ea8c2",
     "namespace": "#e2ded5",
-    "number": "#e2ded5",
+    "number": "#c09ec7",
     "operator": "#e2ded5",
     "parameter": "#e2ded5",
     "property": "#e2ded5",
     "string": "#d5b981",
-    "struct": "#e2ded5",
-    "type": "#e2ded5",
-    "typeParameter": "#e2ded5",
+    "struct": "#86b6aa",
+    "type": "#86b6aa",
+    "typeParameter": "#86b6aa",
     "variable": "#e2ded5",
     "variable.defaultLibrary": "#e2ded5",
-    "variable.readonly": "#e2ded5"
+    "variable.readonly": "#c09ec7"
   },
   "tokenColors": [
     {
@@ -245,7 +245,7 @@
         "support.class"
       ],
       "settings": {
-        "foreground": "#e2ded5"
+        "foreground": "#86b6aa"
       }
     },
     {
@@ -303,7 +303,7 @@
         "constant.numeric"
       ],
       "settings": {
-        "foreground": "#e2ded5"
+        "foreground": "#c09ec7"
       }
     },
     {
@@ -312,7 +312,7 @@
         "support.constant"
       ],
       "settings": {
-        "foreground": "#e2ded5"
+        "foreground": "#c09ec7"
       }
     },
     {
@@ -354,7 +354,7 @@
         "constant.language.boolean"
       ],
       "settings": {
-        "foreground": "#e2ded5"
+        "foreground": "#c09ec7"
       }
     },
     {

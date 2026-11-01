@@ -12,8 +12,8 @@ function M.get(c, opts)
   local keyword_style = styles.keywords or {}
   local bold_todo = opts.bold_todo ~= false
 
-  -- Only four roles carry color: comments, strings, keywords, and functions.
-  -- Everything else stays on fg so structure comes from the code itself.
+  -- Six roles carry color: comments, strings, keywords, functions, types, and
+  -- constants. Variables, fields, and punctuation stay on fg.
   return {
     ----------------------------------------------------------------
     -- ベース実体
@@ -28,9 +28,9 @@ function M.get(c, opts)
     Special        = { fg = c.blue },
     Delimiter      = { fg = c.fg },
 
-    Constant       = { fg = c.fg },
+    Constant       = { fg = c.violet },
     String         = { fg = c.tawny },
-    Number         = { fg = c.fg },
+    Number         = { fg = c.violet },
 
     Identifier     = { fg = c.fg },
     Function       = { fg = c.blue },
@@ -45,7 +45,7 @@ function M.get(c, opts)
     Exception      = { fg = c.orange },
 
     PreProc        = { fg = c.orange },
-    Type           = { fg = c.fg },
+    Type           = { fg = c.teal },
 
     Tag            = { fg = c.blue },
 

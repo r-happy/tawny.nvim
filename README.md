@@ -39,9 +39,10 @@ Generated highlight preview showing syntax, the active buffer, cursor line, sele
 | Blue       | `#8ea8c2` | `#0f55bd` |
 | Violet     | `#c09ec7` | `#791fad` |
 
-Syntax uses only four colored roles: tawny strings, copper (orange) keywords,
-steel-blue functions, and muted comments. Types, numbers, and constants stay on
-the foreground color. Tawny is also the single UI accent.
+Syntax uses six colored roles: tawny strings, copper (orange) keywords,
+steel-blue functions, teal types, violet constants and numbers, and muted
+comments. Variables, fields, and punctuation stay on the foreground color.
+Tawny is also the single UI accent.
 
 Transparency clears the main editing background and gutter. Selection, cursor line,
 popups, and buffer tabs retain their palette backgrounds so their states remain visible.

@@ -1,6 +1,6 @@
 local M = {}
 
--- Completion and breadcrumb kinds reuse the four syntax roles; every other kind
+-- Completion and breadcrumb kinds reuse the syntax roles; every other kind
 -- stays muted so menus read as text, not as a legend.
 local kinds = {
   "Array", "Boolean", "Class", "Color", "Constant", "Constructor", "Enum",
@@ -17,6 +17,12 @@ local function kind_color(c, kind)
     return c.orange
   elseif kind == "String" then
     return c.tawny
+  elseif kind == "Class" or kind == "Struct" or kind == "Interface"
+      or kind == "Enum" or kind == "TypeParameter" then
+    return c.teal
+  elseif kind == "Constant" or kind == "EnumMember" or kind == "Number"
+      or kind == "Boolean" or kind == "Null" then
+    return c.violet
   end
   return c.fg_dim
 end

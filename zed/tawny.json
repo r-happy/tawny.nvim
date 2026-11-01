@@ -116,7 +116,7 @@
             "color": "#b3ab9e"
           },
           "boolean": {
-            "color": "#e2ded5"
+            "color": "#c09ec7"
           },
           "comment": {
             "color": "#948e84",
@@ -127,7 +127,7 @@
             "font_style": "normal"
           },
           "constant": {
-            "color": "#e2ded5"
+            "color": "#c09ec7"
           },
           "constructor": {
             "color": "#8ea8c2"
@@ -142,7 +142,7 @@
             "font_weight": 700
           },
           "enum": {
-            "color": "#e2ded5"
+            "color": "#86b6aa"
           },
           "function": {
             "color": "#8ea8c2"
@@ -165,7 +165,7 @@
             "font_style": "italic"
           },
           "number": {
-            "color": "#e2ded5"
+            "color": "#c09ec7"
           },
           "operator": {
             "color": "#e2ded5"
@@ -217,7 +217,7 @@
             "font_weight": 700
           },
           "type": {
-            "color": "#e2ded5"
+            "color": "#86b6aa"
           },
           "variable": {
             "color": "#e2ded5"
@@ -226,7 +226,7 @@
             "color": "#e2ded5"
           },
           "variant": {
-            "color": "#e2ded5"
+            "color": "#c09ec7"
           }
         },
         "tab.active_background": "#151312",
@@ -386,7 +386,7 @@
             "color": "#42362e"
           },
           "boolean": {
-            "color": "#2a221d"
+            "color": "#791fad"
           },
           "comment": {
             "color": "#6f675d",
@@ -397,7 +397,7 @@
             "font_style": "normal"
           },
           "constant": {
-            "color": "#2a221d"
+            "color": "#791fad"
           },
           "constructor": {
             "color": "#0f55bd"
@@ -412,7 +412,7 @@
             "font_weight": 700
           },
           "enum": {
-            "color": "#2a221d"
+            "color": "#235c4b"
           },
           "function": {
             "color": "#0f55bd"
@@ -435,7 +435,7 @@
             "font_style": "italic"
           },
           "number": {
-            "color": "#2a221d"
+            "color": "#791fad"
           },
           "operator": {
             "color": "#2a221d"
@@ -487,7 +487,7 @@
             "font_weight": 700
           },
           "type": {
-            "color": "#2a221d"
+            "color": "#235c4b"
           },
           "variable": {
             "color": "#2a221d"
@@ -496,7 +496,7 @@
             "color": "#2a221d"
           },
           "variant": {
-            "color": "#2a221d"
+            "color": "#791fad"
           }
         },
         "tab.active_background": "#fbfaf8",
