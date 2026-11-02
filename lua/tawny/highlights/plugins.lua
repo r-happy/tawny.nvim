@@ -144,11 +144,11 @@ function M.get(c, opts)
 
     -- indent-blankline
     IblIndent              = { fg = c.border },
-    IblScope               = { fg = c.fg_dim },
+    IblScope               = { fg = c.border_highlight },
     IblWhitespace          = { fg = c.border },
 
     -- mini.nvim (共通)
-    MiniIndentscopeSymbol  = { fg = c.fg_dim },
+    MiniIndentscopeSymbol  = { fg = c.border_highlight },
     MiniCursorword         = { underline = true },
     MiniStatuslineFilename = { fg = c.fg, bg = c.bg_dim },
     MiniStatuslineFileinfo = { fg = c.fg_dim, bg = c.bg_dim },
@@ -181,6 +181,9 @@ function M.get(c, opts)
     DropBarPreview             = { bg = c.selection },
 
     -- snacks.nvim
+    SnacksIndent                    = { fg = c.border },
+    SnacksIndentScope               = { fg = c.border_highlight },
+    SnacksIndentChunk               = { fg = c.border_highlight },
     SnacksPickerFile                = { fg = c.fg },
     SnacksPickerDirectory           = { fg = c.blue },
     SnacksPickerDir                 = { fg = c.fg_dim },
