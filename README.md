@@ -39,10 +39,10 @@ Generated highlight preview showing syntax, the active buffer, cursor line, sele
 | Blue       | `#8ea8c2` | `#0f55bd` |
 | Violet     | `#c09ec7` | `#791fad` |
 
-Syntax uses six colored roles: tawny strings, copper (orange) keywords,
-steel-blue functions, teal types, violet constants and numbers, and muted
-comments. Variables, fields, and punctuation stay on the foreground color.
-Tawny is also the single UI accent.
+Syntax colors: tawny strings, copper keywords and softer copper operators,
+steel-blue functions, teal types and muted teal modules, violet constants and
+numbers, olive fields, rose parameters, and muted comments. Local variables and
+punctuation stay on the foreground color. Tawny is also the single UI accent.
 
 Transparency clears the main editing background and gutter. Selection, cursor line,
 popups, and buffer tabs retain their palette backgrounds so their states remain visible.
@@ -127,10 +127,8 @@ palette consistency, and the tmux colors-only contract. Run generation before
 the check when changing the source. No third-party test packages are required.
 
 VS Code and Zed derive their shared syntax roles from the Neovim highlight
-definitions: neutral identifiers, properties, numbers and punctuation;
-brass-colored types; copper keywords; steel-blue functions; honeyed strings; and
-readable gray comments. HTML/JSX attributes use muted teal to separate prop names
-from their values.
+definitions, so they follow the same colors. HTML/JSX attributes use the olive
+field color to separate prop names from their values.
 Syntax uses upright text by default. Diagnostic and Git status colors remain distinct.
 Token classification still depends on each editor's language
 grammar and language server.

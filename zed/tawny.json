@@ -113,7 +113,7 @@
         "surface.background": "#181614",
         "syntax": {
           "attribute": {
-            "color": "#b3ab9e"
+            "color": "#9db780"
           },
           "boolean": {
             "color": "#c09ec7"
@@ -168,7 +168,7 @@
             "color": "#c09ec7"
           },
           "operator": {
-            "color": "#e2ded5"
+            "color": "#b28670"
           },
           "preproc": {
             "color": "#cf9577"
@@ -177,7 +177,7 @@
             "color": "#e2ded5"
           },
           "property": {
-            "color": "#e2ded5"
+            "color": "#9db780"
           },
           "punctuation": {
             "color": "#e2ded5"
@@ -223,7 +223,7 @@
             "color": "#e2ded5"
           },
           "variable.special": {
-            "color": "#e2ded5"
+            "color": "#c09ec7"
           },
           "variant": {
             "color": "#c09ec7"
@@ -383,7 +383,7 @@
         "surface.background": "#f3f1ec",
         "syntax": {
           "attribute": {
-            "color": "#42362e"
+            "color": "#157535"
           },
           "boolean": {
             "color": "#791fad"
@@ -438,7 +438,7 @@
             "color": "#791fad"
           },
           "operator": {
-            "color": "#2a221d"
+            "color": "#7b3614"
           },
           "preproc": {
             "color": "#ad410b"
@@ -447,7 +447,7 @@
             "color": "#2a221d"
           },
           "property": {
-            "color": "#2a221d"
+            "color": "#157535"
           },
           "punctuation": {
             "color": "#2a221d"
@@ -493,7 +493,7 @@
             "color": "#2a221d"
           },
           "variable.special": {
-            "color": "#2a221d"
+            "color": "#791fad"
           },
           "variant": {
             "color": "#791fad"

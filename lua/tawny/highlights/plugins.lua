@@ -20,6 +20,10 @@ local function kind_color(c, kind)
   elseif kind == "Class" or kind == "Struct" or kind == "Interface"
       or kind == "Enum" or kind == "TypeParameter" then
     return c.teal
+  elseif kind == "Field" or kind == "Property" then
+    return c.green
+  elseif kind == "Module" or kind == "Namespace" or kind == "Package" then
+    return c.teal_dim
   elseif kind == "Constant" or kind == "EnumMember" or kind == "Number"
       or kind == "Boolean" or kind == "Null" then
     return c.violet

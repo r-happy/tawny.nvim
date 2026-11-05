@@ -12,8 +12,9 @@ function M.get(c, opts)
   local keyword_style = styles.keywords or {}
   local bold_todo = opts.bold_todo ~= false
 
-  -- Six roles carry color: comments, strings, keywords, functions, types, and
-  -- constants. Variables, fields, and punctuation stay on fg.
+  -- Comments, strings, keywords, functions, types, and constants carry the main
+  -- colors; treesitter.lua adds fields, parameters, and modules. Variables and
+  -- punctuation stay on fg.
   return {
     ----------------------------------------------------------------
     -- ベース実体
@@ -24,7 +25,7 @@ function M.get(c, opts)
       comment_style
     ),
 
-    Operator       = { fg = c.fg },
+    Operator       = { fg = c.orange_dim },
     Special        = { fg = c.blue },
     Delimiter      = { fg = c.fg },
 

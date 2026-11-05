@@ -11,16 +11,16 @@ function M.get(c, opts)
     -- 変数
     ----------------------------------------------------------------
     ["@variable"]              = { link = "Variable" },
-    ["@variable.builtin"]      = { fg = c.fg },
-    ["@variable.parameter"]    = { fg = c.fg },
-    ["@variable.member"]       = { fg = c.fg },
+    ["@variable.builtin"]      = { fg = c.violet },
+    ["@variable.parameter"]    = { fg = c.magenta },
+    ["@variable.member"]       = { fg = c.green },
 
-    ["@property"]              = { fg = c.fg },
-    ["@attribute"]             = { fg = c.fg },
+    ["@property"]              = { fg = c.green },
+    ["@attribute"]             = { link = "PreProc" },
     ["@operator"]              = { link = "Operator" },
 
-    ["@module"]                = { fg = c.fg },
-    ["@namespace"]             = { fg = c.fg },
+    ["@module"]                = { fg = c.teal_dim },
+    ["@namespace"]             = { fg = c.teal_dim },
 
     ----------------------------------------------------------------
     -- キーワード
@@ -40,7 +40,7 @@ function M.get(c, opts)
     -- 関数
     ----------------------------------------------------------------
     ["@function"]              = { link = "Function" },
-    ["@function.builtin"]      = { link = "Function" },
+    ["@function.builtin"]      = { fg = c.cyan },
     ["@function.call"]         = { link = "Function" },
     ["@function.method"]       = { link = "Function" },
     ["@function.method.call"]  = { link = "Function" },
@@ -100,7 +100,7 @@ function M.get(c, opts)
     -- HTML / JSX
     ----------------------------------------------------------------
     ["@tag"]                   = { fg = c.blue },
-    ["@tag.attribute"]         = { fg = c.fg_dark },
+    ["@tag.attribute"]         = { fg = c.green },
     ["@tag.delimiter"]         = { fg = c.fg_dark },
     -- JSX link labels include surrounding newlines and indentation. Underlining
     -- that capture draws horizontal strokes through the indent guides.

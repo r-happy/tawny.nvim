@@ -50,18 +50,22 @@ for i, variant in ipairs({ 'dark', 'light' }) do
   equal(zed.themes[i].appearance, variant, 'Zed variant')
   require('tawny').setup({ transparent = false })
   vim.cmd.colorscheme(variant == 'light' and 'tawny-light' or 'tawny')
-  for _, group in ipairs({ 'Identifier', '@property', '@variable.member', '@module',
-    'Operator', 'Delimiter' }) do
+  for _, group in ipairs({ 'Identifier', 'Delimiter' }) do
     equal(fg(group), c.fg, variant .. ' readable neutral ' .. group)
   end
   for _, group in ipairs({ 'Type', '@type', '@type.builtin', '@type.definition',
     '@lsp.type.class', '@lsp.type.struct', '@lsp.type.enum', '@lsp.type.interface',
     '@lsp.type.typeParameter' }) do
-    equal(fg(group), c.type or c.yellow, variant .. ' type ' .. group)
+    equal(fg(group), c.teal, variant .. ' type ' .. group)
   end
-  equal(fg('String'), c.string or c.tawny, variant .. ' string')
-  equal(fg('Number'), c.number or c.fg, variant .. ' number')
-  equal(fg('Constant'), c.constant or c.fg, variant .. ' constant')
+  equal(fg('@property'), c.green, variant .. ' property')
+  equal(fg('@variable.member'), c.green, variant .. ' member')
+  equal(fg('@variable.parameter'), c.magenta, variant .. ' parameter')
+  equal(fg('@module'), c.teal_dim, variant .. ' module')
+  equal(fg('Operator'), c.orange_dim, variant .. ' operator')
+  equal(fg('String'), c.tawny, variant .. ' string')
+  equal(fg('Number'), c.violet, variant .. ' number')
+  equal(fg('Constant'), c.violet, variant .. ' constant')
   if variant == 'light' then
     local seen = {}
     for _, group in ipairs({ 'Identifier', 'String', 'Type', 'Number', 'Keyword', 'Function' }) do
